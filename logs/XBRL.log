@@ -1,0 +1,79 @@
+2023-08-31 10:52:48,009 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting XbrlApplication on PonPrasanth with PID 1700 (F:\BRSS\BBRSS\target\classes started by PonPr in F:\BRSS\BBRSS)
+2023-08-31 10:52:48,013 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2023-08-31 10:52:48,014 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2023-08-31 10:52:48,607 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-31 10:52:48,607 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-31 10:52:51,315 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data repositories in DEFAULT mode.
+2023-08-31 10:52:51,529 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 203ms. Found 16 repository interfaces.
+2023-08-31 10:52:52,316 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$bec0f83f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-31 10:52:52,336 WARN org.springframework.xml.DocumentBuilderFactoryUtils [restartedMain] http://javax.xml.XMLConstants/property/accessExternalDTD property not supported by org.apache.xerces.jaxp.DocumentBuilderFactoryImpl
+2023-08-31 10:52:52,338 WARN org.springframework.xml.DocumentBuilderFactoryUtils [restartedMain] http://javax.xml.XMLConstants/property/accessExternalSchema property not supported by org.apache.xerces.jaxp.DocumentBuilderFactoryImpl
+2023-08-31 10:52:52,385 INFO org.springframework.ws.soap.addressing.server.AbstractAddressingEndpointMapping [restartedMain] Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-08-31 10:52:52,448 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1a293340] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-31 10:52:53,087 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-08-31 10:52:53,114 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2023-08-31 10:52:53,134 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2023-08-31 10:52:53,134 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.21]
+2023-08-31 10:52:53,435 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-08-31 10:52:53,435 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 4825 ms
+2023-08-31 10:52:53,922 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.3.10.Final}
+2023-08-31 10:52:53,924 INFO org.hibernate.cfg.Environment [restartedMain] HHH000206: hibernate.properties not found
+2023-08-31 10:52:54,326 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2023-08-31 10:52:55,844 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2023-08-31 10:52:58,041 WARN org.hibernate.mapping.RootClass [restartedMain] HHH000038: Composite-id class does not override equals(): com.bornfire.xbrl.entities.BRSS.T4BReport
+2023-08-31 10:52:58,042 WARN org.hibernate.mapping.RootClass [restartedMain] HHH000039: Composite-id class does not override hashCode(): com.bornfire.xbrl.entities.BRSS.T4BReport
+2023-08-31 10:52:58,054 WARN org.hibernate.mapping.RootClass [restartedMain] HHH000038: Composite-id class does not override equals(): com.bornfire.xbrl.entities.BRSS.T4AReport
+2023-08-31 10:52:58,055 WARN org.hibernate.mapping.RootClass [restartedMain] HHH000039: Composite-id class does not override hashCode(): com.bornfire.xbrl.entities.BRSS.T4AReport
+2023-08-31 10:52:58,057 WARN org.hibernate.mapping.RootClass [restartedMain] HHH000038: Composite-id class does not override equals(): com.bornfire.xbrl.entities.BRSS.RESTRUCTURED_LOAN_ID
+2023-08-31 10:52:58,058 WARN org.hibernate.mapping.RootClass [restartedMain] HHH000039: Composite-id class does not override hashCode(): com.bornfire.xbrl.entities.BRSS.RESTRUCTURED_LOAN_ID
+2023-08-31 10:53:30,632 INFO org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [restartedMain] HHH000397: Using ASTQueryTranslatorFactory
+2023-08-31 10:53:31,784 INFO org.springframework.aop.framework.CglibAopProxy [restartedMain] Unable to proxy interface-implementing method [public final void org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.afterPropertiesSet() throws java.lang.Exception] because it is marked as final: Consider using interface-based JDK proxies instead!
+2023-08-31 10:53:31,947 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@b3f364, org.springframework.security.web.context.SecurityContextPersistenceFilter@a6344b4, org.springframework.security.web.header.HeaderWriterFilter@57716e02, org.springframework.security.web.authentication.logout.LogoutFilter@1696b536, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4e7d8306, org.springframework.security.web.session.ConcurrentSessionFilter@780c8ea6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@20625b6f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@12b7aff4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@746be7f2, org.springframework.security.web.session.SessionManagementFilter@ccf0d6e, org.springframework.security.web.access.ExceptionTranslationFilter@178cf26b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2a0dae9b]
+2023-08-31 10:53:32,842 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2023-08-31 10:53:32,968 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-31 10:53:35,936 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'taskScheduler'
+2023-08-31 10:53:36,132 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-08-31 10:53:36,181 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2023-08-31 10:53:36,237 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path '/BRSS'
+2023-08-31 10:53:36,243 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started XbrlApplication in 48.933 seconds (JVM running for 50.684)
+2023-08-31 10:54:05,568 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-31 10:54:05,574 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-08-31 10:54:05,592 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 17 ms
+2023-08-31 10:55:59,644 INFO com.bornfire.xbrl.services.LoginServices [http-nio-8080-exec-4] Password Expired in:638
+2023-08-31 10:55:59,756 INFO com.bornfire.xbrl.services.LoginServices [http-nio-8080-exec-4] Account Expired in:1455
+2023-08-31 10:57:16,873 INFO com.bornfire.xbrl.controllers.XBRLReportsController [http-nio-8080-exec-2] Precheck for Report :BRS2
+2023-08-31 10:57:17,409 INFO com.bornfire.xbrl.services.RegulatoryReportServices [http-nio-8080-exec-2] Report precheck : BRS2
+2023-08-31 10:57:17,419 INFO com.bornfire.xbrl.services.BRS2_ReportService [http-nio-8080-exec-2] Report precheck : BRS2
+2023-08-31 10:57:17,421 INFO com.bornfire.xbrl.services.BRS2_ReportService [http-nio-8080-exec-2] Getting No of records in Master table :BRS2
+2023-08-31 10:57:17,571 INFO com.bornfire.xbrl.services.BRS2_ReportService [http-nio-8080-exec-2] Getting No of records in Mod table :BRS2
+2023-08-31 10:57:18,732 INFO com.bornfire.xbrl.controllers.XBRLReportsController [http-nio-8080-exec-2] Get Report :BRS2
+2023-08-31 10:57:18,734 INFO com.bornfire.xbrl.controllers.XBRLReportsController [http-nio-8080-exec-2] Get Report :31/03/2023
+2023-08-31 10:57:18,738 INFO com.bornfire.xbrl.controllers.XBRLReportsController [http-nio-8080-exec-2] Get Report :31-Mar-2023
+2023-08-31 10:57:18,740 INFO com.bornfire.xbrl.controllers.XBRLReportsController [http-nio-8080-exec-2] Assigning Model Attributes :BRS2
+2023-08-31 10:57:18,742 INFO com.bornfire.xbrl.services.ReportServices [http-nio-8080-exec-2] Getting Report Name :BRS2
+2023-08-31 10:57:18,889 INFO com.bornfire.xbrl.controllers.XBRLReportsController [http-nio-8080-exec-2] Getting ModelandView :BRS2
+2023-08-31 10:57:18,890 INFO com.bornfire.xbrl.services.RegulatoryReportServices [http-nio-8080-exec-2] Getting View for the Report :BRS2
+2023-08-31 10:57:18,891 INFO com.bornfire.xbrl.services.BRS2_ReportService [http-nio-8080-exec-2] Inside archivenull
+2023-08-31 10:59:22,922 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-7] Shutting down ExecutorService 'taskScheduler'
+2023-08-31 10:59:22,955 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-7] Shutting down ExecutorService 'applicationTaskExecutor'
+2023-08-31 10:59:26,122 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting XbrlApplication on PonPrasanth with PID 1700 (F:\BRSS\BBRSS\target\classes started by PonPr in F:\BRSS\BBRSS)
+2023-08-31 10:59:26,122 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2023-08-31 10:59:26,123 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2023-08-31 10:59:27,368 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data repositories in DEFAULT mode.
+2023-08-31 10:59:27,596 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 227ms. Found 16 repository interfaces.
+2023-08-31 10:59:27,850 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$bec0f83f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-31 10:59:27,859 INFO org.springframework.ws.soap.addressing.server.AbstractAddressingEndpointMapping [restartedMain] Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-08-31 10:59:27,879 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1a293340] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-31 10:59:28,745 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-08-31 10:59:28,747 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2023-08-31 10:59:28,751 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2023-08-31 10:59:28,752 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.21]
+2023-08-31 10:59:28,808 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-08-31 10:59:28,808 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2680 ms
+2023-08-31 10:59:29,901 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2023-08-31 10:59:31,872 WARN org.hibernate.mapping.RootClass [restartedMain] HHH000038: Composite-id class does not override equals(): com.bornfire.xbrl.entities.BRSS.T4BReport
+2023-08-31 10:59:31,873 WARN org.hibernate.mapping.RootClass [restartedMain] HHH000039: Composite-id class does not override hashCode(): com.bornfire.xbrl.entities.BRSS.T4BReport
+2023-08-31 10:59:31,897 WARN org.hibernate.mapping.RootClass [restartedMain] HHH000038: Composite-id class does not override equals(): com.bornfire.xbrl.entities.BRSS.T4AReport
+2023-08-31 10:59:31,898 WARN org.hibernate.mapping.RootClass [restartedMain] HHH000039: Composite-id class does not override hashCode(): com.bornfire.xbrl.entities.BRSS.T4AReport
+2023-08-31 10:59:31,904 WARN org.hibernate.mapping.RootClass [restartedMain] HHH000038: Composite-id class does not override equals(): com.bornfire.xbrl.entities.BRSS.RESTRUCTURED_LOAN_ID
+2023-08-31 10:59:31,904 WARN org.hibernate.mapping.RootClass [restartedMain] HHH000039: Composite-id class does not override hashCode(): com.bornfire.xbrl.entities.BRSS.RESTRUCTURED_LOAN_ID
