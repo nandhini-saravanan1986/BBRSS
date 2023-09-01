@@ -12,9 +12,12 @@ import javax.persistence.TemporalType;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
-@Table(name="SFINP1")
+@Table(name="BRS3_TABLE")
 public class BRS3_ENTITY {
-	
+	private String	r10_assets;
+	private String	r10_cross_reference;
+	private BigDecimal	r10_month_end;
+	private BigDecimal	r10_average;
 	private String	r11_assets;
 	private String	r11_cross_reference;
 	private BigDecimal	r11_month_end;
@@ -234,6 +237,30 @@ public class BRS3_ENTITY {
 	private String	del_flg  ;
 	private String	report_code  ;
 	private Date	report_submit_date ;
+	public String getR10_assets() {
+		return r10_assets;
+	}
+	public void setR10_assets(String r10_assets) {
+		this.r10_assets = r10_assets;
+	}
+	public String getR10_cross_reference() {
+		return r10_cross_reference;
+	}
+	public void setR10_cross_reference(String r10_cross_reference) {
+		this.r10_cross_reference = r10_cross_reference;
+	}
+	public BigDecimal getR10_month_end() {
+		return r10_month_end;
+	}
+	public void setR10_month_end(BigDecimal r10_month_end) {
+		this.r10_month_end = r10_month_end;
+	}
+	public BigDecimal getR10_average() {
+		return r10_average;
+	}
+	public void setR10_average(BigDecimal r10_average) {
+		this.r10_average = r10_average;
+	}
 	public String getR11_assets() {
 		return r11_assets;
 	}
@@ -1530,7 +1557,8 @@ public class BRS3_ENTITY {
 	public void setReport_submit_date(Date report_submit_date) {
 		this.report_submit_date = report_submit_date;
 	}
-	public BRS3_ENTITY(String r11_assets, String r11_cross_reference, BigDecimal r11_month_end, BigDecimal r11_average,
+	public BRS3_ENTITY(String r10_assets, String r10_cross_reference, BigDecimal r10_month_end, BigDecimal r10_average,
+			String r11_assets, String r11_cross_reference, BigDecimal r11_month_end, BigDecimal r11_average,
 			String r12_assets, String r12_cross_reference, BigDecimal r12_month_end, BigDecimal r12_average,
 			String r13_assets, String r13_cross_reference, BigDecimal r13_month_end, BigDecimal r13_average,
 			String r14_assets, String r14_cross_reference, BigDecimal r14_month_end, BigDecimal r14_average,
@@ -1585,6 +1613,10 @@ public class BRS3_ENTITY {
 			Date report_date, Date report_from_date, Date report_to_date, String entity_flg, String modify_flg,
 			String del_flg, String report_code, Date report_submit_date) {
 		super();
+		this.r10_assets = r10_assets;
+		this.r10_cross_reference = r10_cross_reference;
+		this.r10_month_end = r10_month_end;
+		this.r10_average = r10_average;
 		this.r11_assets = r11_assets;
 		this.r11_cross_reference = r11_cross_reference;
 		this.r11_month_end = r11_month_end;
@@ -1806,6 +1838,5 @@ public class BRS3_ENTITY {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-    
-
+	
 }

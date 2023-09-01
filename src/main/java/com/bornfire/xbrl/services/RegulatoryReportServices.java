@@ -46,11 +46,20 @@ public class RegulatoryReportServices {
 
 	@Autowired
 	CustomRepGeneratorServices customerrptgenserviceexcel;
-
-	@Autowired
-	BRS2_ReportService brs2_ReportService;
 	
 	@Autowired
+
+	BRS3REPORTSERVICE  brs3REPORTSERVICE ;
+	
+	@Autowired
+	BRS13_REPORTSERVICE brs13_REPORTSERVICE;
+	
+	@Autowired
+	BRS14_REPORTSERVICE brs14_REPORTSERVICE;
+	
+	@Autowired
+	BRS17_REPORTSERVICE brs17_REPORTSERVICE;
+
 	BRS61ReportService brs61ReportService;
 	
 	@Autowired
@@ -62,6 +71,15 @@ public class RegulatoryReportServices {
 	@Autowired
 	BRS4_ReportService  brs4_ReportService;
 
+	@Autowired
+	BRS19_REPORTSERVICE brs19_REPORTSERVICE;
+
+	@Autowired
+	BRS20_REPORTSERVICE brs20_REPORTSERVICE;
+	
+
+	
+	
 	public String getExportpath() {
 		return exportpath;
 	}
@@ -78,10 +96,41 @@ public class RegulatoryReportServices {
 
 		logger.info("Getting View for the Report :" + reportId);
 		switch (reportId) {
-		case "BRS2": 
-			repsummary = brs2_ReportService.getBRS2_view(reportId,  fromdate, todate, currency, dtltype, pageable); 
-		    break;
 		
+
+		 case "BRS3": 
+			  repsummary = brs3REPORTSERVICE .getBRS3View(reportId, fromdate, todate, currency, dtltype, pageable);
+			  break;
+			
+		 case "BRS13": 
+			  repsummary = brs13_REPORTSERVICE.getBRS13View(reportId, fromdate, todate, currency, dtltype, pageable);
+			  break;
+			  
+		 case "BRS14": 
+			  repsummary = brs14_REPORTSERVICE.getBRS14View(reportId, fromdate, todate, currency, dtltype, pageable);
+			  break;
+	
+		 case "BRS17": 
+			  repsummary = brs17_REPORTSERVICE.getBRS17View(reportId, fromdate, todate, currency, dtltype, pageable);
+			  break;
+			  
+		 case "BRS19": 
+			  repsummary = brs19_REPORTSERVICE.getBRS19View(reportId, fromdate, todate, currency, dtltype, pageable);
+			  break;
+			  
+		 case "BRS20": 
+			  repsummary = brs20_REPORTSERVICE.getBRS20View(reportId, fromdate, todate, currency, dtltype, pageable);
+			  break;
+
+			  
+		
+			  
+		/*
+		 * case "BRF014": repsummary = brf014ReportService.getBRF014View(reportId,
+		 * fromdate, todate, currency, dtltype, pageable); break;
+		 * 
+		 */	
+		}
 		case "BRS61": 
 			repsummary = brs61ReportService.getBRS61View(reportId,  fromdate, todate, currency, dtltype, pageable); 
 		    break;
@@ -100,6 +149,7 @@ public class RegulatoryReportServices {
 			}
 		
 
+
 		return repsummary; 
 	}
 	public ModelAndView getReportSummary(String reportId, String reportDate, String fromdate, String todate,
@@ -110,6 +160,43 @@ public class RegulatoryReportServices {
 
 		logger.info("Getting View for the Report :" + reportId);
 		switch (reportId) {
+
+		
+		case "BRS3": 
+			  repsummary = brs3REPORTSERVICE .getBRS3View(reportId,
+		  fromdate, todate, currency, dtltype, pageable); break;
+
+		case "BRS13": 
+			  repsummary = brs13_REPORTSERVICE.getBRS13View(reportId,
+		  fromdate, todate, currency, dtltype, pageable); break;
+		  
+		case "BRS14": 
+			  repsummary = brs14_REPORTSERVICE.getBRS14View(reportId,
+		  fromdate, todate, currency, dtltype, pageable); break;
+		 
+		case "BRS17": 
+			  repsummary = brs17_REPORTSERVICE.getBRS17View(reportId,
+		  fromdate, todate, currency, dtltype, pageable); break;
+
+		  
+		case "BRS19": 
+			  repsummary = brs19_REPORTSERVICE.getBRS19View(reportId,
+		  fromdate, todate, currency, dtltype, pageable); break;
+		  
+		case "BRS20": 
+			  repsummary = brs20_REPORTSERVICE.getBRS20View(reportId,
+		  fromdate, todate, currency, dtltype, pageable); break;
+		  
+
+		  
+
+
+		/*
+		 * case "BRF014": repsummary = brf014ReportService.getBRF014View(reportId,
+		 * fromdate, todate, currency, dtltype, pageable); break;
+		 * 
+		 */	
+
 
 
 
@@ -132,6 +219,7 @@ public class RegulatoryReportServices {
 			repsummary = brs4_ReportService.getBRS4_view(reportId, fromdate, todate, currency, dtltype, pageable);
 			break;
 			
+
 		}
 
 		return repsummary;
@@ -145,15 +233,39 @@ public class RegulatoryReportServices {
 		logger.info("Getting Details for the Report :" + reportId);
 
 		switch (reportId) {
+		 
+		case "BRS3": 
+			  repdetail = brs3REPORTSERVICE .getBRS3currentDtl(reportId, fromdate,
+		  todate, currency, dtltype, pageable, Filter); break;
 
+		case "BRS13": 
+			  repdetail = brs13_REPORTSERVICE.getBRS13currentDtl(reportId, fromdate,
+		  todate, currency, dtltype, pageable, Filter); break;
+		  
+		case "BRS14": 
+			  repdetail = brs14_REPORTSERVICE.getBRS14currentDtl(reportId, fromdate,
+		  todate, currency, dtltype, pageable, Filter); break;
+		  
+		case "BRS17": 
+			  repdetail = brs17_REPORTSERVICE.getBRS17currentDtl(reportId, fromdate,
+		  todate, currency, dtltype, pageable, Filter); break;
+		  
+		case "BRS19": 
+			  repdetail = brs19_REPORTSERVICE.getBRS19currentDtl(reportId, fromdate,
+		  todate, currency, dtltype, pageable, Filter); break;
+		  
+		case "BRS20": 
+			  repdetail = brs20_REPORTSERVICE.getBRS20currentDtl(reportId, fromdate,
+		  todate, currency, dtltype, pageable, Filter); break;
+		  
 
+		  
 		
-		case "BRS2":
-			repdetail = brs2_ReportService.getBRS2currentDtl(reportId, fromdate, todate, currency, dtltype, pageable, Filter);
-			break;
-		case "BRS61":
-			repdetail = brs61ReportService.getBRS61Details(reportId, fromdate, todate, currency, dtltype, pageable, Filter);
-			break;
+		  
+		/*
+		 * case "B14": repdetail = b14ReportService.getB14currentDtl(reportId, fromdate,
+		 * todate, currency, dtltype, pageable, Filter); break;
+		 */
 
 		case "BRS1":
 			repdetail = brs1_ReportService.getBRS1currentDtl(reportId, fromdate, todate, currency, dtltype, pageable, Filter);
@@ -181,14 +293,33 @@ public class RegulatoryReportServices {
 
 		switch (reportId) {
 		
-
-		case "BRS2":
-			repfile = brs2_ReportService.getFileBRS2(reportId, fromdate, todate, currency, dtltype, filetype);
-			break;
-		case "BRS61":
-			repfile = brs61ReportService.getFileBRS61(reportId, fromdate, todate, currency, dtltype, filetype);
-			break;
+		 case "BRS3": repfile = brs3REPORTSERVICE .getFile(reportId, fromdate,
+				  todate, currency, dtltype, filetype); break;
+				  
+		 case "BRS13": repfile = brs13_REPORTSERVICE.getFile(reportId, fromdate,
+				  todate, currency, dtltype, filetype); break;
+				  
+		 case "BRS14": repfile = brs14_REPORTSERVICE.getFile(reportId, fromdate,
+				  todate, currency, dtltype, filetype); break;
+				  
+		 case "BRS17": 
+             repfile = brs17_REPORTSERVICE.getFile(reportId, fromdate,
+			  todate, currency, dtltype, filetype); break;
+			  
+		 case "BRS19": 
+             repfile = brs19_REPORTSERVICE.getFile(reportId, fromdate,
+			  todate, currency, dtltype, filetype); break;
+			  
+		 case "BRS20": 
+             repfile = brs20_REPORTSERVICE.getFile(reportId, fromdate,
+			  todate, currency, dtltype, filetype); break;
+			  
 		
+
+
+		
+	
+
 		case "BRS1":
 			repfile = brs1_ReportService.getFileBRS1(reportId, fromdate, todate, currency, dtltype, filetype);
 			break;
@@ -216,6 +347,32 @@ public class RegulatoryReportServices {
 		logger.info("Report precheck : " + reportid);
 
 		switch (reportid) {
+
+		  case "BRS3":
+			  msg = brs3REPORTSERVICE .preCheck(reportid, fromdate, todate);
+		  break;
+
+		  case "BRS13":
+			  msg = brs13_REPORTSERVICE.preCheck(reportid, fromdate, todate);
+		  break;
+		  
+		  case "BRS14":
+			  msg = brs14_REPORTSERVICE.preCheck(reportid, fromdate, todate);
+		  break;
+		  
+		  case "BRS17":
+			  msg = brs17_REPORTSERVICE.preCheck(reportid, fromdate, todate);
+		  break;
+		  
+		  case "BRS19":
+			  msg = brs19_REPORTSERVICE.preCheck(reportid, fromdate, todate);
+		  break;
+		  
+		  case "BRS20":
+			  msg = brs20_REPORTSERVICE.preCheck(reportid, fromdate, todate);
+		  break;
+		  
+
 		case "BRS2": 
 			msg = brs2_ReportService.preCheck(reportid, fromdate, todate);
 			break;
@@ -238,7 +395,15 @@ public class RegulatoryReportServices {
 			
 			
 			
+
 		
+		  
+		  
+		
+		/*
+		 * case "B14": msg = b14ReportService.preCheckB14(reportid, fromdate, todate);
+		 * break;
+		 */
 		default:
 			logger.info("default -> preCheck()");
 			msg = "Master - need to process";

@@ -1,0 +1,1406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="BRS19" pageWidth="700" pageHeight="842" columnWidth="660" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9e5b8a61-c159-43c0-92b6-be3a478dc455">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="BRSS.jrdax"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="REPORT_DATE" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT * FROM BRS19 WHERE REPORT_DATE=$P{REPORT_DATE}]]>
+	</queryString>
+	<field name="R12_LOAN_TO_VAL" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R12_LOAN_TO_VAL"/>
+		<property name="com.jaspersoft.studio.field.label" value="R12_LOAN_TO_VAL"/>
+	</field>
+	<field name="R12_PER_EXP_RES_MOR" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R12_PER_EXP_RES_MOR"/>
+		<property name="com.jaspersoft.studio.field.label" value="R12_PER_EXP_RES_MOR"/>
+	</field>
+	<field name="R12_NON_PER_EXP_RES_MOR" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R12_NON_PER_EXP_RES_MOR"/>
+		<property name="com.jaspersoft.studio.field.label" value="R12_NON_PER_EXP_RES_MOR"/>
+	</field>
+	<field name="R12_SPEC_PROV_RES_MOR" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R12_SPEC_PROV_RES_MOR"/>
+		<property name="com.jaspersoft.studio.field.label" value="R12_SPEC_PROV_RES_MOR"/>
+	</field>
+	<field name="R12_SP_UNSEC_POR_RES_MOR" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R12_SP_UNSEC_POR_RES_MOR"/>
+		<property name="com.jaspersoft.studio.field.label" value="R12_SP_UNSEC_POR_RES_MOR"/>
+	</field>
+	<field name="R12_TOTAL" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R12_TOTAL"/>
+		<property name="com.jaspersoft.studio.field.label" value="R12_TOTAL"/>
+	</field>
+	<field name="R13_LOAN_TO_VAL" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R13_LOAN_TO_VAL"/>
+		<property name="com.jaspersoft.studio.field.label" value="R13_LOAN_TO_VAL"/>
+	</field>
+	<field name="R13_PER_EXP_RES_MOR" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R13_PER_EXP_RES_MOR"/>
+		<property name="com.jaspersoft.studio.field.label" value="R13_PER_EXP_RES_MOR"/>
+	</field>
+	<field name="R13_NON_PER_EXP_RES_MOR" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R13_NON_PER_EXP_RES_MOR"/>
+		<property name="com.jaspersoft.studio.field.label" value="R13_NON_PER_EXP_RES_MOR"/>
+	</field>
+	<field name="R13_SPEC_PROV_RES_MOR" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R13_SPEC_PROV_RES_MOR"/>
+		<property name="com.jaspersoft.studio.field.label" value="R13_SPEC_PROV_RES_MOR"/>
+	</field>
+	<field name="R13_SP_UNSEC_POR_RES_MOR" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R13_SP_UNSEC_POR_RES_MOR"/>
+		<property name="com.jaspersoft.studio.field.label" value="R13_SP_UNSEC_POR_RES_MOR"/>
+	</field>
+	<field name="R13_TOTAL" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R13_TOTAL"/>
+		<property name="com.jaspersoft.studio.field.label" value="R13_TOTAL"/>
+	</field>
+	<field name="R14_LOAN_TO_VAL" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R14_LOAN_TO_VAL"/>
+		<property name="com.jaspersoft.studio.field.label" value="R14_LOAN_TO_VAL"/>
+	</field>
+	<field name="R14_PER_EXP_RES_MOR" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R14_PER_EXP_RES_MOR"/>
+		<property name="com.jaspersoft.studio.field.label" value="R14_PER_EXP_RES_MOR"/>
+	</field>
+	<field name="R14_NON_PER_EXP_RES_MOR" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R14_NON_PER_EXP_RES_MOR"/>
+		<property name="com.jaspersoft.studio.field.label" value="R14_NON_PER_EXP_RES_MOR"/>
+	</field>
+	<field name="R14_SPEC_PROV_RES_MOR" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R14_SPEC_PROV_RES_MOR"/>
+		<property name="com.jaspersoft.studio.field.label" value="R14_SPEC_PROV_RES_MOR"/>
+	</field>
+	<field name="R14_SP_UNSEC_POR_RES_MOR" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R14_SP_UNSEC_POR_RES_MOR"/>
+		<property name="com.jaspersoft.studio.field.label" value="R14_SP_UNSEC_POR_RES_MOR"/>
+	</field>
+	<field name="R14_TOTAL" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R14_TOTAL"/>
+		<property name="com.jaspersoft.studio.field.label" value="R14_TOTAL"/>
+	</field>
+	<field name="R15_LOAN_TO_VAL" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R15_LOAN_TO_VAL"/>
+		<property name="com.jaspersoft.studio.field.label" value="R15_LOAN_TO_VAL"/>
+	</field>
+	<field name="R15_PER_EXP_RES_MOR" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R15_PER_EXP_RES_MOR"/>
+		<property name="com.jaspersoft.studio.field.label" value="R15_PER_EXP_RES_MOR"/>
+	</field>
+	<field name="R15_NON_PER_EXP_RES_MOR" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R15_NON_PER_EXP_RES_MOR"/>
+		<property name="com.jaspersoft.studio.field.label" value="R15_NON_PER_EXP_RES_MOR"/>
+	</field>
+	<field name="R15_SPEC_PROV_RES_MOR" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R15_SPEC_PROV_RES_MOR"/>
+		<property name="com.jaspersoft.studio.field.label" value="R15_SPEC_PROV_RES_MOR"/>
+	</field>
+	<field name="R15_SP_UNSEC_POR_RES_MOR" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R15_SP_UNSEC_POR_RES_MOR"/>
+		<property name="com.jaspersoft.studio.field.label" value="R15_SP_UNSEC_POR_RES_MOR"/>
+	</field>
+	<field name="R15_TOTAL" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R15_TOTAL"/>
+		<property name="com.jaspersoft.studio.field.label" value="R15_TOTAL"/>
+	</field>
+	<field name="R16_LOAN_TO_VAL" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R16_LOAN_TO_VAL"/>
+		<property name="com.jaspersoft.studio.field.label" value="R16_LOAN_TO_VAL"/>
+	</field>
+	<field name="R16_PER_EXP_RES_MOR" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R16_PER_EXP_RES_MOR"/>
+		<property name="com.jaspersoft.studio.field.label" value="R16_PER_EXP_RES_MOR"/>
+	</field>
+	<field name="R16_NON_PER_EXP_RES_MOR" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R16_NON_PER_EXP_RES_MOR"/>
+		<property name="com.jaspersoft.studio.field.label" value="R16_NON_PER_EXP_RES_MOR"/>
+	</field>
+	<field name="R16_SPEC_PROV_RES_MOR" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R16_SPEC_PROV_RES_MOR"/>
+		<property name="com.jaspersoft.studio.field.label" value="R16_SPEC_PROV_RES_MOR"/>
+	</field>
+	<field name="R16_SP_UNSEC_POR_RES_MOR" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R16_SP_UNSEC_POR_RES_MOR"/>
+		<property name="com.jaspersoft.studio.field.label" value="R16_SP_UNSEC_POR_RES_MOR"/>
+	</field>
+	<field name="R16_TOTAL" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R16_TOTAL"/>
+		<property name="com.jaspersoft.studio.field.label" value="R16_TOTAL"/>
+	</field>
+	<field name="R17_LOAN_TO_VAL" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R17_LOAN_TO_VAL"/>
+		<property name="com.jaspersoft.studio.field.label" value="R17_LOAN_TO_VAL"/>
+	</field>
+	<field name="R17_PER_EXP_RES_MOR" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R17_PER_EXP_RES_MOR"/>
+		<property name="com.jaspersoft.studio.field.label" value="R17_PER_EXP_RES_MOR"/>
+	</field>
+	<field name="R17_NON_PER_EXP_RES_MOR" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R17_NON_PER_EXP_RES_MOR"/>
+		<property name="com.jaspersoft.studio.field.label" value="R17_NON_PER_EXP_RES_MOR"/>
+	</field>
+	<field name="R17_SPEC_PROV_RES_MOR" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R17_SPEC_PROV_RES_MOR"/>
+		<property name="com.jaspersoft.studio.field.label" value="R17_SPEC_PROV_RES_MOR"/>
+	</field>
+	<field name="R17_SP_UNSEC_POR_RES_MOR" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R17_SP_UNSEC_POR_RES_MOR"/>
+		<property name="com.jaspersoft.studio.field.label" value="R17_SP_UNSEC_POR_RES_MOR"/>
+	</field>
+	<field name="R17_TOTAL" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R17_TOTAL"/>
+		<property name="com.jaspersoft.studio.field.label" value="R17_TOTAL"/>
+	</field>
+	<field name="R18_LOAN_TO_VAL" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R18_LOAN_TO_VAL"/>
+		<property name="com.jaspersoft.studio.field.label" value="R18_LOAN_TO_VAL"/>
+	</field>
+	<field name="R18_PER_EXP_RES_MOR" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R18_PER_EXP_RES_MOR"/>
+		<property name="com.jaspersoft.studio.field.label" value="R18_PER_EXP_RES_MOR"/>
+	</field>
+	<field name="R18_NON_PER_EXP_RES_MOR" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R18_NON_PER_EXP_RES_MOR"/>
+		<property name="com.jaspersoft.studio.field.label" value="R18_NON_PER_EXP_RES_MOR"/>
+	</field>
+	<field name="R18_SPEC_PROV_RES_MOR" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R18_SPEC_PROV_RES_MOR"/>
+		<property name="com.jaspersoft.studio.field.label" value="R18_SPEC_PROV_RES_MOR"/>
+	</field>
+	<field name="R18_SP_UNSEC_POR_RES_MOR" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R18_SP_UNSEC_POR_RES_MOR"/>
+		<property name="com.jaspersoft.studio.field.label" value="R18_SP_UNSEC_POR_RES_MOR"/>
+	</field>
+	<field name="R18_TOTAL" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R18_TOTAL"/>
+		<property name="com.jaspersoft.studio.field.label" value="R18_TOTAL"/>
+	</field>
+	<field name="R19_LOAN_TO_VAL" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R19_LOAN_TO_VAL"/>
+		<property name="com.jaspersoft.studio.field.label" value="R19_LOAN_TO_VAL"/>
+	</field>
+	<field name="R19_PER_EXP_RES_MOR" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R19_PER_EXP_RES_MOR"/>
+		<property name="com.jaspersoft.studio.field.label" value="R19_PER_EXP_RES_MOR"/>
+	</field>
+	<field name="R19_NON_PER_EXP_RES_MOR" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R19_NON_PER_EXP_RES_MOR"/>
+		<property name="com.jaspersoft.studio.field.label" value="R19_NON_PER_EXP_RES_MOR"/>
+	</field>
+	<field name="R19_SPEC_PROV_RES_MOR" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R19_SPEC_PROV_RES_MOR"/>
+		<property name="com.jaspersoft.studio.field.label" value="R19_SPEC_PROV_RES_MOR"/>
+	</field>
+	<field name="R19_SP_UNSEC_POR_RES_MOR" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R19_SP_UNSEC_POR_RES_MOR"/>
+		<property name="com.jaspersoft.studio.field.label" value="R19_SP_UNSEC_POR_RES_MOR"/>
+	</field>
+	<field name="R19_TOTAL" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R19_TOTAL"/>
+		<property name="com.jaspersoft.studio.field.label" value="R19_TOTAL"/>
+	</field>
+	<field name="REPORT_DATE" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="REPORT_DATE"/>
+		<property name="com.jaspersoft.studio.field.label" value="REPORT_DATE"/>
+	</field>
+	<field name="REPORT_FROM_DATE" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="REPORT_FROM_DATE"/>
+		<property name="com.jaspersoft.studio.field.label" value="REPORT_FROM_DATE"/>
+	</field>
+	<field name="REPORT_TO_DATE" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="REPORT_TO_DATE"/>
+		<property name="com.jaspersoft.studio.field.label" value="REPORT_TO_DATE"/>
+	</field>
+	<field name="ENTITY_FLG" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="ENTITY_FLG"/>
+		<property name="com.jaspersoft.studio.field.label" value="ENTITY_FLG"/>
+	</field>
+	<field name="MODIFY_FLG" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="MODIFY_FLG"/>
+		<property name="com.jaspersoft.studio.field.label" value="MODIFY_FLG"/>
+	</field>
+	<field name="DEL_FLG" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="DEL_FLG"/>
+		<property name="com.jaspersoft.studio.field.label" value="DEL_FLG"/>
+	</field>
+	<field name="REPORT_CODE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="REPORT_CODE"/>
+		<property name="com.jaspersoft.studio.field.label" value="REPORT_CODE"/>
+	</field>
+	<field name="REPORT_SUBMIT_DATE" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="REPORT_SUBMIT_DATE"/>
+		<property name="com.jaspersoft.studio.field.label" value="REPORT_SUBMIT_DATE"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="127" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="-20" width="680" height="25" uuid="09d632fb-b24c-4084-b73a-2dc080e84174">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CAPITAL ADEQUACY FRAMEWORK STANDARDISED APPROACH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="5" width="680" height="25" uuid="25cda104-9cbd-4696-8674-02f7efd91905">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Monthly Schedule M-SRWA 12e - (LTV): Loan to Value Disclosure]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-20" y="-20" width="20" height="25" uuid="44373fec-1113-406b-ab76-c3c2e2fea59a"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-20" y="5" width="20" height="25" uuid="893497dd-2b8b-49a3-aa48-e95cec9696e3"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-20" y="30" width="20" height="25" uuid="ad512083-e2c0-45d2-8932-e48063d34b3d"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-20" y="55" width="20" height="25" uuid="ad3474ea-a28d-4e0c-8bcd-1397a9fda482"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-20" y="80" width="20" height="25" uuid="ed35c232-a403-4d7b-b67a-e845b0885e5b"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="30" width="360" height="25" uuid="6b64b129-d14f-4389-b18c-0b2cad754f65">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Bottom">
+					<font size="12"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[(confidential and not available for inspection by the public)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="30" width="110" height="25" uuid="3b9da493-c046-4c67-9e1a-4e9e020da101">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="470" y="30" width="105" height="25" uuid="a3422901-f137-46eb-a654-f261fdc484dc">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="575" y="30" width="105" height="25" uuid="8a40a9f6-a4a0-430c-a6c7-a000e8ac7826">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="55" width="125" height="25" uuid="5bd4a1c7-aa6b-42cd-9c84-f29016453809">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[Name of bank:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="125" y="55" width="110" height="25" uuid="a280f50a-ee9f-4607-aa89-ac68d5e11978">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="235" y="55" width="235" height="25" uuid="1c277c4b-1261-4338-8204-3b75d22b5b25">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[Bank of Baroda (Botswana) Ltd.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="470" y="55" width="105" height="25" uuid="964e096a-4a14-47a2-a71f-0a8f1b0525fa">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="575" y="55" width="105" height="25" uuid="aac38a99-8833-40da-814c-e8b99d36dbd1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="80" width="125" height="25" uuid="883724fe-9e40-48cf-8bb9-1a03e7a8da68">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[Month ended (dd/mm/yyy):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="125" y="80" width="110" height="25" uuid="77c69e3e-19f0-45ac-b512-b59577b68612">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="235" y="80" width="125" height="25" uuid="49d112c8-6c7c-4a27-ae5c-b02f2edcb4f2">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[31.03.2023]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="80" width="110" height="25" uuid="45e642ce-5eda-40b8-bf5c-86adaafb1dd3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="470" y="80" width="105" height="25" uuid="c50ae2ac-6fe9-494f-af67-72012d5afb36">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="575" y="80" width="105" height="25" uuid="8d21aa5f-c705-42c3-b15e-e66bb97b65a6">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+		</band>
+	</title>
+	<summary>
+		<band height="482" splitType="Stretch">
+			<staticText>
+				<reportElement x="-20" y="0" width="20" height="25" uuid="22c00058-6060-48d3-ba06-ced84b2c3177"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="0" width="110" height="25" uuid="fa56c58c-1afd-4dec-892a-6060fa76413a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="360" height="25" uuid="9b6e7995-98e0-460e-8aab-6d73b2384683">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Bottom">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Loan To Value Breakdown for Residential Mortgage]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="470" y="0" width="105" height="25" uuid="eba620d4-596c-4bfc-b10f-b89f3f5f5a0f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="575" y="0" width="105" height="25" uuid="fdf367d7-cb50-40b0-89cf-e87f2fa888d6">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="25" width="125" height="25" uuid="2df19afb-acaa-479d-8dce-ba876984f0af">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="575" y="25" width="105" height="25" uuid="79879a33-f88f-4fc5-9ef0-b127237b6967">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="235" y="25" width="125" height="25" uuid="f0080e71-77ee-4197-ba09-af90a4636c04">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="25" width="110" height="25" uuid="3f5c7db8-ba78-47e0-b6fe-1e4d3d2dfcf5">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-20" y="25" width="20" height="25" uuid="b5c7c624-cb0c-44a9-bf6f-4c53f53f0047"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="125" y="25" width="110" height="25" uuid="90938cd6-fc4f-4f22-ab4f-2ddcb428b239">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="470" y="25" width="105" height="25" uuid="806e11b1-e5f8-488e-873f-e2681874b6b2">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-20" y="50" width="20" height="25" uuid="3401d4af-2d88-47cf-a0a9-6fa18a7a77e0"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-20" y="75" width="20" height="56" uuid="08685204-235a-4f5d-b4ff-acf3281f2ce1"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="50" width="125" height="81" uuid="e7caa9d4-d72e-4c38-9ba0-b91075ff0ac3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<box bottomPadding="5">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Arial" size="10"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[Loan To Value (LTV)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="125" y="50" width="450" height="25" uuid="7c004dc4-0d1d-4f4e-ab6c-2d89d13e0efe">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<box bottomPadding="5">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[Residential Mortgages]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="575" y="50" width="105" height="81" uuid="5a778f66-ac89-49ef-baaa-69d48c89acdf">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<box bottomPadding="5">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Arial"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="125" y="75" width="110" height="56" uuid="31b5b7fd-f0b6-4c94-8995-b0a90bcf77e8">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<box bottomPadding="5">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font isBold="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[ Performing Exposure ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="235" y="75" width="125" height="56" uuid="3ea0d95b-92e2-4356-8b2d-dd0f9245fc29">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<box bottomPadding="5">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font isBold="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[Non Performing Exposure]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="75" width="110" height="56" uuid="d54224c2-9c6c-4a0d-b5db-ccfd13850888">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<box bottomPadding="5">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font isBold="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[Specific Provisions]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="470" y="75" width="105" height="56" uuid="e7b08e93-c3c6-4bd7-9aa5-37420ac79acd">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<box bottomPadding="5">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font isBold="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[ Specific Provisions to Unsecured Portion of NPL (%)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-20" y="131" width="20" height="25" uuid="6981f15b-e529-4d84-bce2-1b207611aeb9"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="235" y="131" width="125" height="25" uuid="f381efd7-44ed-48b4-9a90-65f76ac1d037">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ B]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="131" width="110" height="25" uuid="7926be1c-621f-4086-9aca-d856be62518c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ C ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="575" y="131" width="105" height="25" uuid="9a6126be-82ce-460d-a40e-2501adbf7c1b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ A+B-C]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="125" y="131" width="110" height="25" uuid="1156e7bc-545b-495f-a39f-d48a7ee3e3d5">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ A ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="470" y="131" width="105" height="25" uuid="5be6e14d-2ec6-4cf2-a39a-f5d7b14cfcfd">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ D ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="131" width="125" height="25" uuid="2d39a1f0-2509-43d2-985b-a63029e2c02a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField pattern="#,###.00">
+				<reportElement x="470" y="156" width="105" height="30" uuid="7b3284d9-d4e3-4686-94b2-73126271a759">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R12_SP_UNSEC_POR_RES_MOR}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="156" width="125" height="30" uuid="c0d03d0a-0197-44c3-b662-bc624a13bebb">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R12_LOAN_TO_VAL}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.00">
+				<reportElement x="360" y="156" width="110" height="30" uuid="79316312-6df6-4ae0-aec8-a02d085756c4">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R12_SPEC_PROV_RES_MOR}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.00">
+				<reportElement x="125" y="156" width="110" height="30" uuid="40b50bf9-8a05-479c-99a5-87996bc28740">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R12_PER_EXP_RES_MOR}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-20" y="156" width="20" height="30" uuid="657811c6-11c4-44f5-88e0-1936fa915b36"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField pattern="#,###.00">
+				<reportElement x="235" y="156" width="125" height="30" uuid="724e26ec-b280-4300-88fd-b7762c1f83f7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R12_NON_PER_EXP_RES_MOR}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.00">
+				<reportElement x="575" y="156" width="105" height="30" uuid="07e75341-5483-4081-a76a-0b5a4bbe38a6">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R12_TOTAL}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.00">
+				<reportElement x="470" y="206" width="105" height="25" uuid="ef1bb418-0c20-49b4-9202-df91e91bbb42">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R14_SP_UNSEC_POR_RES_MOR}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="206" width="125" height="25" uuid="8da3e378-5152-4659-9e25-9b887922e4af">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R14_LOAN_TO_VAL}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.00">
+				<reportElement x="360" y="206" width="110" height="25" uuid="6eba1bc9-60ab-4474-8c19-c616d64ea082">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R14_SPEC_PROV_RES_MOR}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.00">
+				<reportElement x="125" y="206" width="110" height="25" uuid="cd17a6f3-4f5d-44ff-860d-0ed18ecb1595">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R14_PER_EXP_RES_MOR}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-20" y="206" width="20" height="25" uuid="7bc4ff44-5938-46e4-8e72-e9928869ebc0"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField pattern="#,###.00">
+				<reportElement x="235" y="206" width="125" height="25" uuid="79f28723-d1a4-469b-983b-fa82a6c922a7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R14_NON_PER_EXP_RES_MOR}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.00">
+				<reportElement x="575" y="206" width="105" height="25" uuid="13354c5c-a031-4647-9fcd-f5d11708fd85">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R14_TOTAL}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.00">
+				<reportElement x="575" y="231" width="105" height="25" uuid="f9b9ae62-8a9b-4203-bca6-1dc19a7172c7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R15_TOTAL}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.00">
+				<reportElement x="470" y="231" width="105" height="25" uuid="5640d054-13bd-4448-976f-e2af1527fd12">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R15_SP_UNSEC_POR_RES_MOR}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="231" width="125" height="25" uuid="71e2220e-13d2-41a1-96f8-12aec08737c9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R15_LOAN_TO_VAL}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-20" y="231" width="20" height="25" uuid="3d4df8ee-a4ae-483e-a3e4-a757462ee4f1"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField pattern="#,###.00">
+				<reportElement x="360" y="231" width="110" height="25" uuid="b12739f2-1c0d-4e62-8c72-6dc78dc97b2f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R15_SPEC_PROV_RES_MOR}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.00">
+				<reportElement x="235" y="231" width="125" height="25" uuid="ebc3e9e9-926b-451e-b198-57772f450493">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R15_NON_PER_EXP_RES_MOR}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.00">
+				<reportElement x="125" y="231" width="110" height="25" uuid="9401510b-8e05-40d2-9d35-cd397af8e33b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R15_PER_EXP_RES_MOR}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.00">
+				<reportElement x="575" y="281" width="105" height="25" uuid="d4599957-9560-4e78-bcd9-1098d6f8c631">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R17_TOTAL}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.00">
+				<reportElement x="575" y="306" width="105" height="25" uuid="dd863569-2196-413f-8704-ca3b2e555f8e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R18_TOTAL}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.00">
+				<reportElement x="360" y="256" width="110" height="25" uuid="e35a07c4-0d59-4fdd-b0af-49f28f1c19d6">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R16_SPEC_PROV_RES_MOR}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.00">
+				<reportElement x="125" y="281" width="110" height="25" uuid="e1075f30-0674-468e-9757-11424b542cdc">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R17_PER_EXP_RES_MOR}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.00">
+				<reportElement x="235" y="331" width="125" height="25" uuid="fdd4b9c8-acd0-4311-bfdb-8ccc513dd0aa">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R19_NON_PER_EXP_RES_MOR}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.00">
+				<reportElement x="235" y="281" width="125" height="25" uuid="b8c24d1a-f98c-4a09-8f16-bee24effbd99">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R17_NON_PER_EXP_RES_MOR}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.00">
+				<reportElement x="575" y="256" width="105" height="25" uuid="208fba51-8afa-4213-be77-2750cae1605c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R16_TOTAL}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-20" y="281" width="20" height="25" uuid="b1d4277a-de38-4f95-b231-9ee8120a7bf3"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField pattern="#,###.00">
+				<reportElement x="470" y="306" width="105" height="25" uuid="37e5675f-d4a1-4074-ad26-e15d6bbc1bb9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R18_SP_UNSEC_POR_RES_MOR}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="306" width="125" height="25" uuid="1b80d24e-9265-49be-9298-65f0454cae8d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R18_LOAN_TO_VAL}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-20" y="256" width="20" height="25" uuid="5bec704b-8fde-4214-88e4-059b78e6cfc2"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="281" width="125" height="25" uuid="d62633aa-c18e-48a8-ba65-13da71e96bef">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R17_LOAN_TO_VAL}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.00">
+				<reportElement x="360" y="331" width="110" height="25" uuid="1e2c9be6-7cfe-4279-afe3-ed167623d1aa">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R19_SPEC_PROV_RES_MOR}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.00">
+				<reportElement x="575" y="331" width="105" height="25" uuid="813b848e-4153-4a77-93c7-35fa73024e77">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R19_TOTAL}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.00">
+				<reportElement x="470" y="331" width="105" height="25" uuid="79c6d4c4-a499-4e37-8185-68b203ca6c84">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R19_SP_UNSEC_POR_RES_MOR}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.00">
+				<reportElement x="470" y="256" width="105" height="25" uuid="453e9586-ece2-4f94-a608-2265df12919c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R16_SP_UNSEC_POR_RES_MOR}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-20" y="306" width="20" height="25" uuid="7fc9e4fc-8706-4543-b3f6-9b853919d0ef"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField pattern="#,###.00">
+				<reportElement x="360" y="281" width="110" height="25" uuid="2438b836-3176-41f2-9fdf-ea38be156731">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R17_SPEC_PROV_RES_MOR}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.00">
+				<reportElement x="360" y="306" width="110" height="25" uuid="7c361583-0083-46cb-b46e-7838cb5a96af">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R18_SPEC_PROV_RES_MOR}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.00">
+				<reportElement x="470" y="281" width="105" height="25" uuid="50f05e21-105a-4a1c-9f16-1b11507bd0ee">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R17_SP_UNSEC_POR_RES_MOR}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="331" width="125" height="25" uuid="fea70559-aae2-48be-9276-333c65af2775">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R19_LOAN_TO_VAL}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.00">
+				<reportElement x="235" y="306" width="125" height="25" uuid="74932f6f-dc51-41a7-a559-3ae7509ff3ed">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R18_NON_PER_EXP_RES_MOR}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.00">
+				<reportElement x="125" y="331" width="110" height="25" uuid="0fa9315c-e8a1-4307-8588-2b2ab5568cb6">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R19_PER_EXP_RES_MOR}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-20" y="331" width="20" height="25" uuid="eaa8f19d-0ae1-472d-b541-cae47cd08ca6"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField pattern="#,###.00">
+				<reportElement x="235" y="256" width="125" height="25" uuid="b9d1a012-f01a-465d-b241-831e380cf2a9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R16_NON_PER_EXP_RES_MOR}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.00">
+				<reportElement x="125" y="256" width="110" height="25" uuid="cf282f9b-3524-41e3-b322-9f188cb2c69a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R16_PER_EXP_RES_MOR}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.00">
+				<reportElement x="125" y="306" width="110" height="25" uuid="e88b2ca8-bc59-4515-8a33-42837236434d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R18_PER_EXP_RES_MOR}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="256" width="125" height="25" uuid="eeede64c-14a1-4a57-9274-f6fe5ae6da4b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R16_LOAN_TO_VAL}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.00">
+				<reportElement x="235" y="186" width="125" height="20" uuid="2cb9afb4-4fee-408d-82f3-ae4d390cd2aa">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R13_NON_PER_EXP_RES_MOR}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="186" width="125" height="20" uuid="a85ed89b-0f79-417e-8719-ea0f864f1430">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R13_LOAN_TO_VAL}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.00">
+				<reportElement x="575" y="186" width="105" height="20" uuid="bd722420-333c-4c38-9e0b-8bcb562797bf">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R13_TOTAL}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.00">
+				<reportElement x="360" y="186" width="110" height="20" uuid="d24237c3-55ff-4caa-a142-6bb5126e979a">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R13_SPEC_PROV_RES_MOR}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-20" y="186" width="20" height="20" uuid="96aca190-b6b7-494b-8cda-f303708ea900">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField pattern="#,###.00">
+				<reportElement x="470" y="186" width="105" height="20" uuid="361be743-d190-41a3-8690-7b6aa77414d8">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R13_SP_UNSEC_POR_RES_MOR}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###.00">
+				<reportElement x="125" y="186" width="110" height="20" uuid="883079e8-fef3-4e95-a137-3b1b47a8c26a">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R13_PER_EXP_RES_MOR}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

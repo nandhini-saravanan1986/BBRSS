@@ -1,0 +1,3539 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="BRS3" pageWidth="2000" pageHeight="2000" columnWidth="1960" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bcfdeace-bc83-4a7f-a785-7b4c77f2dc29">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="BRSS.jrdax"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="REPORT_DATE" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT * FROM SFINP1 WHERE REPORT_DATE=$P{REPORT_DATE}]]>
+	</queryString>
+	<field name="R10_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R10_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R10_ASSETS"/>
+	</field>
+	<field name="R10_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R10_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R10_CROSS_REFERENCE"/>
+	</field>
+	<field name="R10_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R10_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R10_MONTH_END"/>
+	</field>
+	<field name="R10_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R10_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R10_AVERAGE"/>
+	</field>
+	<field name="R11_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R11_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R11_ASSETS"/>
+	</field>
+	<field name="R11_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R11_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R11_CROSS_REFERENCE"/>
+	</field>
+	<field name="R11_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R11_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R11_MONTH_END"/>
+	</field>
+	<field name="R11_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R11_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R11_AVERAGE"/>
+	</field>
+	<field name="R12_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R12_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R12_ASSETS"/>
+	</field>
+	<field name="R12_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R12_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R12_CROSS_REFERENCE"/>
+	</field>
+	<field name="R12_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R12_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R12_MONTH_END"/>
+	</field>
+	<field name="R12_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R12_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R12_AVERAGE"/>
+	</field>
+	<field name="R13_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R13_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R13_ASSETS"/>
+	</field>
+	<field name="R13_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R13_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R13_CROSS_REFERENCE"/>
+	</field>
+	<field name="R13_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R13_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R13_MONTH_END"/>
+	</field>
+	<field name="R13_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R13_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R13_AVERAGE"/>
+	</field>
+	<field name="R14_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R14_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R14_ASSETS"/>
+	</field>
+	<field name="R14_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R14_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R14_CROSS_REFERENCE"/>
+	</field>
+	<field name="R14_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R14_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R14_MONTH_END"/>
+	</field>
+	<field name="R14_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R14_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R14_AVERAGE"/>
+	</field>
+	<field name="R15_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R15_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R15_ASSETS"/>
+	</field>
+	<field name="R15_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R15_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R15_CROSS_REFERENCE"/>
+	</field>
+	<field name="R15_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R15_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R15_MONTH_END"/>
+	</field>
+	<field name="R15_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R15_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R15_AVERAGE"/>
+	</field>
+	<field name="R16_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R16_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R16_ASSETS"/>
+	</field>
+	<field name="R16_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R16_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R16_CROSS_REFERENCE"/>
+	</field>
+	<field name="R16_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R16_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R16_MONTH_END"/>
+	</field>
+	<field name="R16_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R16_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R16_AVERAGE"/>
+	</field>
+	<field name="R17_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R17_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R17_ASSETS"/>
+	</field>
+	<field name="R17_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R17_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R17_CROSS_REFERENCE"/>
+	</field>
+	<field name="R17_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R17_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R17_MONTH_END"/>
+	</field>
+	<field name="R17_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R17_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R17_AVERAGE"/>
+	</field>
+	<field name="R18_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R18_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R18_ASSETS"/>
+	</field>
+	<field name="R18_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R18_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R18_CROSS_REFERENCE"/>
+	</field>
+	<field name="R18_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R18_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R18_MONTH_END"/>
+	</field>
+	<field name="R18_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R18_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R18_AVERAGE"/>
+	</field>
+	<field name="R19_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R19_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R19_ASSETS"/>
+	</field>
+	<field name="R19_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R19_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R19_CROSS_REFERENCE"/>
+	</field>
+	<field name="R19_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R19_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R19_MONTH_END"/>
+	</field>
+	<field name="R19_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R19_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R19_AVERAGE"/>
+	</field>
+	<field name="R20_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R20_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R20_ASSETS"/>
+	</field>
+	<field name="R20_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R20_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R20_CROSS_REFERENCE"/>
+	</field>
+	<field name="R20_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R20_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R20_MONTH_END"/>
+	</field>
+	<field name="R20_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R20_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R20_AVERAGE"/>
+	</field>
+	<field name="R21_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R21_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R21_ASSETS"/>
+	</field>
+	<field name="R21_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R21_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R21_CROSS_REFERENCE"/>
+	</field>
+	<field name="R21_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R21_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R21_MONTH_END"/>
+	</field>
+	<field name="R21_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R21_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R21_AVERAGE"/>
+	</field>
+	<field name="R22_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R22_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R22_ASSETS"/>
+	</field>
+	<field name="R22_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R22_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R22_CROSS_REFERENCE"/>
+	</field>
+	<field name="R22_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R22_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R22_MONTH_END"/>
+	</field>
+	<field name="R22_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R22_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R22_AVERAGE"/>
+	</field>
+	<field name="R23_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R23_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R23_ASSETS"/>
+	</field>
+	<field name="R23_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R23_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R23_CROSS_REFERENCE"/>
+	</field>
+	<field name="R23_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R23_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R23_MONTH_END"/>
+	</field>
+	<field name="R23_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R23_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R23_AVERAGE"/>
+	</field>
+	<field name="R24_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R24_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R24_ASSETS"/>
+	</field>
+	<field name="R24_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R24_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R24_CROSS_REFERENCE"/>
+	</field>
+	<field name="R24_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R24_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R24_MONTH_END"/>
+	</field>
+	<field name="R24_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R24_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R24_AVERAGE"/>
+	</field>
+	<field name="R25_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R25_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R25_ASSETS"/>
+	</field>
+	<field name="R25_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R25_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R25_CROSS_REFERENCE"/>
+	</field>
+	<field name="R25_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R25_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R25_MONTH_END"/>
+	</field>
+	<field name="R25_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R25_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R25_AVERAGE"/>
+	</field>
+	<field name="R26_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R26_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R26_ASSETS"/>
+	</field>
+	<field name="R26_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R26_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R26_CROSS_REFERENCE"/>
+	</field>
+	<field name="R26_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R26_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R26_MONTH_END"/>
+	</field>
+	<field name="R26_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R26_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R26_AVERAGE"/>
+	</field>
+	<field name="R27_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R27_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R27_ASSETS"/>
+	</field>
+	<field name="R27_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R27_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R27_CROSS_REFERENCE"/>
+	</field>
+	<field name="R27_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R27_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R27_MONTH_END"/>
+	</field>
+	<field name="R27_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R27_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R27_AVERAGE"/>
+	</field>
+	<field name="R28_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R28_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R28_ASSETS"/>
+	</field>
+	<field name="R28_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R28_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R28_CROSS_REFERENCE"/>
+	</field>
+	<field name="R28_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R28_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R28_MONTH_END"/>
+	</field>
+	<field name="R28_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R28_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R28_AVERAGE"/>
+	</field>
+	<field name="R29_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R29_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R29_ASSETS"/>
+	</field>
+	<field name="R29_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R29_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R29_CROSS_REFERENCE"/>
+	</field>
+	<field name="R29_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R29_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R29_MONTH_END"/>
+	</field>
+	<field name="R29_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R29_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R29_AVERAGE"/>
+	</field>
+	<field name="R30_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R30_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R30_ASSETS"/>
+	</field>
+	<field name="R30_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R30_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R30_CROSS_REFERENCE"/>
+	</field>
+	<field name="R30_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R30_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R30_MONTH_END"/>
+	</field>
+	<field name="R30_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R30_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R30_AVERAGE"/>
+	</field>
+	<field name="R31_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R31_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R31_ASSETS"/>
+	</field>
+	<field name="R31_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R31_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R31_CROSS_REFERENCE"/>
+	</field>
+	<field name="R31_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R31_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R31_MONTH_END"/>
+	</field>
+	<field name="R31_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R31_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R31_AVERAGE"/>
+	</field>
+	<field name="R32_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R32_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R32_ASSETS"/>
+	</field>
+	<field name="R32_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R32_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R32_CROSS_REFERENCE"/>
+	</field>
+	<field name="R32_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R32_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R32_MONTH_END"/>
+	</field>
+	<field name="R32_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R32_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R32_AVERAGE"/>
+	</field>
+	<field name="R33_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R33_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R33_ASSETS"/>
+	</field>
+	<field name="R33_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R33_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R33_CROSS_REFERENCE"/>
+	</field>
+	<field name="R33_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R33_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R33_MONTH_END"/>
+	</field>
+	<field name="R33_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R33_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R33_AVERAGE"/>
+	</field>
+	<field name="R34_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R34_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R34_ASSETS"/>
+	</field>
+	<field name="R34_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R34_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R34_CROSS_REFERENCE"/>
+	</field>
+	<field name="R34_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R34_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R34_MONTH_END"/>
+	</field>
+	<field name="R34_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R34_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R34_AVERAGE"/>
+	</field>
+	<field name="R35_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R35_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R35_ASSETS"/>
+	</field>
+	<field name="R35_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R35_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R35_CROSS_REFERENCE"/>
+	</field>
+	<field name="R35_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R35_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R35_MONTH_END"/>
+	</field>
+	<field name="R35_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R35_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R35_AVERAGE"/>
+	</field>
+	<field name="R36_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R36_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R36_ASSETS"/>
+	</field>
+	<field name="R36_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R36_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R36_CROSS_REFERENCE"/>
+	</field>
+	<field name="R36_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R36_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R36_MONTH_END"/>
+	</field>
+	<field name="R36_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R36_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R36_AVERAGE"/>
+	</field>
+	<field name="R37_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R37_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R37_ASSETS"/>
+	</field>
+	<field name="R37_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R37_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R37_CROSS_REFERENCE"/>
+	</field>
+	<field name="R37_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R37_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R37_MONTH_END"/>
+	</field>
+	<field name="R37_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R37_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R37_AVERAGE"/>
+	</field>
+	<field name="R38_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R38_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R38_ASSETS"/>
+	</field>
+	<field name="R38_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R38_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R38_CROSS_REFERENCE"/>
+	</field>
+	<field name="R38_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R38_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R38_MONTH_END"/>
+	</field>
+	<field name="R38_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R38_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R38_AVERAGE"/>
+	</field>
+	<field name="R39_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R39_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R39_ASSETS"/>
+	</field>
+	<field name="R39_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R39_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R39_CROSS_REFERENCE"/>
+	</field>
+	<field name="R39_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R39_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R39_MONTH_END"/>
+	</field>
+	<field name="R39_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R39_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R39_AVERAGE"/>
+	</field>
+	<field name="R40_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R40_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R40_ASSETS"/>
+	</field>
+	<field name="R40_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R40_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R40_CROSS_REFERENCE"/>
+	</field>
+	<field name="R40_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R40_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R40_MONTH_END"/>
+	</field>
+	<field name="R40_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R40_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R40_AVERAGE"/>
+	</field>
+	<field name="R41_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R41_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R41_ASSETS"/>
+	</field>
+	<field name="R41_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R41_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R41_CROSS_REFERENCE"/>
+	</field>
+	<field name="R41_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R41_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R41_MONTH_END"/>
+	</field>
+	<field name="R41_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R41_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R41_AVERAGE"/>
+	</field>
+	<field name="R42_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R42_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R42_ASSETS"/>
+	</field>
+	<field name="R42_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R42_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R42_CROSS_REFERENCE"/>
+	</field>
+	<field name="R42_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R42_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R42_MONTH_END"/>
+	</field>
+	<field name="R42_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R42_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R42_AVERAGE"/>
+	</field>
+	<field name="R43_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R43_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R43_ASSETS"/>
+	</field>
+	<field name="R43_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R43_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R43_CROSS_REFERENCE"/>
+	</field>
+	<field name="R43_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R43_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R43_MONTH_END"/>
+	</field>
+	<field name="R43_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R43_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R43_AVERAGE"/>
+	</field>
+	<field name="R44_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R44_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R44_ASSETS"/>
+	</field>
+	<field name="R44_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R44_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R44_CROSS_REFERENCE"/>
+	</field>
+	<field name="R44_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R44_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R44_MONTH_END"/>
+	</field>
+	<field name="R44_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R44_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R44_AVERAGE"/>
+	</field>
+	<field name="R45_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R45_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R45_ASSETS"/>
+	</field>
+	<field name="R45_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R45_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R45_CROSS_REFERENCE"/>
+	</field>
+	<field name="R45_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R45_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R45_MONTH_END"/>
+	</field>
+	<field name="R45_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R45_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R45_AVERAGE"/>
+	</field>
+	<field name="R46_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R46_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R46_ASSETS"/>
+	</field>
+	<field name="R46_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R46_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R46_CROSS_REFERENCE"/>
+	</field>
+	<field name="R46_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R46_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R46_MONTH_END"/>
+	</field>
+	<field name="R46_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R46_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R46_AVERAGE"/>
+	</field>
+	<field name="R47_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R47_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R47_ASSETS"/>
+	</field>
+	<field name="R47_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R47_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R47_CROSS_REFERENCE"/>
+	</field>
+	<field name="R47_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R47_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R47_MONTH_END"/>
+	</field>
+	<field name="R47_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R47_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R47_AVERAGE"/>
+	</field>
+	<field name="R48_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R48_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R48_ASSETS"/>
+	</field>
+	<field name="R48_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R48_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R48_CROSS_REFERENCE"/>
+	</field>
+	<field name="R48_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R48_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R48_MONTH_END"/>
+	</field>
+	<field name="R48_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R48_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R48_AVERAGE"/>
+	</field>
+	<field name="R49_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R49_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R49_ASSETS"/>
+	</field>
+	<field name="R49_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R49_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R49_CROSS_REFERENCE"/>
+	</field>
+	<field name="R49_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R49_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R49_MONTH_END"/>
+	</field>
+	<field name="R49_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R49_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R49_AVERAGE"/>
+	</field>
+	<field name="R50_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R50_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R50_ASSETS"/>
+	</field>
+	<field name="R50_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R50_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R50_CROSS_REFERENCE"/>
+	</field>
+	<field name="R50_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R50_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R50_MONTH_END"/>
+	</field>
+	<field name="R50_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R50_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R50_AVERAGE"/>
+	</field>
+	<field name="R51_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R51_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R51_ASSETS"/>
+	</field>
+	<field name="R51_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R51_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R51_CROSS_REFERENCE"/>
+	</field>
+	<field name="R51_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R51_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R51_MONTH_END"/>
+	</field>
+	<field name="R51_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R51_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R51_AVERAGE"/>
+	</field>
+	<field name="R52_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R52_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R52_ASSETS"/>
+	</field>
+	<field name="R52_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R52_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R52_CROSS_REFERENCE"/>
+	</field>
+	<field name="R52_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R52_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R52_MONTH_END"/>
+	</field>
+	<field name="R52_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R52_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R52_AVERAGE"/>
+	</field>
+	<field name="R53_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R53_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R53_ASSETS"/>
+	</field>
+	<field name="R53_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R53_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R53_CROSS_REFERENCE"/>
+	</field>
+	<field name="R53_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R53_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R53_MONTH_END"/>
+	</field>
+	<field name="R53_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R53_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R53_AVERAGE"/>
+	</field>
+	<field name="R54_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R54_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R54_ASSETS"/>
+	</field>
+	<field name="R54_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R54_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R54_CROSS_REFERENCE"/>
+	</field>
+	<field name="R54_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R54_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R54_MONTH_END"/>
+	</field>
+	<field name="R54_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R54_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R54_AVERAGE"/>
+	</field>
+	<field name="R55_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R55_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R55_ASSETS"/>
+	</field>
+	<field name="R55_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R55_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R55_CROSS_REFERENCE"/>
+	</field>
+	<field name="R55_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R55_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R55_MONTH_END"/>
+	</field>
+	<field name="R55_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R55_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R55_AVERAGE"/>
+	</field>
+	<field name="R56_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R56_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R56_ASSETS"/>
+	</field>
+	<field name="R56_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R56_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R56_CROSS_REFERENCE"/>
+	</field>
+	<field name="R56_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R56_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R56_MONTH_END"/>
+	</field>
+	<field name="R56_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R56_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R56_AVERAGE"/>
+	</field>
+	<field name="R57_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R57_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R57_ASSETS"/>
+	</field>
+	<field name="R57_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R57_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R57_CROSS_REFERENCE"/>
+	</field>
+	<field name="R57_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R57_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R57_MONTH_END"/>
+	</field>
+	<field name="R57_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R57_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R57_AVERAGE"/>
+	</field>
+	<field name="R58_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R58_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R58_ASSETS"/>
+	</field>
+	<field name="R58_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R58_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R58_CROSS_REFERENCE"/>
+	</field>
+	<field name="R58_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R58_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R58_MONTH_END"/>
+	</field>
+	<field name="R58_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R58_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R58_AVERAGE"/>
+	</field>
+	<field name="R59_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R59_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R59_ASSETS"/>
+	</field>
+	<field name="R59_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R59_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R59_CROSS_REFERENCE"/>
+	</field>
+	<field name="R59_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R59_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R59_MONTH_END"/>
+	</field>
+	<field name="R59_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R59_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R59_AVERAGE"/>
+	</field>
+	<field name="R60_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R60_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R60_ASSETS"/>
+	</field>
+	<field name="R60_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R60_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R60_CROSS_REFERENCE"/>
+	</field>
+	<field name="R60_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R60_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R60_MONTH_END"/>
+	</field>
+	<field name="R60_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R60_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R60_AVERAGE"/>
+	</field>
+	<field name="R61_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R61_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R61_ASSETS"/>
+	</field>
+	<field name="R61_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R61_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R61_CROSS_REFERENCE"/>
+	</field>
+	<field name="R61_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R61_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R61_MONTH_END"/>
+	</field>
+	<field name="R61_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R61_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R61_AVERAGE"/>
+	</field>
+	<field name="R62_ASSETS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R62_ASSETS"/>
+		<property name="com.jaspersoft.studio.field.label" value="R62_ASSETS"/>
+	</field>
+	<field name="R62_CROSS_REFERENCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R62_CROSS_REFERENCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R62_CROSS_REFERENCE"/>
+	</field>
+	<field name="R62_MONTH_END" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R62_MONTH_END"/>
+		<property name="com.jaspersoft.studio.field.label" value="R62_MONTH_END"/>
+	</field>
+	<field name="R62_AVERAGE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R62_AVERAGE"/>
+		<property name="com.jaspersoft.studio.field.label" value="R62_AVERAGE"/>
+	</field>
+	<field name="REPORT_DATE" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="REPORT_DATE"/>
+		<property name="com.jaspersoft.studio.field.label" value="REPORT_DATE"/>
+	</field>
+	<field name="REPORT_FROM_DATE" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="REPORT_FROM_DATE"/>
+		<property name="com.jaspersoft.studio.field.label" value="REPORT_FROM_DATE"/>
+	</field>
+	<field name="REPORT_TO_DATE" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="REPORT_TO_DATE"/>
+		<property name="com.jaspersoft.studio.field.label" value="REPORT_TO_DATE"/>
+	</field>
+	<field name="ENTITY_FLG" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="ENTITY_FLG"/>
+		<property name="com.jaspersoft.studio.field.label" value="ENTITY_FLG"/>
+	</field>
+	<field name="MODIFY_FLG" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="MODIFY_FLG"/>
+		<property name="com.jaspersoft.studio.field.label" value="MODIFY_FLG"/>
+	</field>
+	<field name="DEL_FLG" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="DEL_FLG"/>
+		<property name="com.jaspersoft.studio.field.label" value="DEL_FLG"/>
+	</field>
+	<field name="REPORT_CODE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="REPORT_CODE"/>
+		<property name="com.jaspersoft.studio.field.label" value="REPORT_CODE"/>
+	</field>
+	<field name="REPORT_SUBMIT_DATE" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="REPORT_SUBMIT_DATE"/>
+		<property name="com.jaspersoft.studio.field.label" value="REPORT_SUBMIT_DATE"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="160" splitType="Stretch">
+			<staticText>
+				<reportElement x="-20" y="0" width="400" height="20" uuid="5d5fb587-ff1a-4ec0-88c5-d3c98b1a9584"/>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[BANK OF BOTSWANA - BANKING SUPERVISION DEPARTMENT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="540" y="0" width="160" height="20" uuid="de82ba42-c022-4574-8850-45aa667c4896"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-20" y="20" width="560" height="20" uuid="b0c1b75f-fbbf-48ca-91d2-fda7e3fde1ed"/>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[(1) MONTHLY SCHEDULE M-SFinP1:   STATEMENT OF FINANCIAL POSITION AS AT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="540" y="20" width="160" height="20" uuid="adf7222e-d0ed-4225-a497-f222f953d87d"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="540" y="40" width="160" height="20" uuid="ed7f905f-bd5e-4763-b2b9-abfa05ed367f"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-20" y="60" width="400" height="20" uuid="bd6bc077-4a66-4fe2-bb40-a22f8f6a1cc4"/>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[(confidential and not available for inspection by the public)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="540" y="60" width="160" height="20" uuid="dad45213-34a8-44d8-b692-cbb1f66cd60f"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-20" y="40" width="400" height="20" uuid="cbb8fd6d-65a3-4556-9885-e07a15489f26"/>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ (P'000)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="540" y="80" width="160" height="20" uuid="96252607-f6ca-4951-a9ec-a030a02b48d4"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-20" y="100" width="400" height="20" uuid="9392a734-ccda-48bf-88d2-e4247d1f1fbf"/>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Month ended (dd/mm/yyy):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="540" y="100" width="160" height="20" uuid="1958157a-c9db-412e-87d1-5112b1e533c6"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-20" y="80" width="400" height="20" uuid="fa743c99-332f-4744-969f-a7a17109bc13"/>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Name of bank:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-20" y="140" width="400" height="20" uuid="6e9ef219-1ff7-4b74-b3b5-13962abea4fc"/>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ASSETS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="540" y="140" width="160" height="20" uuid="c5ac0f9e-4ece-4f4f-98d0-4af7e123d0e5"/>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[MONTH-END]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="700" y="100" width="160" height="20" uuid="097d1a94-53a3-4fef-8ca0-26890dfa4a08"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="700" y="0" width="160" height="20" uuid="59105c71-cb59-4619-8e3a-8e4d3692f27d"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="700" y="60" width="160" height="20" uuid="095b6a96-7a19-49ac-bc23-b37b7a5d9a2f"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="700" y="20" width="160" height="20" uuid="1d2278a4-809b-40ff-9fb3-883692f1de52"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="700" y="140" width="160" height="20" uuid="f8419e49-ae95-4bf2-8908-ed4608bfe8bb"/>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[AVERAGE*]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="700" y="40" width="160" height="20" uuid="bb0c9859-3dc6-40c6-8398-0baa2aaebadf"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="700" y="80" width="160" height="20" uuid="8bf3fba5-961c-4bbd-8371-841ac604c6a9"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="100" width="160" height="20" uuid="6aa5d7d5-20f2-4e58-8152-a02eace308e7"/>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[31.12.2022]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="0" width="160" height="20" uuid="a72c7105-29a2-49bd-b712-b5f06d5fec61"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="60" width="160" height="20" uuid="e5fbb584-8822-42bc-8e47-afd7847adbc8"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="140" width="160" height="20" uuid="192547e5-56fb-45f7-92f2-f50630e2748f"/>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cross Reference]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="40" width="160" height="20" uuid="93573bc7-103f-4956-ad72-0276ed95d07e"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="80" width="160" height="20" uuid="77a3526e-98b0-4c5a-9c58-b61762942f45"/>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Bank of Baroda (Botswana) Ltd.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-20" y="120" width="400" height="20" uuid="432bbeea-f4a2-490e-b968-c5bacad1d3f7">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="120" width="160" height="20" uuid="8c243b37-660c-41da-8306-4ef3f633520f"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="540" y="120" width="160" height="20" uuid="66bf87e5-e75d-416e-bee0-90abc5373175"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="700" y="120" width="160" height="20" uuid="6295ce9e-964d-46cd-9fe1-44fa99d11ce5"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+		</band>
+	</title>
+	<summary>
+		<band height="1390" splitType="Stretch">
+			<textField>
+				<reportElement x="-20" y="300" width="400" height="25" uuid="1f2beede-8e21-4ab2-a9c2-4f4e2ca9219a">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="40">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R22_ASSETS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="0" width="160" height="25" uuid="9de69247-0140-4b40-bea6-3e04131413d1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R10_CROSS_REFERENCE}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="540" y="0" width="160" height="25" uuid="575c2588-36b9-4a07-9ff8-30586c05379b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R10_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="700" y="0" width="160" height="25" uuid="f7f98fd3-72d3-49e4-97b3-1831e824db6a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R10_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="25" width="400" height="25" uuid="8f0026a8-80e1-4959-a95a-e6881022a536">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R11_ASSETS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="25" width="160" height="25" uuid="7924d9ef-971f-4ab0-9d5c-5155e46ec7c4">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R11_CROSS_REFERENCE}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="540" y="25" width="160" height="25" uuid="5cb227fc-df91-4fb8-87ba-ad874972c339">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R11_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="700" y="25" width="160" height="25" uuid="b957c06e-0d20-4d3d-ad2f-d4dcf8801bcc">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R11_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="50" width="400" height="25" uuid="24f9df8c-964e-4aea-a541-10daaa47ab01">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R12_ASSETS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="50" width="160" height="25" uuid="535453c3-e797-4c7b-bb4f-2aa7d81b8fd0">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R12_CROSS_REFERENCE}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="540" y="50" width="160" height="25" uuid="fe035dfa-8d60-45e5-9762-4069f86db671">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R12_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="700" y="50" width="160" height="25" uuid="c9eb4290-bb3f-4dfa-b674-b9b9b3590024">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R12_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="75" width="400" height="25" uuid="b49dc719-f7b3-4a14-860c-aeaaead8519c">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<box leftPadding="25">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<paragraph leftIndent="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R13_ASSETS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="75" width="160" height="25" uuid="9565af4f-05fc-4ced-aa8f-53495c3bec36">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R13_CROSS_REFERENCE}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="540" y="75" width="160" height="25" uuid="f21ea366-80e6-42b3-82ed-cdc406a7fde3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R13_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="700" y="75" width="160" height="25" uuid="7498ce51-4728-4147-9d64-e5a1dee42019">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R13_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="100" width="400" height="25" uuid="5719119a-c71e-49a7-9d27-97adcc675e33">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="25">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R14_ASSETS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="100" width="160" height="25" uuid="bf7e6cf8-f59d-45cf-a5f2-f17d9e8d2569">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R14_CROSS_REFERENCE}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="540" y="100" width="160" height="25" uuid="ec976382-d6d3-41d4-bcec-1e8eb0189dee">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R14_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="700" y="100" width="160" height="25" uuid="5a9aeb8e-f765-4b0e-b015-2605b5429d2a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R14_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="125" width="400" height="25" uuid="7cda723b-75ff-46ad-b2ca-14aa0082ef99">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="25">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R15_ASSETS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="125" width="160" height="25" uuid="b43fe3b2-dfa5-4bff-b308-ed576ed57ef5">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R15_CROSS_REFERENCE}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="540" y="125" width="160" height="25" uuid="e293c540-32b7-4e03-9181-db7d02972a3f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R15_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="700" y="125" width="160" height="25" uuid="96c1c0f3-462f-4bce-84c5-4baec19fc16c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R15_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="150" width="400" height="25" uuid="054fc972-f1d4-4c0b-998d-52d06b715474">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="25">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R16_ASSETS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="150" width="160" height="25" uuid="e0911727-99b8-4a51-b178-21bf023aafbe">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R16_CROSS_REFERENCE}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="540" y="150" width="160" height="25" uuid="826f6033-5528-4455-be2d-f48127a17406">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R16_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="700" y="150" width="160" height="25" uuid="bad84d0d-2af4-47c5-b82c-15969a0358bb">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R16_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="175" width="400" height="25" uuid="eca3e8ef-d885-4c4f-ad4e-4ea756756903">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R17_ASSETS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="175" width="160" height="25" uuid="583d660f-1794-4c06-9e02-a5f556436b9f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R17_CROSS_REFERENCE}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="540" y="175" width="160" height="25" uuid="c974ad5d-aaa8-4b92-819d-6e2f4faa4cce">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R17_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="700" y="175" width="160" height="25" uuid="69d4dd11-8b04-416b-853c-b0619db8882f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R17_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="200" width="400" height="25" uuid="d7e9fe29-db80-40ed-9693-5f4c7f05527f">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R18_ASSETS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="200" width="160" height="25" uuid="a7c00ace-af48-47e1-821b-c43fda60e585">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R18_CROSS_REFERENCE}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="540" y="200" width="160" height="25" uuid="40c2958b-b0b4-447a-87e2-059d9205aa4f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R18_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="700" y="200" width="160" height="25" uuid="fe35194f-b999-4d43-94ef-3f3dc67b0d6d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R18_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="225" width="400" height="25" uuid="5c41522a-c446-4156-b5d0-c6fca0371a31">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R19_ASSETS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="225" width="160" height="25" uuid="77002cde-c366-42bd-ad58-6b3412e8e120">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R19_CROSS_REFERENCE}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="540" y="225" width="160" height="25" uuid="101a807c-6d9a-43b3-ad30-dfe5b73edd90">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R19_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="700" y="225" width="160" height="25" uuid="4d12951f-a5c3-4ace-8697-9a226699d796">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R19_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="250" width="400" height="25" uuid="463715c1-e4d1-4887-8e9d-7cac57d15cfa">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R20_ASSETS}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="380" y="250" width="160" height="25" uuid="3b9dca6c-4f21-426a-838f-c1b86d2de4b6">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField pattern="#,###">
+				<reportElement x="540" y="250" width="160" height="25" uuid="2b7454b7-3d9c-4026-b1d3-e981f8efc98f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R20_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="700" y="250" width="160" height="25" uuid="fa7aa03d-9148-4a6f-be21-d2f499cb0f06">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R20_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="275" width="400" height="25" uuid="52213767-1a84-48aa-9d8c-b96b7ddaf029">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="25">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R21_ASSETS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="275" width="160" height="25" uuid="dff3954a-64bb-4cfc-acdb-931efe3a0feb">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R21_CROSS_REFERENCE}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="540" y="275" width="160" height="25" uuid="e338b33c-9bda-476c-a14d-ccec5bdb846b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R21_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="700" y="275" width="160" height="25" uuid="873a95c3-70c5-4c05-b443-382c423bd0ab">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R21_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="0" width="400" height="25" uuid="9be9f195-910c-4a68-a918-2507a474cf18">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R10_ASSETS}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="380" y="300" width="160" height="25" uuid="efd9afdd-415e-4c2e-b4b8-14a45cb8cf86">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField pattern="#,###">
+				<reportElement x="540" y="300" width="160" height="25" uuid="ed08ba77-463c-4da8-9a59-67d0e67cd4fe">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R22_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="700" y="300" width="160" height="25" uuid="40e3d546-00d7-42fc-9482-28a89aac6c83">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R22_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="380" y="325" width="160" height="25" uuid="adcf14f6-e453-4e66-af64-3faa312256e3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField pattern="#,###">
+				<reportElement x="540" y="325" width="160" height="25" uuid="44e2e96c-160d-45f7-9751-985b9ab00b85">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R23_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="700" y="325" width="160" height="25" uuid="0197b99f-2df3-4d88-b52a-1f3b35ad6ec9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R23_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="325" width="400" height="25" uuid="57815050-2873-43a1-b078-f77e4ebbb358">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="40">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R23_ASSETS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="350" width="160" height="25" uuid="7f8d3bc5-ab22-4ef4-bcb6-35d5ee0619fe">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R24_CROSS_REFERENCE}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="540" y="350" width="160" height="25" uuid="0325685a-6ec9-4c3e-b7e8-634dea66ff93">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R24_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="700" y="350" width="160" height="25" uuid="bdb222d5-8da7-490e-8384-1a750322a902">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R24_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="350" width="400" height="25" uuid="0b54ab50-a36c-4cca-82b4-d05eb8244313">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="25">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R24_ASSETS}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="380" y="375" width="160" height="25" uuid="4c21a73b-9574-439b-a5bd-1c1d15a1a7b1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField pattern="#,###">
+				<reportElement x="540" y="375" width="160" height="25" uuid="625c64c1-c10d-44e1-aa19-21a4db5567ed">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R25_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="700" y="375" width="160" height="25" uuid="a97df7da-013a-4295-950e-1cc11c0a3cac">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R25_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="375" width="400" height="25" uuid="0fa05f8f-2512-47c4-80e4-efd7da18ac46">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="40">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R25_ASSETS}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="380" y="400" width="160" height="25" uuid="42bb61da-dcdc-4b08-bd77-4fdcbcff25c4">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField pattern="#,###">
+				<reportElement x="540" y="400" width="160" height="25" uuid="9b4929ac-0fd0-4454-8a52-3dc73c1cac9e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R26_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="700" y="400" width="160" height="25" uuid="6a8875f4-6a66-4404-8a8b-dc0cc58565a2">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R26_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="400" width="400" height="25" uuid="3c6c3416-80fd-4aa6-a75a-d08e67b76ed3">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="40">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R26_ASSETS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="425" width="160" height="25" uuid="001ba77f-e17b-4f30-8e3a-99bf9d8a5a28">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R27_CROSS_REFERENCE}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="540" y="425" width="160" height="25" uuid="8b65d576-1258-4e42-8305-7dfde057b741">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R27_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="700" y="425" width="160" height="25" uuid="41d3b32d-d805-4f82-b912-94c58cc1dadd">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R27_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="425" width="400" height="25" uuid="8132a6c1-bd1e-485f-8c33-bdec03d2d762">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R27_ASSETS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="450" width="160" height="25" uuid="2aa29991-b311-47fc-bfaa-7afab90e2913">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R28_CROSS_REFERENCE}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="540" y="450" width="160" height="25" uuid="82146c26-302f-49d9-b726-34d94510126f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R28_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="700" y="450" width="160" height="25" uuid="40b2113d-2387-4655-9589-b64d682c2175">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R28_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="450" width="400" height="25" uuid="4c3be3e8-b8ba-4590-b0f4-18ba2a6e07f1">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="25">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R28_ASSETS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="475" width="160" height="25" uuid="a8989e45-1e44-4ee2-87a6-7c6b924af409">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R29_CROSS_REFERENCE}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="540" y="475" width="160" height="25" uuid="a1a4e485-d95d-4777-85e7-766ac13bbb00">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R29_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="700" y="475" width="160" height="25" uuid="a319e3d8-e7b0-4e75-b33a-9a0ea266088e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R29_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="475" width="400" height="25" uuid="58b23c3d-2780-479a-8af3-328c481bc377">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="25">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R29_ASSETS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="500" width="160" height="25" uuid="f00e46bd-f7e0-4623-856c-5b51c1b6fc77">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R30_CROSS_REFERENCE}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="540" y="500" width="160" height="25" uuid="d0747a76-a751-4755-a68f-83c4a197a257">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R30_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="700" y="500" width="160" height="25" uuid="b03fa427-867f-4ad9-a738-e31faefb016c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R30_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="500" width="400" height="25" uuid="09225991-611b-431a-9f60-af224a8c4807">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="25">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R30_ASSETS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="525" width="160" height="25" uuid="bed20ccd-5e5d-4ce1-9e54-b8b1cf655d3b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R31_CROSS_REFERENCE}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="540" y="525" width="160" height="25" uuid="247c2448-0f12-4e2f-be38-0174decdc293">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R31_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="700" y="525" width="160" height="25" uuid="aeaf3991-a889-460e-abe4-c7ddfeda99fa">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R31_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="525" width="400" height="25" uuid="2691c858-6fdc-4b83-9490-d6746f495d74">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R31_ASSETS}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="380" y="550" width="160" height="25" uuid="b313031d-e186-4428-8b26-4146ddede11c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField pattern="#,###">
+				<reportElement x="540" y="550" width="160" height="25" uuid="5a15da9b-ed82-4a15-9121-9f34a0b66d0e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R32_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="700" y="550" width="160" height="25" uuid="5abfb3b5-b394-43c6-abf3-2cd1b97606d5">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R32_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="550" width="400" height="25" uuid="9e8399f6-f80a-4a85-82e8-7ff462b691a8">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="25">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R32_ASSETS}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="380" y="575" width="160" height="25" uuid="49707c4c-ba37-4e48-baa4-117e25b7233c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField pattern="#,###">
+				<reportElement x="540" y="575" width="160" height="25" uuid="05f521ab-b723-4a19-8e9e-8f1be6b4b458">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R33_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="700" y="575" width="160" height="25" uuid="9f4971ba-c0d2-4f29-8e14-c272add70533">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R33_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="575" width="400" height="25" uuid="2d766e97-9952-4b55-b47e-3cdba1b9be60">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="25">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R33_ASSETS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="600" width="400" height="25" uuid="9af666e0-48f9-487d-8d5d-a16e95d35723">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R34_ASSETS}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="700" y="600" width="160" height="25" uuid="a20b1862-5065-47a4-bc4a-4f5fe6df034a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R34_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="540" y="600" width="160" height="25" uuid="781032d8-5610-48cb-969e-8c8b7e9b59bb">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R34_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="600" width="160" height="25" uuid="611fe7d3-b0a7-4ce9-952a-09ca11e6b3f5">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R34_CROSS_REFERENCE}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="700" y="825" width="160" height="25" uuid="d9154a0b-87a6-4aa5-9c02-e5514bb5088f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R43_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="540" y="900" width="160" height="25" uuid="048d05f9-b45d-4b8e-9813-7a8b8023a422">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R46_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="540" y="725" width="160" height="25" uuid="ef203d35-078e-45f6-8f26-c166ac22ddec">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R39_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="700" y="1225" width="160" height="25" uuid="528230dc-e6d4-429b-8504-20d03a12625d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R59_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="540" y="1125" width="160" height="25" uuid="6e045f47-df36-4586-88bf-65609560ba59">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R55_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="540" y="1075" width="160" height="25" uuid="3ae05043-4de2-45e8-a6e2-866a0b867000">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R53_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="540" y="1100" width="160" height="25" uuid="f7044f3b-59e1-4d78-bfd7-f0fc393a645a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R54_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="1075" width="160" height="25" uuid="cc929070-d6e0-4f10-b625-3160e7e9efbe">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R53_CROSS_REFERENCE}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="700" y="1150" width="160" height="25" uuid="86f2564f-aef1-43a6-be8b-8a817a383ff7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R56_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="380" y="1150" width="160" height="25" uuid="90c3d434-6d7e-4f05-b91b-39b70db90103">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="-20" y="825" width="400" height="25" uuid="38fa2218-8a91-4cfa-aca4-500352a82420">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="25">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R43_ASSETS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="1025" width="400" height="25" uuid="610df174-6e5f-4524-8201-f908e7c00d8c">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="25">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R51_ASSETS}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="380" y="800" width="160" height="25" uuid="9f1b1c95-d0fd-4283-ad9d-3405d6e0e8f3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField pattern="#,###">
+				<reportElement x="700" y="875" width="160" height="25" uuid="4aa7d002-034d-4239-ae03-e0e5a0cc9d0a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R45_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="540" y="1225" width="160" height="25" uuid="ad8054a0-e772-44c0-a247-6555a60df73c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R59_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="540" y="775" width="160" height="25" uuid="bc66c3b2-d272-4470-ad94-a7c594335640">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R41_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="700" y="950" width="160" height="25" uuid="231b99e1-fa65-4c86-a5b3-bec713b1953d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R48_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="1125" width="400" height="25" uuid="87accfaf-76ba-4bb6-9b8e-0bf4c6291b71">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R55_ASSETS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="1000" width="400" height="25" uuid="1adce38a-07a6-4945-a121-918acf4b9038">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="25">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R50_ASSETS}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="700" y="1100" width="160" height="25" uuid="80797a11-005e-4e8d-91a3-24a60398a652">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R54_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="380" y="925" width="160" height="25" uuid="fc9849e3-9b7f-4ab6-8ed7-9946cb0e7923">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField pattern="#,###">
+				<reportElement x="700" y="625" width="160" height="25" uuid="bec68d37-c7f5-4821-9d7f-be8ba7f7faca">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R35_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="540" y="950" width="160" height="25" uuid="bfd573d8-6e80-456b-a9e7-c7b32940b5bd">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R48_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="540" y="675" width="160" height="25" uuid="b93aefae-d119-4870-bc64-2d9faf535614">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R37_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="380" y="700" width="160" height="25" uuid="72ee6445-ba85-4f07-93ec-62f117e3f2e8">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField pattern="#,###">
+				<reportElement x="540" y="925" width="160" height="25" uuid="5d61f911-a9fd-4d33-ae2e-5d3204d13872">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R47_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="380" y="1050" width="160" height="25" uuid="e53204fd-83d4-4bdb-baa4-bf9be72c0dc7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="-20" y="1175" width="400" height="25" uuid="19e5c11c-2f39-4813-9bc1-88634eec6712">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="25">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R57_ASSETS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="950" width="400" height="25" uuid="6792f938-e7bc-44d4-a8ee-a034b3a1e216">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="25">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R48_ASSETS}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="700" y="925" width="160" height="25" uuid="ad7f6330-8ae9-4135-81ad-2208eb0d60f2">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R47_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="700" y="975" width="160" height="25" uuid="c919a9fd-7107-4ed6-859d-c29ef1eb04c1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R49_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="650" width="400" height="25" uuid="b81d2103-17aa-48e0-92ca-9360e3e7ff0e">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="25">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R36_ASSETS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="1200" width="400" height="25" uuid="67d038b8-4dd5-4b66-9e99-b2d8b1653944">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="25">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R58_ASSETS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="750" width="160" height="25" uuid="3a04af21-4fdd-49d2-9fcd-5d3d43274a15">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R40_CROSS_REFERENCE}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="700" y="700" width="160" height="25" uuid="19d1d050-ddfe-4561-b565-9483374dd382">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R38_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="540" y="625" width="160" height="25" uuid="2ffb992c-1c91-4f07-b213-0f4fafbdc849">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R35_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="775" width="400" height="25" uuid="c5e9dd6b-5ca3-4720-8a8a-25b0bed33092">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="25">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R41_ASSETS}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="380" y="1225" width="160" height="25" uuid="50e40311-67d1-4e93-bc86-e517fe3bdb13">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField pattern="#,###">
+				<reportElement x="700" y="750" width="160" height="25" uuid="359f091a-a98b-490e-b227-b7843895bcc3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R40_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="380" y="975" width="160" height="25" uuid="87747451-29fd-4e7e-8325-2ca3a6a99308">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="-20" y="1050" width="400" height="25" uuid="f177b0a7-6ceb-4126-bcb2-2064695f141a">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="25">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R52_ASSETS}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="380" y="875" width="160" height="25" uuid="1bd4a28d-4dfb-454c-93cb-3ed7a69f8b40">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="900" width="160" height="25" uuid="e84c9e73-51ac-4ea5-b8c7-4774c4de8751">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="1000" width="160" height="25" uuid="4de6ebd5-98f3-43ed-b666-499fb5052d40">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="675" width="160" height="25" uuid="00041661-96bb-449e-a02b-b50ff5455d7e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="-20" y="625" width="400" height="25" uuid="7a4438d1-6cac-4ef1-8af9-7380739779e3">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R35_ASSETS}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="540" y="975" width="160" height="25" uuid="a663c5e3-96aa-4d15-9071-33547cd8b187">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R49_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="1225" width="400" height="25" uuid="774db98e-149a-4092-b62f-d15c921dc70e">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="25">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R59_ASSETS}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="700" y="800" width="160" height="25" uuid="2ff42a88-904b-491e-9f7d-95b225a5279b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R42_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="380" y="1025" width="160" height="25" uuid="bdac818c-f29c-4074-8eca-e3bba6bff631">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField pattern="#,###">
+				<reportElement x="540" y="1025" width="160" height="25" uuid="d552ff73-f7b2-42a9-bc3e-d2f116ea9d62">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R51_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="1075" width="400" height="25" uuid="57615a02-46e0-4877-bee4-f7f3fbe48598">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R53_ASSETS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="800" width="400" height="25" uuid="97b36f73-b54e-4626-a767-c5c399c4e536">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="25">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R42_ASSETS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="700" width="400" height="25" uuid="1394719d-cd94-4b2e-91a0-de3d09fba0af">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R38_ASSETS}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="380" y="650" width="160" height="25" uuid="943054c2-e964-45b6-8a17-bc97b637514e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="380" y="625" width="160" height="25" uuid="d5bc9ab7-589b-49cb-b2fd-c12f21a9a2c4">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R35_CROSS_REFERENCE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="725" width="400" height="25" uuid="f22b2e58-699d-4200-8c9e-8c204c5f4c07">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R39_ASSETS}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="700" y="1025" width="160" height="25" uuid="2253f1e6-04f6-4956-9449-fcbdbfb03f09">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R51_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="875" width="400" height="25" uuid="46b47a5f-07b1-475e-97b5-fa77590bdd4e">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="25">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R45_ASSETS}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="700" y="1200" width="160" height="25" uuid="4c512259-22c6-40b6-b53a-da529c3bb0b5">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R58_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="1125" width="160" height="25" uuid="2db8e7bf-0189-4d64-9455-9077c88aa497">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R55_CROSS_REFERENCE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="750" width="400" height="25" uuid="f61d0240-6f3d-477d-ac62-905df62251ce">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R40_ASSETS}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="700" y="775" width="160" height="25" uuid="28d9508a-b1cf-420d-ad0d-d32c33977f8e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R41_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="700" y="900" width="160" height="25" uuid="7854e2c7-8f6f-419e-b6fa-dd30ad1b097e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R46_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="850" width="400" height="25" uuid="78083646-dc76-4e2c-8571-78f0748a3a75">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R44_ASSETS}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="380" y="825" width="160" height="25" uuid="c9776562-007e-4294-81ea-8122188fac81">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField pattern="#,###">
+				<reportElement x="700" y="1050" width="160" height="25" uuid="9917386a-b636-4953-9169-0f42fc2a1682">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R52_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="540" y="1050" width="160" height="25" uuid="d3822bb6-abd3-4976-8f6b-56aad82e0260">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R52_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="700" y="850" width="160" height="25" uuid="3e78d25e-e617-4afc-8a13-341d137c9a13">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R44_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="675" width="400" height="25" uuid="9bc304fd-2907-4788-a7a4-8c3bc5db35a9">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="25">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R37_ASSETS}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="380" y="950" width="160" height="25" uuid="b094bf75-07b3-4cff-9932-2a2ecafa921b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField pattern="#,###">
+				<reportElement x="540" y="700" width="160" height="25" uuid="c40fcf25-02ed-4223-9286-39f17a84614e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R38_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="540" y="1150" width="160" height="25" uuid="cd512eee-471c-4985-8ee2-3403adf1aaf3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R56_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="1150" width="400" height="25" uuid="b19816d1-4b33-4260-bc8c-830a4a99e5c3">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R56_ASSETS}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="700" y="1175" width="160" height="25" uuid="f581feec-902f-42d5-a377-2641dcf326c6">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R57_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="540" y="650" width="160" height="25" uuid="b6d8d35c-c32c-4d56-be84-08ae52a7dbc9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R36_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="1100" width="400" height="25" uuid="dda67541-940a-435a-8952-308abe8a5a34">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R54_ASSETS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="925" width="400" height="25" uuid="d8c66dd0-c1b8-4597-a4f6-1b6a836f9f27">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="25">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R47_ASSETS}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="540" y="850" width="160" height="25" uuid="5cbee216-bf43-4012-a300-6ffcd37057f6">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R44_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="850" width="160" height="25" uuid="deda8331-7710-46cc-b25b-5e182aa42f14">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R44_CROSS_REFERENCE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="900" width="400" height="25" uuid="e02f535a-c33b-44fa-b68b-81c21de89479">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="25">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R46_ASSETS}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="540" y="1000" width="160" height="25" uuid="19e643b8-5f50-488b-9801-9f43b140a66e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R50_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="540" y="875" width="160" height="25" uuid="ef7a12e3-41c0-40b4-8d4b-09e5a4f0bb23">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R45_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="700" y="675" width="160" height="25" uuid="86a8e08f-76be-47c6-ace8-4aebcd128952">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R37_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="540" y="800" width="160" height="25" uuid="f5cf15b8-0859-4a8e-93f7-20605ef15efd">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R42_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="700" y="650" width="160" height="25" uuid="f73fb46c-f490-40d2-8edc-f6340096eecd">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R36_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="700" y="1075" width="160" height="25" uuid="87c8cca6-f59c-429c-8f00-25755ab618c1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R53_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="540" y="1200" width="160" height="25" uuid="d9c568a0-1af6-43d9-8655-3a03614f0e3f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R58_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="380" y="775" width="160" height="25" uuid="5aade50a-6fc5-42a4-83f5-b5fcc2c9d84d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField pattern="#,###">
+				<reportElement x="540" y="825" width="160" height="25" uuid="445092cc-a6cb-4a70-ad53-16fb1419fcdc">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R43_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="380" y="1200" width="160" height="25" uuid="e07168e6-6dc8-4207-b56a-ee028d4298c2">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField pattern="#,###">
+				<reportElement x="700" y="725" width="160" height="25" uuid="857b6bf5-c16e-4e07-8727-876077b83403">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R39_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="380" y="1175" width="160" height="25" uuid="eb898fa6-57f3-437b-a78d-6cab79d99f6e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField pattern="#,###">
+				<reportElement x="540" y="750" width="160" height="25" uuid="cdb6c78c-82ab-4aca-abda-7cad187f857d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R40_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="975" width="400" height="25" uuid="bde113d8-9b91-498f-9be2-9ca8619c6ef2">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R49_ASSETS}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="700" y="1125" width="160" height="25" uuid="a9f57488-fb72-4178-8e40-4c5ae09f708b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R55_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="1100" width="160" height="25" uuid="cb67d423-2965-4c5a-946c-8db7586e97c1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R54_CROSS_REFERENCE}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="700" y="1000" width="160" height="25" uuid="55d92c86-a9ee-4a1c-84d3-83f5c1a4be58">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R50_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="540" y="1175" width="160" height="25" uuid="c104b3cf-8de7-4326-9fec-656b6ba7cb1c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R57_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="725" width="160" height="25" uuid="844343e3-9ca8-4ccd-876c-d239f14d0fbd">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R39_CROSS_REFERENCE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="1300" width="400" height="25" uuid="5a604bdf-a51a-46a9-b18a-ea2772f18c3f">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R62_ASSETS}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="380" y="1300" width="160" height="25" uuid="51f6d0fe-9940-4b6a-a4a4-705529f22d1e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField pattern="#,###">
+				<reportElement x="700" y="1275" width="160" height="25" uuid="a65786c2-e7bb-4233-8454-b383cdfa157f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R61_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="1275" width="400" height="25" uuid="159a857d-31ec-458a-9538-2a46abbe2e4d">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="25">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R61_ASSETS}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="540" y="1300" width="160" height="25" uuid="8cadeadd-3096-4ec3-ab14-6151692ae001">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R62_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="540" y="1275" width="160" height="25" uuid="ff2067bb-5359-4369-8ba6-f74e432cc0b0">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R61_MONTH_END}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="1250" width="400" height="25" uuid="7e2a3f34-9e14-4597-ade0-d9c697ca79c6">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="25">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R60_ASSETS}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="380" y="1275" width="160" height="25" uuid="51780508-8014-4dcc-a818-40f1a4ee978a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField pattern="#,###">
+				<reportElement x="700" y="1300" width="160" height="25" uuid="56cd5077-6456-4581-b68e-d52460d2e1f0">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R62_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="380" y="1250" width="160" height="25" uuid="b7db4c57-2205-4bd2-8a9b-1faa32223933">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField pattern="#,###">
+				<reportElement x="700" y="1250" width="160" height="25" uuid="cf82dc85-75c2-4c42-b29d-040324d07f2a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R60_AVERAGE}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###">
+				<reportElement x="540" y="1250" width="160" height="25" uuid="56c55b65-3854-4e3f-a2dc-594f59c4cf34">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box rightPadding="2">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{R60_MONTH_END}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
