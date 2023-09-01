@@ -7,13 +7,23 @@
     },
     {
       "name": "default",
+      "type": "com.bornfire.xbrl.controllers.XBRLReportsController",
+      "sourceType": "com.bornfire.xbrl.controllers.XBRLReportsController"
+    },
+    {
+      "name": "default",
       "type": "com.bornfire.xbrl.controllers.XBRLNavigationController",
       "sourceType": "com.bornfire.xbrl.controllers.XBRLNavigationController"
     },
     {
-      "name": "default",
-      "type": "com.bornfire.xbrl.controllers.XBRLReportsController",
-      "sourceType": "com.bornfire.xbrl.controllers.XBRLReportsController"
+      "name": "output",
+      "type": "com.bornfire.xbrl.services.RegulatoryReportServices",
+      "sourceType": "com.bornfire.xbrl.services.RegulatoryReportServices"
+    },
+    {
+      "name": "output",
+      "type": "com.bornfire.xbrl.services.BRS4_ReportService",
+      "sourceType": "com.bornfire.xbrl.services.BRS4_ReportService"
     },
     {
       "name": "output",
@@ -47,6 +57,11 @@
     },
     {
       "name": "output",
+      "type": "com.bornfire.xbrl.services.BRS1_ReportService",
+      "sourceType": "com.bornfire.xbrl.services.BRS1_ReportService"
+    },
+    {
+      "name": "output",
       "type": "com.bornfire.xbrl.services.ReportServices",
       "sourceType": "com.bornfire.xbrl.services.ReportServices"
     },
@@ -67,25 +82,30 @@
     },
     {
       "name": "output",
-      "type": "com.bornfire.xbrl.services.RegulatoryReportServices",
-      "sourceType": "com.bornfire.xbrl.services.RegulatoryReportServices"
+      "type": "com.bornfire.xbrl.services.BRS5_ReportService",
+      "sourceType": "com.bornfire.xbrl.services.BRS5_ReportService"
     }
   ],
   "properties": [
     {
       "name": "default.pagesize",
       "type": "java.lang.String",
-      "sourceType": "com.bornfire.xbrl.controllers.XBRLNavigationController"
+      "sourceType": "com.bornfire.xbrl.controllers.XBRLReportsController"
     },
     {
       "name": "default.pagesize",
       "type": "java.lang.String",
-      "sourceType": "com.bornfire.xbrl.controllers.XBRLReportsController"
+      "sourceType": "com.bornfire.xbrl.controllers.XBRLNavigationController"
     },
     {
       "name": "output.domain-list",
       "type": "java.util.List<java.lang.String>",
       "sourceType": "com.bornfire.xbrl.services.ReportServices"
+    },
+    {
+      "name": "output.exportpath",
+      "type": "java.lang.String",
+      "sourceType": "com.bornfire.xbrl.services.RegulatoryReportServices"
     },
     {
       "name": "output.exportpath",
@@ -106,11 +126,6 @@
       "name": "output.exportpath",
       "type": "java.lang.String",
       "sourceType": "com.bornfire.xbrl.services.ReportCodeMappingService"
-    },
-    {
-      "name": "output.exportpath",
-      "type": "java.lang.String",
-      "sourceType": "com.bornfire.xbrl.services.RegulatoryReportServices"
     },
     {
       "name": "output.file-upload-list",
