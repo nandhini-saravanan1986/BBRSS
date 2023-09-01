@@ -27,6 +27,11 @@
     },
     {
       "name": "output",
+      "type": "com.bornfire.xbrl.services.BRS13_REPORTSERVICE",
+      "sourceType": "com.bornfire.xbrl.services.BRS13_REPORTSERVICE"
+    },
+    {
+      "name": "output",
       "type": "com.bornfire.xbrl.services.LoginServices",
       "sourceType": "com.bornfire.xbrl.services.LoginServices"
     },
@@ -34,6 +39,21 @@
       "name": "output",
       "type": "com.bornfire.xbrl.services.BRS2_ReportService",
       "sourceType": "com.bornfire.xbrl.services.BRS2_ReportService"
+    },
+    {
+      "name": "output",
+      "type": "com.bornfire.xbrl.services.BRS19_REPORTSERVICE",
+      "sourceType": "com.bornfire.xbrl.services.BRS19_REPORTSERVICE"
+    },
+    {
+      "name": "output",
+      "type": "com.bornfire.xbrl.services.BRS20_REPORTSERVICE",
+      "sourceType": "com.bornfire.xbrl.services.BRS20_REPORTSERVICE"
+    },
+    {
+      "name": "output",
+      "type": "com.bornfire.xbrl.services.BRS14_REPORTSERVICE",
+      "sourceType": "com.bornfire.xbrl.services.BRS14_REPORTSERVICE"
     },
     {
       "name": "output",
@@ -57,6 +77,11 @@
     },
     {
       "name": "output",
+      "type": "com.bornfire.xbrl.services.BRS3REPORTSERVICE",
+      "sourceType": "com.bornfire.xbrl.services.BRS3REPORTSERVICE"
+    },
+    {
+      "name": "output",
       "type": "com.bornfire.xbrl.services.RBSValidationservices",
       "sourceType": "com.bornfire.xbrl.services.RBSValidationservices"
     },
@@ -69,6 +94,11 @@
       "name": "output",
       "type": "com.bornfire.xbrl.services.RegulatoryReportServices",
       "sourceType": "com.bornfire.xbrl.services.RegulatoryReportServices"
+    },
+    {
+      "name": "output",
+      "type": "com.bornfire.xbrl.services.BRS17_REPORTSERVICE",
+      "sourceType": "com.bornfire.xbrl.services.BRS17_REPORTSERVICE"
     }
   ],
   "properties": [
