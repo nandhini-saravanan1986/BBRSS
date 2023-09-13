@@ -1,4 +1,4 @@
-+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
 <!-- 
 CREATED BY	: MANIVANNAN BASKAR.
 CREATED ON	: 13-OCT-2020
@@ -588,8 +588,7 @@ PURPOSE		: T1 RBS REPORT
 			<div class="col-sm-12 customcol"
 				style="background-color: #4d8cb9; padding-top: 10px; padding-bottom: 10px; padding-left: 5px;">
 
-				<b style="color: white;"> (13) MONTHLY SCHEDLE: M-OR1: OPERATIONAL RISK						
-							
+				<b style="color: white;"> (15) MONTHLY SCHEDLE: M-MRC: MARKET RISK CAPITAL CHARGE		
 											
 		
 				
@@ -645,372 +644,149 @@ PURPOSE		: T1 RBS REPORT
 
 		<!------------------------------ Report summary section starts it will shown only if summary button clicked------------------------->
 		<div class="row">
-			<div class="col-sm-12 customcol"
-				th:if="${displaymode}=='summary' or ${displaymode}==null">
-				<div class="row">
+<div class="col-sm-12 customcol"
+                th:if="${displaymode}=='summary' or ${displaymode}==null">
+<div class="row">
 
-					<div class="col-sm-12">
+ 
 
-						<div class="table-responsive"
-							style="border-right: 1px solid #dee2e6">
-							<table style="width: 1500px;"
-								class="table  table-bordered table-hover table-sm table-condensed">
-								<thead align="center">
-								<tr>
-									<th>Year</th>
-								
-								<th> Month</th>
-								<th>Gross Income</th>
-								<th>Average Gross Income </th>
-								<th>Average Risk Factor </th>
-								
-	</tr>
-	                           
-			</thead>
+                    <div class="col-sm-12">
+
+ 
+
+                        <div class="table-responsive"
+                            style="border-right: 1px solid #dee2e6">
+<table style="width: 1500px;"
+                                class="table  table-bordered table-hover table-sm table-condensed">
+<thead align="center">
+
+<tr>
+
+<th>Summary Information</th>
+
+<th>Total</th>
+
+</tr>
+</thead>	</thead>
 								<tbody th:each="repdetail: ${reportsummary}"
 									style="font-size: 16px;">
+									  <tr>
+								<th th:text="${repdetail.r1_product}"></th>
+								<th th:text="${#numbers.formatDecimal(repdetail.r1_total,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
+								</tr>
+								 <tr>
+								<th th:text="${repdetail.r2_product}"></th>
+								<th th:text="${#numbers.formatDecimal(repdetail.r2_total,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
+								</tr>
+								 <tr>
+								<th th:text="${repdetail.r3_product}"></th>
+								<th th:text="${#numbers.formatDecimal(repdetail.r3_total,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
+								</tr>
+								 <tr>
+								<th th:text="${repdetail.r4_product}"></th>
+								<th th:text="${#numbers.formatDecimal(repdetail.r4_total,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
+								</tr>
+								 <tr>
+								<th th:text="${repdetail.r5_product}"></th>
+								<th th:text="${#numbers.formatDecimal(repdetail.r5_total,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
+								</tr>
+								 <tr>
+								<th th:text="${repdetail.r6_product}"></th>
+								<th th:text="${#numbers.formatDecimal(repdetail.r6_total,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
+								</tr>
+								<tr height="30">
+									<th></th>
+									<th></th>
+								</tr>
+								 <tr>
+								<th th:text="${repdetail.r7_product}"></th>
+								<th th:text="${#numbers.formatDecimal(repdetail.r7_total,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
+								</tr>
+								 <tr>
+								<th th:text="${repdetail.r8_product}"></th>
+								<th th:text="${#numbers.formatDecimal(repdetail.r18_total,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
+								</tr>
+								 <tr>
+								<th th:text="${repdetail.r9_product}"></th>
+								<th th:text="${#numbers.formatDecimal(repdetail.r9_total,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
+								</tr>
+								 <tr>
+								<th th:text="${repdetail.r10_product}"></th>
+								<th th:text="${#numbers.formatDecimal(repdetail.r10_total,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
+								</tr>
+								 <tr>
+								<th th:text="${repdetail.r11_product}"></th>
+								<th th:text="${#numbers.formatDecimal(repdetail.r11_total,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
+								</tr>
+								<tr height="30">
+									<th></th>
+									<th></th>
+								</tr>
+								 <tr>
+								<th th:text="${repdetail.r12_product}"></th>
+								<th th:text="${#numbers.formatDecimal(repdetail.r12_total,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
+								</tr>
+								 <tr>
+								<th th:text="${repdetail.r13_product}"></th>
+								<th th:text="${#numbers.formatDecimal(repdetail.r13_total,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
+								</tr>
+								 <tr>
+								<th th:text="${repdetail.r14_product}"></th>
+								<th th:text="${#numbers.formatDecimal(repdetail.r14_total,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
+								</tr>
+								 <tr>
+								<th th:text="${repdetail.r15_product}"></th>
+								<th th:text="${#numbers.formatDecimal(repdetail.r15_total,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
+								</tr>
+								<tr height="30">
+									<th></th>
+									<th></th>
+								</tr>
+								 <tr>
+								<th th:text="${repdetail.r16_product}"></th>
+								<th th:text="${#numbers.formatDecimal(repdetail.r16_total,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
+								</tr>
+								 <tr>
+								<th th:text="${repdetail.r17_product}"></th>
+								<th th:text="${#numbers.formatDecimal(repdetail.r17_total,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
+								</tr>
+								 <tr>
+								<th th:text="${repdetail.r18_product}"></th>
+								<th th:text="${#numbers.formatDecimal(repdetail.r18_total,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
+								</tr>
+								 <tr>
+								<th th:text="${repdetail.r19_product}"></th>
+								<th th:text="${#numbers.formatDecimal(repdetail.r19_total,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
+								</tr>
+								<tr height="30">
+									<th></th>
+									<th></th>
+								</tr>
+								 <tr>
+								<th th:text="${repdetail.r20_product}"></th>
+								<th th:text="${#numbers.formatDecimal(repdetail.r20_total,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
+								</tr>
+								 <tr>
+								<th th:text="${repdetail.r21_product}"></th>
+								<th th:text="${#numbers.formatDecimal(repdetail.r21_total,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
+								</tr>
+								 <tr>
+								<th th:text="${repdetail.r22_product}"></th>
+								<th th:text="${#numbers.formatDecimal(repdetail.22_total,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
+								</tr>
+								<tr height="30">
+									<th></th>
+									<th></th>
+								</tr>
+								 <tr>
+								<th th:text="${repdetail.r23_product}"></th>
+								<th th:text="${#numbers.formatDecimal(repdetail.r23_total,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
+								</tr>
+								
+
 									
-									 <tr>
-										 <th rowspan="12">1</th>
-								
-						<th th:text="${repdetail.r10_month}"></th>
-
-								<th th:text="${#numbers.formatDecimal(repdetail.r10_gross_income,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
- <th rowspan="39"></th>
- <th rowspan="44"></th>
-							</tr>
-	 <tr>
-								
-						<th th:text="${repdetail.r11_month}"></th>
-
-								<th th:text="${#numbers.formatDecimal(repdetail.r11_gross_income,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
-
-							</tr>
-								 <tr>
-								
-						<th th:text="${repdetail.r12_month}"></th>
-
-								<th th:text="${#numbers.formatDecimal(repdetail.r12_gross_income,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
-
-							</tr>
-							
-								 <tr>
-								
-						<th th:text="${repdetail.r13_month}"></th>
-
-								<th th:text="${#numbers.formatDecimal(repdetail.r13_gross_income,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
-
-							</tr>
-								 <tr>
-								
-						<th th:text="${repdetail.r14_month}"></th>
-
-								<th th:text="${#numbers.formatDecimal(repdetail.r14_gross_income,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
-
-							</tr>
-							
-								 <tr>
-								
-						<th th:text="${repdetail.r15_month}"></th>
-
-								<th th:text="${#numbers.formatDecimal(repdetail.r15_gross_income,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
-
-							</tr>
-							
-								 <tr>
-								
-						<th th:text="${repdetail.r16_month}"></th>
-
-								<th th:text="${#numbers.formatDecimal(repdetail.r16_gross_income,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
-
-							</tr>
-								 <tr>
-								
-						<th th:text="${repdetail.r17_month}"></th>
-
-								<th th:text="${#numbers.formatDecimal(repdetail.r17_gross_income,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
-
-							</tr>
-								 <tr>
-								
-						<th th:text="${repdetail.r18_month}"></th>
-
-								<th th:text="${#numbers.formatDecimal(repdetail.r18_gross_income,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
-
-							</tr>
-								 <tr>
-								
-						<th th:text="${repdetail.r19_month}"></th>
-
-								<th th:text="${#numbers.formatDecimal(repdetail.r19_gross_income,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
-
-							</tr>
-							
-								 <tr>
-								
-						<th th:text="${repdetail.r20_month}"></th>
-
-								<th th:text="${#numbers.formatDecimal(repdetail.r20_gross_income,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
-
-							</tr>
-								 <tr>
-								
-						<th th:text="${repdetail.r21_month}"></th>
-
-								<th th:text="${#numbers.formatDecimal(repdetail.r21_gross_income,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
-
-							</tr>
-							
-							<tr>
-								<th> Total Gross Income for Year 1</th>
-								
-						<th th:text="${repdetail.r22_month}"></th>
-
-								<th th:text="${#numbers.formatDecimal(repdetail.r22_gross_income,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
-
-							</tr>
-							
-							<tr>
-										 <th rowspan="12">2</th>
-								
-						<th th:text="${repdetail.r23_month}"></th>
-
-								<th th:text="${#numbers.formatDecimal(repdetail.r23_gross_income,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
-
-							</tr>
-							 <tr>
-								
-						<th th:text="${repdetail.r24_month}"></th>
-
-								<th th:text="${#numbers.formatDecimal(repdetail.r24_gross_income,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
-
-							</tr>
-							
-							 <tr>
-								
-						<th th:text="${repdetail.r25_month}"></th>
-
-								<th th:text="${#numbers.formatDecimal(repdetail.r25_gross_income,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
-
-							</tr>
-							 <tr>
-								
-						<th th:text="${repdetail.r26_month}"></th>
-
-								<th th:text="${#numbers.formatDecimal(repdetail.r26_gross_income,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
-
-							</tr>
-							 <tr>
-								
-						<th th:text="${repdetail.r27_month}"></th>
-
-								<th th:text="${#numbers.formatDecimal(repdetail.r27_gross_income,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
-
-							</tr>
-							 <tr>
-								
-						<th th:text="${repdetail.r28_month}"></th>
-
-								<th th:text="${#numbers.formatDecimal(repdetail.r28_gross_income,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
-
-							</tr>
-							 <tr>
-								
-						<th th:text="${repdetail.r29_month}"></th>
-
-								<th th:text="${#numbers.formatDecimal(repdetail.r29_gross_income,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
-
-							</tr>
-							
-							 <tr>
-								
-						<th th:text="${repdetail.r30_month}"></th>
-
-								<th th:text="${#numbers.formatDecimal(repdetail.r30_gross_income,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
-
-							</tr>
-							 <tr>
-								
-						<th th:text="${repdetail.r31_month}"></th>
-
-								<th th:text="${#numbers.formatDecimal(repdetail.r31_gross_income,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
-
-							</tr>
-							
-							 <tr>
-								
-						<th th:text="${repdetail.r32_month}"></th>
-
-								<th th:text="${#numbers.formatDecimal(repdetail.r32_gross_income,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
-
-							</tr>
-							
-							 <tr>
-								
-						<th th:text="${repdetail.r33_month}"></th>
-
-								<th th:text="${#numbers.formatDecimal(repdetail.r33_gross_income,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
-
-							</tr>
-							 <tr>
-								
-						<th th:text="${repdetail.r34_month}"></th>
-
-								<th th:text="${#numbers.formatDecimal(repdetail.r34_gross_income,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
-
-							</tr>
-							
-							 <tr>
-								 <th>Total Gross Income for Year 2</th>
-								
-						<th th:text="${repdetail.r35_month}"></th>
-
-								<th th:text="${#numbers.formatDecimal(repdetail.r35_gross_income,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
-
-							</tr>
-							 <tr>
-										 <th rowspan="12">3</th>
-								
-						<th th:text="${repdetail.r36_month}"></th>
-
-								<th th:text="${#numbers.formatDecimal(repdetail.r36_gross_income,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
-
-							</tr>
-						 <tr>
-								
-						<th th:text="${repdetail.r37_month}"></th>
-
-								<th th:text="${#numbers.formatDecimal(repdetail.r37_gross_income,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
-
-							</tr>
-							 <tr>
-								
-						<th th:text="${repdetail.r38_month}"></th>
-
-								<th th:text="${#numbers.formatDecimal(repdetail.r38_gross_income,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
-
-							</tr>
-							 <tr>
-								
-						<th th:text="${repdetail.r39_month}"></th>
-
-								<th th:text="${#numbers.formatDecimal(repdetail.r39_gross_income,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
-
-							</tr>
-							 <tr>
-								
-						<th th:text="${repdetail.r40_month}"></th>
-
-								<th th:text="${#numbers.formatDecimal(repdetail.r40_gross_income,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
-
-							</tr>
-							 <tr>
-								
-						<th th:text="${repdetail.r41_month}"></th>
-
-								<th th:text="${#numbers.formatDecimal(repdetail.r41_gross_income,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
-
-							</tr>
-							
-							 <tr>
-								
-						<th th:text="${repdetail.r42_month}"></th>
-
-								<th th:text="${#numbers.formatDecimal(repdetail.r42_gross_income,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
-
-							</tr>
-							
-							 <tr>
-								
-						<th th:text="${repdetail.r43_month}"></th>
-
-								<th th:text="${#numbers.formatDecimal(repdetail.r43_gross_income,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
-
-							</tr>
-							 <tr>
-								
-						<th th:text="${repdetail.r44_month}"></th>
-
-								<th th:text="${#numbers.formatDecimal(repdetail.r44_gross_income,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
-
-							</tr>
-							 <tr>
-								
-						<th th:text="${repdetail.r45_month}"></th>
-
-								<th th:text="${#numbers.formatDecimal(repdetail.r45_gross_income,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
-
-							</tr>
-							
-							 <tr>
-								
-						<th th:text="${repdetail.r46_month}"></th>
-
-								<th th:text="${#numbers.formatDecimal(repdetail.r46_gross_income,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
-
-							</tr>
-							 <tr>
-								
-						<th th:text="${repdetail.r47_month}"></th>
-
-								<th th:text="${#numbers.formatDecimal(repdetail.r47_gross_income,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
-
-							</tr>
-							 <tr>
-								 <th>Total Gross Income for Year 3
-</th>
-								
-						<th th:text="${repdetail.r48_month}"></th>
-
-								<th th:text="${#numbers.formatDecimal(repdetail.r48_gross_income,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
-
-							</tr>
-					
-							<tr>
-								 <th colspan="3">Aggregate Gross Income	</th>
-								
-						
-
-								<th th:text="${#numbers.formatDecimal(repdetail.r49_average_gross_income,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
-
-							</tr>
-								<tr>
-								 <th colspan="3">operational risk factor - denoted alpha 	</th>
-								
-						
-
-								<th th:text="${#numbers.formatDecimal(repdetail.r50_average_gross_income,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
-
-							</tr>
-							
-							<tr>
-								 <th >Aggregate Gross Income multiplied by alpha </th>
-								 <th></th>
-								 <th></th>
-								
-						
-
-								<th th:text="${#numbers.formatDecimal(repdetail.r51_average_gross_income,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
-
-							</tr>
-							<tr>
-								 <th >No. of years with Positive Gross Income (n) </th>
-								 <th></th>
-								 <th></th>
-								
-						
-
-								<th th:text="${#numbers.formatDecimal(repdetail.r52_average_gross_income,1,'COMMA',2,'POINT')}" style="text-align:right;">CHENNAI</th>
-
-							</tr>
-							
-							
-							
-							
-							
-							
-</tbody>
-	</table>
+								</tbody>
+							</table>
 						</div>
 						<div class="card-footer text-center"
 							th:if="${displaymode}=='summary' or ${displaymode}==null"
@@ -1020,6 +796,11 @@ PURPOSE		: T1 RBS REPORT
 							 <button type="button" class="btn btn-xs btn-primary"
 									id="btnBack" onclick="back();">Back</button> 
 						</div>
+					</div>
+				</div>
+
+			</div>
+						
 					</div>
 				</div>
 
