@@ -141,7 +141,7 @@ public class BRS23_SERVICE {
 
 			// T1rep = t1CurProdServiceRepo.getT1CurProdServices(d1);
 
-			mv.setViewName("RR/brs25");
+			mv.setViewName("RR/brs23");
 			// mv.addObject("currlist", refCodeConfig.currList());
 			mv.addObject("reportsummary", T1Master);
 			/* mv.addObject("reportsummary1", T1Master1); */
