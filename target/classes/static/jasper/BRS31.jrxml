@@ -1,0 +1,1867 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="2595" pageHeight="2842" columnWidth="2555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bc76c7da-113a-4e85-ace1-c54970e8d52b">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="BRSS.jrdax"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="REPORT_DATE" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from  "BRS31_TABLE" where REPORT_DATE=$P{REPORT_DATE}]]>
+	</queryString>
+	<field name="R1_PRODUCT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R1_PRODUCT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R1_PRODUCT"/>
+	</field>
+	<field name="R1_TOTAL_LONG_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R1_TOTAL_LONG_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R1_TOTAL_LONG_POSITION"/>
+	</field>
+	<field name="R1_TOTAL_SHORT_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R1_TOTAL_SHORT_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R1_TOTAL_SHORT_POSITION"/>
+	</field>
+	<field name="R1_GROSS_OPEN_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R1_GROSS_OPEN_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R1_GROSS_OPEN_POSITION"/>
+	</field>
+	<field name="R1_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK_3_PERCENT_OF_GROSS_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R1_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK_3_PERCENT_OF_GROSS_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R1_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK_3_PERCENT_OF_GROSS_POSITION"/>
+	</field>
+	<field name="R1_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R1_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK"/>
+		<property name="com.jaspersoft.studio.field.label" value="R1_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK"/>
+	</field>
+	<field name="R1_NET_OPEN_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R1_NET_OPEN_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R1_NET_OPEN_POSITION"/>
+	</field>
+	<field name="R1_CHARGE_FOR_DIRECTIONAL_RISK_15PERCENT_OF_NET_OPEN_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R1_CHARGE_FOR_DIRECTIONAL_RISK_15PERCENT_OF_NET_OPEN_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R1_CHARGE_FOR_DIRECTIONAL_RISK_15PERCENT_OF_NET_OPEN_POSITION"/>
+	</field>
+	<field name="R1_CAPITAL_CHARGE_FOR_DIRECTIONAL_RISK" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R1_CAPITAL_CHARGE_FOR_DIRECTIONAL_RISK"/>
+		<property name="com.jaspersoft.studio.field.label" value="R1_CAPITAL_CHARGE_FOR_DIRECTIONAL_RISK"/>
+	</field>
+	<field name="R1_TOTAL_CAPITAL_CHARGE_BY_COMMODITY" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R1_TOTAL_CAPITAL_CHARGE_BY_COMMODITY"/>
+		<property name="com.jaspersoft.studio.field.label" value="R1_TOTAL_CAPITAL_CHARGE_BY_COMMODITY"/>
+	</field>
+	<field name="R2_PRODUCT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R2_PRODUCT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R2_PRODUCT"/>
+	</field>
+	<field name="R2_TOTAL_LONG_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R2_TOTAL_LONG_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R2_TOTAL_LONG_POSITION"/>
+	</field>
+	<field name="R2_TOTAL_SHORT_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R2_TOTAL_SHORT_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R2_TOTAL_SHORT_POSITION"/>
+	</field>
+	<field name="R2_GROSS_OPEN_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R2_GROSS_OPEN_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R2_GROSS_OPEN_POSITION"/>
+	</field>
+	<field name="R2_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK_3_PERCENT_OF_GROSS_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R2_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK_3_PERCENT_OF_GROSS_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R2_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK_3_PERCENT_OF_GROSS_POSITION"/>
+	</field>
+	<field name="R2_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R2_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK"/>
+		<property name="com.jaspersoft.studio.field.label" value="R2_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK"/>
+	</field>
+	<field name="R2_NET_OPEN_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R2_NET_OPEN_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R2_NET_OPEN_POSITION"/>
+	</field>
+	<field name="R2_CHARGE_FOR_DIRECTIONAL_RISK_15PERCENT_OF_NET_OPEN_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R2_CHARGE_FOR_DIRECTIONAL_RISK_15PERCENT_OF_NET_OPEN_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R2_CHARGE_FOR_DIRECTIONAL_RISK_15PERCENT_OF_NET_OPEN_POSITION"/>
+	</field>
+	<field name="R2_CAPITAL_CHARGE_FOR_DIRECTIONAL_RISK" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R2_CAPITAL_CHARGE_FOR_DIRECTIONAL_RISK"/>
+		<property name="com.jaspersoft.studio.field.label" value="R2_CAPITAL_CHARGE_FOR_DIRECTIONAL_RISK"/>
+	</field>
+	<field name="R2_TOTAL_CAPITAL_CHARGE_BY_COMMODITY" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R2_TOTAL_CAPITAL_CHARGE_BY_COMMODITY"/>
+		<property name="com.jaspersoft.studio.field.label" value="R2_TOTAL_CAPITAL_CHARGE_BY_COMMODITY"/>
+	</field>
+	<field name="R3_PRODUCT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R3_PRODUCT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R3_PRODUCT"/>
+	</field>
+	<field name="R3_TOTAL_LONG_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R3_TOTAL_LONG_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R3_TOTAL_LONG_POSITION"/>
+	</field>
+	<field name="R3_TOTAL_SHORT_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R3_TOTAL_SHORT_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R3_TOTAL_SHORT_POSITION"/>
+	</field>
+	<field name="R3_GROSS_OPEN_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R3_GROSS_OPEN_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R3_GROSS_OPEN_POSITION"/>
+	</field>
+	<field name="R3_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK_3_PERCENT_OF_GROSS_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R3_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK_3_PERCENT_OF_GROSS_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R3_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK_3_PERCENT_OF_GROSS_POSITION"/>
+	</field>
+	<field name="R3_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R3_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK"/>
+		<property name="com.jaspersoft.studio.field.label" value="R3_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK"/>
+	</field>
+	<field name="R3_NET_OPEN_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R3_NET_OPEN_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R3_NET_OPEN_POSITION"/>
+	</field>
+	<field name="R3_CHARGE_FOR_DIRECTIONAL_RISK_15PERCENT_OF_NET_OPEN_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R3_CHARGE_FOR_DIRECTIONAL_RISK_15PERCENT_OF_NET_OPEN_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R3_CHARGE_FOR_DIRECTIONAL_RISK_15PERCENT_OF_NET_OPEN_POSITION"/>
+	</field>
+	<field name="R3_CAPITAL_CHARGE_FOR_DIRECTIONAL_RISK" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R3_CAPITAL_CHARGE_FOR_DIRECTIONAL_RISK"/>
+		<property name="com.jaspersoft.studio.field.label" value="R3_CAPITAL_CHARGE_FOR_DIRECTIONAL_RISK"/>
+	</field>
+	<field name="R3_TOTAL_CAPITAL_CHARGE_BY_COMMODITY" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R3_TOTAL_CAPITAL_CHARGE_BY_COMMODITY"/>
+		<property name="com.jaspersoft.studio.field.label" value="R3_TOTAL_CAPITAL_CHARGE_BY_COMMODITY"/>
+	</field>
+	<field name="R4_PRODUCT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R4_PRODUCT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R4_PRODUCT"/>
+	</field>
+	<field name="R4_TOTAL_LONG_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R4_TOTAL_LONG_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R4_TOTAL_LONG_POSITION"/>
+	</field>
+	<field name="R4_TOTAL_SHORT_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R4_TOTAL_SHORT_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R4_TOTAL_SHORT_POSITION"/>
+	</field>
+	<field name="R4_GROSS_OPEN_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R4_GROSS_OPEN_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R4_GROSS_OPEN_POSITION"/>
+	</field>
+	<field name="R4_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK_3_PERCENT_OF_GROSS_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R4_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK_3_PERCENT_OF_GROSS_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R4_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK_3_PERCENT_OF_GROSS_POSITION"/>
+	</field>
+	<field name="R4_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R4_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK"/>
+		<property name="com.jaspersoft.studio.field.label" value="R4_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK"/>
+	</field>
+	<field name="R4_NET_OPEN_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R4_NET_OPEN_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R4_NET_OPEN_POSITION"/>
+	</field>
+	<field name="R4_CHARGE_FOR_DIRECTIONAL_RISK_15PERCENT_OF_NET_OPEN_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R4_CHARGE_FOR_DIRECTIONAL_RISK_15PERCENT_OF_NET_OPEN_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R4_CHARGE_FOR_DIRECTIONAL_RISK_15PERCENT_OF_NET_OPEN_POSITION"/>
+	</field>
+	<field name="R4_CAPITAL_CHARGE_FOR_DIRECTIONAL_RISK" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R4_CAPITAL_CHARGE_FOR_DIRECTIONAL_RISK"/>
+		<property name="com.jaspersoft.studio.field.label" value="R4_CAPITAL_CHARGE_FOR_DIRECTIONAL_RISK"/>
+	</field>
+	<field name="R4_TOTAL_CAPITAL_CHARGE_BY_COMMODITY" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R4_TOTAL_CAPITAL_CHARGE_BY_COMMODITY"/>
+		<property name="com.jaspersoft.studio.field.label" value="R4_TOTAL_CAPITAL_CHARGE_BY_COMMODITY"/>
+	</field>
+	<field name="R5_PRODUCT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R5_PRODUCT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R5_PRODUCT"/>
+	</field>
+	<field name="R5_TOTAL_LONG_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R5_TOTAL_LONG_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R5_TOTAL_LONG_POSITION"/>
+	</field>
+	<field name="R5_TOTAL_SHORT_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R5_TOTAL_SHORT_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R5_TOTAL_SHORT_POSITION"/>
+	</field>
+	<field name="R5_GROSS_OPEN_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R5_GROSS_OPEN_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R5_GROSS_OPEN_POSITION"/>
+	</field>
+	<field name="R5_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK_3_PERCENT_OF_GROSS_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R5_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK_3_PERCENT_OF_GROSS_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R5_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK_3_PERCENT_OF_GROSS_POSITION"/>
+	</field>
+	<field name="R5_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R5_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK"/>
+		<property name="com.jaspersoft.studio.field.label" value="R5_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK"/>
+	</field>
+	<field name="R5_NET_OPEN_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R5_NET_OPEN_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R5_NET_OPEN_POSITION"/>
+	</field>
+	<field name="R5_CHARGE_FOR_DIRECTIONAL_RISK_15PERCENT_OF_NET_OPEN_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R5_CHARGE_FOR_DIRECTIONAL_RISK_15PERCENT_OF_NET_OPEN_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R5_CHARGE_FOR_DIRECTIONAL_RISK_15PERCENT_OF_NET_OPEN_POSITION"/>
+	</field>
+	<field name="R5_CAPITAL_CHARGE_FOR_DIRECTIONAL_RISK" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R5_CAPITAL_CHARGE_FOR_DIRECTIONAL_RISK"/>
+		<property name="com.jaspersoft.studio.field.label" value="R5_CAPITAL_CHARGE_FOR_DIRECTIONAL_RISK"/>
+	</field>
+	<field name="R5_TOTAL_CAPITAL_CHARGE_BY_COMMODITY" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R5_TOTAL_CAPITAL_CHARGE_BY_COMMODITY"/>
+		<property name="com.jaspersoft.studio.field.label" value="R5_TOTAL_CAPITAL_CHARGE_BY_COMMODITY"/>
+	</field>
+	<field name="R6_PRODUCT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R6_PRODUCT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R6_PRODUCT"/>
+	</field>
+	<field name="R6_TOTAL_LONG_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R6_TOTAL_LONG_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R6_TOTAL_LONG_POSITION"/>
+	</field>
+	<field name="R6_TOTAL_SHORT_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R6_TOTAL_SHORT_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R6_TOTAL_SHORT_POSITION"/>
+	</field>
+	<field name="R6_GROSS_OPEN_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R6_GROSS_OPEN_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R6_GROSS_OPEN_POSITION"/>
+	</field>
+	<field name="R6_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK_3_PERCENT_OF_GROSS_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R6_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK_3_PERCENT_OF_GROSS_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R6_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK_3_PERCENT_OF_GROSS_POSITION"/>
+	</field>
+	<field name="R6_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R6_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK"/>
+		<property name="com.jaspersoft.studio.field.label" value="R6_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK"/>
+	</field>
+	<field name="R6_NET_OPEN_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R6_NET_OPEN_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R6_NET_OPEN_POSITION"/>
+	</field>
+	<field name="R6_CHARGE_FOR_DIRECTIONAL_RISK_15PERCENT_OF_NET_OPEN_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R6_CHARGE_FOR_DIRECTIONAL_RISK_15PERCENT_OF_NET_OPEN_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R6_CHARGE_FOR_DIRECTIONAL_RISK_15PERCENT_OF_NET_OPEN_POSITION"/>
+	</field>
+	<field name="R6_CAPITAL_CHARGE_FOR_DIRECTIONAL_RISK" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R6_CAPITAL_CHARGE_FOR_DIRECTIONAL_RISK"/>
+		<property name="com.jaspersoft.studio.field.label" value="R6_CAPITAL_CHARGE_FOR_DIRECTIONAL_RISK"/>
+	</field>
+	<field name="R6_TOTAL_CAPITAL_CHARGE_BY_COMMODITY" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R6_TOTAL_CAPITAL_CHARGE_BY_COMMODITY"/>
+		<property name="com.jaspersoft.studio.field.label" value="R6_TOTAL_CAPITAL_CHARGE_BY_COMMODITY"/>
+	</field>
+	<field name="R7_PRODUCT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R7_PRODUCT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R7_PRODUCT"/>
+	</field>
+	<field name="R7_TOTAL_LONG_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R7_TOTAL_LONG_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R7_TOTAL_LONG_POSITION"/>
+	</field>
+	<field name="R7_TOTAL_SHORT_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R7_TOTAL_SHORT_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R7_TOTAL_SHORT_POSITION"/>
+	</field>
+	<field name="R7_GROSS_OPEN_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R7_GROSS_OPEN_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R7_GROSS_OPEN_POSITION"/>
+	</field>
+	<field name="R7_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK_3_PERCENT_OF_GROSS_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R7_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK_3_PERCENT_OF_GROSS_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R7_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK_3_PERCENT_OF_GROSS_POSITION"/>
+	</field>
+	<field name="R7_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R7_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK"/>
+		<property name="com.jaspersoft.studio.field.label" value="R7_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK"/>
+	</field>
+	<field name="R7_NET_OPEN_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R7_NET_OPEN_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R7_NET_OPEN_POSITION"/>
+	</field>
+	<field name="R7_CHARGE_FOR_DIRECTIONAL_RISK_15PERCENT_OF_NET_OPEN_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R7_CHARGE_FOR_DIRECTIONAL_RISK_15PERCENT_OF_NET_OPEN_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R7_CHARGE_FOR_DIRECTIONAL_RISK_15PERCENT_OF_NET_OPEN_POSITION"/>
+	</field>
+	<field name="R7_CAPITAL_CHARGE_FOR_DIRECTIONAL_RISK" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R7_CAPITAL_CHARGE_FOR_DIRECTIONAL_RISK"/>
+		<property name="com.jaspersoft.studio.field.label" value="R7_CAPITAL_CHARGE_FOR_DIRECTIONAL_RISK"/>
+	</field>
+	<field name="R7_TOTAL_CAPITAL_CHARGE_BY_COMMODITY" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R7_TOTAL_CAPITAL_CHARGE_BY_COMMODITY"/>
+		<property name="com.jaspersoft.studio.field.label" value="R7_TOTAL_CAPITAL_CHARGE_BY_COMMODITY"/>
+	</field>
+	<field name="R8_PRODUCT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R8_PRODUCT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R8_PRODUCT"/>
+	</field>
+	<field name="R8_TOTAL_LONG_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R8_TOTAL_LONG_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R8_TOTAL_LONG_POSITION"/>
+	</field>
+	<field name="R8_TOTAL_SHORT_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R8_TOTAL_SHORT_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R8_TOTAL_SHORT_POSITION"/>
+	</field>
+	<field name="R8_GROSS_OPEN_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R8_GROSS_OPEN_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R8_GROSS_OPEN_POSITION"/>
+	</field>
+	<field name="R8_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK_3_PERCENT_OF_GROSS_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R8_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK_3_PERCENT_OF_GROSS_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R8_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK_3_PERCENT_OF_GROSS_POSITION"/>
+	</field>
+	<field name="R8_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R8_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK"/>
+		<property name="com.jaspersoft.studio.field.label" value="R8_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK"/>
+	</field>
+	<field name="R8_NET_OPEN_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R8_NET_OPEN_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R8_NET_OPEN_POSITION"/>
+	</field>
+	<field name="R8_CHARGE_FOR_DIRECTIONAL_RISK_15PERCENT_OF_NET_OPEN_POSITION" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R8_CHARGE_FOR_DIRECTIONAL_RISK_15PERCENT_OF_NET_OPEN_POSITION"/>
+		<property name="com.jaspersoft.studio.field.label" value="R8_CHARGE_FOR_DIRECTIONAL_RISK_15PERCENT_OF_NET_OPEN_POSITION"/>
+	</field>
+	<field name="R8_CAPITAL_CHARGE_FOR_DIRECTIONAL_RISK" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R8_CAPITAL_CHARGE_FOR_DIRECTIONAL_RISK"/>
+		<property name="com.jaspersoft.studio.field.label" value="R8_CAPITAL_CHARGE_FOR_DIRECTIONAL_RISK"/>
+	</field>
+	<field name="R8_TOTAL_CAPITAL_CHARGE_BY_COMMODITY" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R8_TOTAL_CAPITAL_CHARGE_BY_COMMODITY"/>
+		<property name="com.jaspersoft.studio.field.label" value="R8_TOTAL_CAPITAL_CHARGE_BY_COMMODITY"/>
+	</field>
+	<field name="REPORT_DATE" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="REPORT_DATE"/>
+		<property name="com.jaspersoft.studio.field.label" value="REPORT_DATE"/>
+	</field>
+	<field name="REPORT_FROM_DATE" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="REPORT_FROM_DATE"/>
+		<property name="com.jaspersoft.studio.field.label" value="REPORT_FROM_DATE"/>
+	</field>
+	<field name="REPORT_TO_DATE" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="REPORT_TO_DATE"/>
+		<property name="com.jaspersoft.studio.field.label" value="REPORT_TO_DATE"/>
+	</field>
+	<field name="ENTITY_FLG" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="ENTITY_FLG"/>
+		<property name="com.jaspersoft.studio.field.label" value="ENTITY_FLG"/>
+	</field>
+	<field name="MODIFY_FLG" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="MODIFY_FLG"/>
+		<property name="com.jaspersoft.studio.field.label" value="MODIFY_FLG"/>
+	</field>
+	<field name="DEL_FLG" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="DEL_FLG"/>
+		<property name="com.jaspersoft.studio.field.label" value="DEL_FLG"/>
+	</field>
+	<field name="REPORT_CODE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="REPORT_CODE"/>
+		<property name="com.jaspersoft.studio.field.label" value="REPORT_CODE"/>
+	</field>
+	<field name="REPORT_SUBMIT_DATE" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="REPORT_SUBMIT_DATE"/>
+		<property name="com.jaspersoft.studio.field.label" value="REPORT_SUBMIT_DATE"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="230" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="1111" height="25" uuid="f83757ed-6fd3-4aad-b61d-f44e53cf4bb9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[(21) MONTHLY SCHEDLE: M-CR: COMMODITIES RISK								
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="25" width="111" height="25" uuid="c671ed27-6578-450a-a243-fc9b9aa0770a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="25" width="111" height="25" uuid="5f998919-0493-4798-8b8d-6815fa1193d8">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="222" y="25" width="111" height="25" uuid="f2b88d8d-778a-4815-82aa-ef47bd147f38">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="25" width="111" height="25" uuid="f39f5487-f934-48d5-b6fb-a1fcedb6ef24">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="25" width="111" height="25" uuid="275029f9-7978-427f-a32f-b34168558d58">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="555" y="25" width="111" height="25" uuid="6ea26b54-a52a-49b9-b68f-c2ec86d3a9e7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="666" y="25" width="111" height="25" uuid="15402aa9-bb22-4a11-952f-ce90ca254db2">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="777" y="25" width="111" height="25" uuid="5fd7e495-f038-4c41-b42a-93d24d1ae298">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="888" y="25" width="111" height="25" uuid="a2350a66-e604-4c2c-bcb0-068697fcb3c0">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1000" y="25" width="111" height="25" uuid="46e68e45-fade-4eab-bbfa-b33e45302626">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="777" y="75" width="111" height="25" uuid="5d783c2b-514e-4939-85d8-7f9061e4afe1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="555" y="75" width="111" height="25" uuid="591df85d-067a-4b6d-8e92-793b035a9b7e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1000" y="75" width="111" height="25" uuid="e1f5d16b-727e-4eba-b93c-e2ebac32a2c3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="75" width="111" height="25" uuid="303b5d2d-23e0-4ee8-88be-08cdd3c911cb">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="222" y="75" width="221" height="25" uuid="ab6e8509-5a01-45a3-bc37-e346f6031d9b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[(Bank of Baroda)Botswana Ltd.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="666" y="75" width="111" height="25" uuid="d08f7764-c54e-43bc-98e6-29d48ed3a3aa">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="75" width="110" height="25" uuid="151200a1-fdfb-42b5-b767-2f26b90de3d4">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<text><![CDATA[Name of bank:
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="888" y="75" width="111" height="25" uuid="dc270818-52bf-4e98-a295-01480f8a1a4a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="777" y="100" width="111" height="25" uuid="32f3a611-889d-4aa4-93fa-4cb0bf841179">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="555" y="100" width="111" height="25" uuid="45f86e15-e14c-41a2-91dc-da20a4ad57e1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1000" y="100" width="111" height="25" uuid="643daa49-6935-4afa-a3dc-e295adef9b03">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="100" width="111" height="25" uuid="13338551-f059-4c5a-9e12-68c5e0b9c24a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="100" width="111" height="25" uuid="2177f919-30b0-48e5-b0e6-dd80c1bc561c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="222" y="100" width="111" height="25" uuid="d3ae9c42-0b28-4e1d-a91f-5655946a534c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="666" y="100" width="111" height="25" uuid="40c926d8-d96f-43a7-bc1e-b068decadb50">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="100" width="222" height="25" uuid="5a009153-ea3c-45eb-aad8-9f8b77265e49">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[Month ended(dd/mm/yyyy)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="888" y="100" width="111" height="25" uuid="894c8826-08e7-431e-9ce1-a269498d2dfd">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="777" y="125" width="111" height="25" uuid="a811db29-704a-4b47-a331-fd47d91a3cc3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="555" y="125" width="111" height="25" uuid="51f34407-e2df-44e2-b74b-9468e53447f0">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1000" y="125" width="111" height="25" uuid="95ff3c3b-2128-4dba-9c62-194ca72e009e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="125" width="111" height="25" uuid="fdd1ddfa-a033-4e80-955b-810942973ac2">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="125" width="111" height="25" uuid="18d1aa66-d686-4116-a157-274370a85a61">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="222" y="125" width="111" height="25" uuid="350de565-fdbd-4884-96ea-9fa9cc77352d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="666" y="125" width="111" height="25" uuid="6533bc8a-e562-49cb-8fcb-58a5806885e1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="125" width="109" height="25" uuid="e57d4148-d477-4cea-857f-98193f12cc59">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="888" y="125" width="111" height="25" uuid="581457ca-30fe-48ce-a649-e4e0f8314f46">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="777" y="150" width="111" height="55" uuid="9c8d6dfc-fda2-495c-b691-6de9242003b3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<text><![CDATA["Charge for Directional Risk 
+(15 percent of Net Open Position)"
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="555" y="150" width="111" height="55" uuid="04d95851-6535-4118-bdfa-0e1017e721d7"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<text><![CDATA["Capital Charge for Basis Risk, Interest Rate Risk and Forward Gap Risk
+"
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="999" y="150" width="111" height="55" uuid="c017ce6f-e203-4294-a49e-f970372b0604"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<text><![CDATA[Total Capital Charge by Commodity
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="150" width="111" height="55" uuid="09ebfd89-ea11-4aa9-b1c3-0e96b5ca3325"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<text><![CDATA["Charge for Basis Risk, Interest Rate Risk and Forward Gap Risk
+(3 percent of Gross Position)"
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="150" width="111" height="55" uuid="47d4081a-5ab0-4e45-aaa0-c7b4b9cd9db1"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<text><![CDATA[Gross Open Position
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="222" y="150" width="111" height="55" uuid="fa1d8cb0-caef-46fa-91f4-8037ed0fb39e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<text><![CDATA["Total
+Short Position"
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="666" y="150" width="111" height="55" uuid="5c775967-eb45-4a3b-a51f-3d92f23a5552"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<text><![CDATA[Net Open position
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="150" width="111" height="55" uuid="1034e4df-8ec7-42c6-8ebe-88c71d5a9469"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<text><![CDATA[Commodity
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="150" width="111" height="55" uuid="65bfbee3-baba-4aa7-871f-c1ac3aa69f50"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<text><![CDATA["Total
+Long Position"
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="888" y="150" width="111" height="55" uuid="7099204a-948b-4d9e-bcd5-c2dccf80759a"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<text><![CDATA["Capitla Charge for Directional Risk
+"
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="50" width="1111" height="25" uuid="a663ec7d-b718-481a-9052-d88615875895">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[(confidential and not available for inspection by the public)										
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="75" width="110" height="25" uuid="8c252819-b1b6-4ee8-a5bb-253ed3898287">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="125" width="110" height="25" uuid="0910d3f6-8ff1-452a-8f19-760a455ef6f7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="555" y="205" width="111" height="25" uuid="ea60ac96-dc40-4d41-89c4-ce5a4d3d9a75">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<text><![CDATA[(P'000)
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="222" y="205" width="111" height="25" uuid="5200e0cf-5e74-46a9-9be8-6f2d7ec727f2">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<text><![CDATA[(P'000)
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="777" y="205" width="111" height="25" uuid="a0109fd3-561f-48b8-b35e-46a16a0f420f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<text><![CDATA[Percent
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="205" width="111" height="25" uuid="581baa32-39e8-4965-9c02-199168ba5301">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<text><![CDATA[Percent
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="205" width="111" height="25" uuid="d922393c-d8eb-4724-a6fc-549aa03cc45c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<text><![CDATA[(P'000)
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="666" y="205" width="111" height="25" uuid="d6b38809-18e3-4454-a4f6-bafba92c6ba9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<text><![CDATA[(P'000)
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="205" width="111" height="25" uuid="05c0f5a3-9977-4c18-8aa0-cc4c3ccff644">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="888" y="205" width="111" height="25" uuid="94975443-9c87-40bf-8ea2-91df86c68597">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<text><![CDATA[(P'000)
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="999" y="205" width="111" height="25" uuid="a4030de9-7f56-48bb-ada3-bf4b5a24ab22">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<text><![CDATA[(P'000)
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="205" width="111" height="25" uuid="a10d3cbb-7118-472f-b040-5c335f82e220">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<text><![CDATA[(P'000)
+]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="883" splitType="Stretch">
+			<textField>
+				<reportElement x="555" y="0" width="111" height="35" uuid="64ec4206-b84f-4e6c-9a63-2b540ec6b19f"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R1_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="0" width="111" height="35" uuid="f5d156bf-e7a9-424a-bd29-f0322def1293">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R1_TOTAL_SHORT_POSITION}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="777" y="0" width="111" height="35" uuid="01906ef6-edf2-4b26-a3c9-e6967c5b8821"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[15]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="0" width="111" height="35" uuid="afd818b7-1ecf-4f4b-83dd-d40328ea0eb6"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[3]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="333" y="0" width="111" height="35" uuid="0cacda38-b8fe-497f-b1b6-ea91536a4ddb"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R1_GROSS_OPEN_POSITION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="666" y="0" width="111" height="35" uuid="39f0bf1e-5ae6-4751-a7cc-088891e820f1"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R1_NET_OPEN_POSITION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="111" height="35" uuid="860326cb-b25a-4187-8da1-632404c7e62a"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R1_PRODUCT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="888" y="0" width="111" height="35" uuid="f783aab9-9ec1-42bc-8684-aba0505b59f9"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R1_CHARGE_FOR_DIRECTIONAL_RISK_15PERCENT_OF_NET_OPEN_POSITION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="999" y="0" width="111" height="35" uuid="6dddb7ca-37e2-4376-acfe-9adc3166a0b7"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R1_TOTAL_CAPITAL_CHARGE_BY_COMMODITY}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="0" width="111" height="35" uuid="fdd376ac-6eaf-4797-a31b-2784df750549"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R1_TOTAL_LONG_POSITION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="35" width="111" height="25" uuid="e178891b-7212-485c-a5a0-a5a22bc1146e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R2_TOTAL_SHORT_POSITION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="666" y="35" width="111" height="25" uuid="7a8edce3-aa24-47ab-80d9-ea3d00a57512">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R2_NET_OPEN_POSITION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="333" y="35" width="111" height="25" uuid="9d0ac308-4f8b-4425-99d8-ed425ea81388">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R2_GROSS_OPEN_POSITION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="555" y="35" width="111" height="25" uuid="6021a727-3b6b-404d-bf5d-684aeb4c2a7b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R2_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="35" width="111" height="25" uuid="45a96978-05ec-418c-806e-47a62e6e8600">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R2_PRODUCT}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="777" y="35" width="111" height="25" uuid="e48658e3-bbf6-45f3-8eb3-d4692e3f9ffb">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[15]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="888" y="35" width="111" height="25" uuid="53e0e192-ffff-476f-b0d7-75d89c485bec">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R2_CAPITAL_CHARGE_FOR_DIRECTIONAL_RISK}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="999" y="35" width="111" height="25" uuid="d84c8ec7-3bbf-46af-802d-9e6bbf9d0005">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R2_TOTAL_CAPITAL_CHARGE_BY_COMMODITY}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="35" width="111" height="25" uuid="b3586d12-deee-4c6b-8d96-baaac42faac3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R2_TOTAL_LONG_POSITION}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="444" y="35" width="111" height="25" uuid="cbb1014d-20db-44cb-82da-67ca406b21b9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[3]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="222" y="60" width="111" height="25" uuid="995c7075-3060-444c-9eb2-cca20ac4bb45">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R3_TOTAL_SHORT_POSITION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="333" y="60" width="111" height="25" uuid="d054270e-4408-4ef1-96e9-d082878fab0e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R3_GROSS_OPEN_POSITION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="60" width="111" height="25" uuid="6c068073-661e-43f3-bb2e-0a010d040263">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R3_PRODUCT}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="777" y="60" width="111" height="25" uuid="1e3b8f84-005e-4f62-8d63-c8250d566736">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[15]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="888" y="60" width="111" height="25" uuid="81073904-cc1d-49cc-8b6e-eb21d0fda79f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R3_CAPITAL_CHARGE_FOR_DIRECTIONAL_RISK}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="999" y="60" width="111" height="25" uuid="78a70460-910d-4166-b514-bf654dae2d04">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R3_TOTAL_CAPITAL_CHARGE_BY_COMMODITY}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="60" width="111" height="25" uuid="818e9f17-0f32-42e5-a652-bcd0b8834cb3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R3_TOTAL_LONG_POSITION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="85" width="111" height="25" uuid="07286588-cd01-4b86-8bea-444604685428">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R4_TOTAL_SHORT_POSITION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="333" y="85" width="111" height="25" uuid="350b4e4f-fdcb-4920-9666-940497069173">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R4_GROSS_OPEN_POSITION}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="777" y="85" width="111" height="25" uuid="2efde2b7-f6ed-423e-9203-dac532b5a6a3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[15]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="111" y="85" width="111" height="25" uuid="27d6dfba-2b4b-4c83-b53e-a80ee1a4241c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R4_TOTAL_LONG_POSITION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="85" width="111" height="25" uuid="dcbdcec2-fa3c-44d2-be19-4aed300ef266">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R4_PRODUCT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="888" y="85" width="111" height="25" uuid="086f46f2-fca3-4cc0-aeeb-b0465cecf553">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R4_CAPITAL_CHARGE_FOR_DIRECTIONAL_RISK}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="999" y="85" width="111" height="25" uuid="9d761c60-34a4-435c-838e-77fa66fda745">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R4_TOTAL_CAPITAL_CHARGE_BY_COMMODITY}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="110" width="111" height="25" uuid="212bbdd8-96bf-4f1d-9b95-4e75011c736e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R5_TOTAL_SHORT_POSITION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="333" y="110" width="111" height="25" uuid="9ae6ef53-2093-4267-b5f7-8a9c38a94ee0">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R5_GROSS_OPEN_POSITION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="555" y="110" width="111" height="25" uuid="2e3fbbe2-30bb-4478-a4ad-867cfa5e70f7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R5_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="777" y="110" width="111" height="25" uuid="a27d33ce-ca23-4825-8ff9-96508b3acb61">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[15]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="111" y="110" width="111" height="25" uuid="51e414b9-a8ab-4e32-8e79-e3055e63cd94">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R5_TOTAL_LONG_POSITION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="110" width="111" height="25" uuid="5021891e-709b-4b97-b98f-1bf022c7b58d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R5_PRODUCT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="888" y="110" width="111" height="25" uuid="b975b7dd-d546-4458-b050-f2b2e2c7a838">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R5_CHARGE_FOR_DIRECTIONAL_RISK_15PERCENT_OF_NET_OPEN_POSITION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="999" y="110" width="111" height="25" uuid="444cef51-f491-4746-b5f7-a06d767c5473">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R5_TOTAL_CAPITAL_CHARGE_BY_COMMODITY}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="444" y="110" width="111" height="25" uuid="40dda788-b3eb-4267-81c7-0de58ad938ac">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[3]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="666" y="110" width="111" height="25" uuid="eb22421f-a59e-4778-b339-344c88c2a9ec">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R5_NET_OPEN_POSITION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="135" width="111" height="25" uuid="cdc99045-6617-428f-a5aa-a6ad9d01ac8a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R6_TOTAL_SHORT_POSITION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="333" y="135" width="111" height="25" uuid="85dd3fef-e961-47aa-a741-a8006abdc209">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R6_GROSS_OPEN_POSITION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="555" y="135" width="111" height="25" uuid="8fc26291-27d4-4d2e-b916-f1b28bbf31e4">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R6_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="777" y="135" width="111" height="25" uuid="3656590a-f358-4101-ad51-d6ad6d774d3c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[15]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="111" y="135" width="111" height="25" uuid="c6c853b2-0f31-4227-8a5a-fc9b46ad24fc">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R6_TOTAL_LONG_POSITION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="135" width="111" height="25" uuid="2da82d74-4aee-4437-be07-85313c5838fe">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R6_PRODUCT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="888" y="135" width="111" height="25" uuid="eb6e361a-4830-4025-bed1-825325dfec76">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R6_CAPITAL_CHARGE_FOR_DIRECTIONAL_RISK}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="999" y="135" width="111" height="25" uuid="5b1d1542-ac9f-474a-9355-a24ab5058006">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R6_TOTAL_CAPITAL_CHARGE_BY_COMMODITY}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="444" y="135" width="111" height="25" uuid="75194bd1-7a9f-44e5-8754-a0260545d750">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[3]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="666" y="135" width="111" height="25" uuid="b4c4b9f4-e339-4c1f-a437-712df2b30a7e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R6_NET_OPEN_POSITION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="160" width="111" height="25" uuid="39838ab0-042e-42a2-8b38-f24132acf985">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R7_TOTAL_SHORT_POSITION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="333" y="160" width="111" height="25" uuid="0920a68c-25a7-458a-805c-ac3f23250424">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R7_GROSS_OPEN_POSITION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="555" y="160" width="111" height="25" uuid="b8367e94-9eb0-433c-bcf0-37c54f031783">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R7_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="777" y="160" width="111" height="25" uuid="185e765c-4b60-43e2-ab8f-de0e6ad3abbc">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[15]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="111" y="160" width="111" height="25" uuid="a7fdb142-6bc3-4055-b5e1-698563d986c7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R7_TOTAL_LONG_POSITION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="160" width="111" height="25" uuid="a6115621-d15c-419c-95cf-e54089ff8679">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R7_PRODUCT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="888" y="160" width="111" height="25" uuid="83971689-5edd-4a43-93e9-51e000855701">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R7_CAPITAL_CHARGE_FOR_DIRECTIONAL_RISK}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="999" y="160" width="111" height="25" uuid="3b70e793-396e-432a-a1c4-1d8df3ca4ea5">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R7_TOTAL_CAPITAL_CHARGE_BY_COMMODITY}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="444" y="160" width="111" height="25" uuid="7397f48b-37c1-416a-9561-a46b207f6655">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[3]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="666" y="160" width="111" height="25" uuid="a6e645c9-83b0-4a39-ba0f-781d0d50cb9e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R7_NET_OPEN_POSITION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="185" width="111" height="25" uuid="fa692886-e1de-4d1f-8cb8-7a092ff5e5b6">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R8_TOTAL_SHORT_POSITION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="333" y="185" width="111" height="25" uuid="3f8bef31-9ab0-4c84-883a-c9c7277e570b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R8_GROSS_OPEN_POSITION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="555" y="185" width="111" height="25" uuid="b064b785-f476-4121-a4ac-3faced748d94">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R8_CHARGE_FOR_BASIS_RISK_INTEREST_RATE_RISK_AND_FORWARD_GAP_RISK}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="777" y="185" width="111" height="25" uuid="9c669555-8eb2-4b36-9db6-96d60c034fb5">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[15]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="111" y="185" width="111" height="25" uuid="9394814c-d255-4b45-924f-c6730ee76af7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R8_TOTAL_LONG_POSITION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="185" width="111" height="25" uuid="6144fb2c-8604-454e-9f66-fc8a2d997d3b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R8_PRODUCT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="888" y="185" width="111" height="25" uuid="acdc5176-1533-44b7-aa66-b92763824e43">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R8_CAPITAL_CHARGE_FOR_DIRECTIONAL_RISK}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="999" y="185" width="111" height="25" uuid="48ae0ba8-6202-490a-8521-0bd28b46869a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R8_TOTAL_CAPITAL_CHARGE_BY_COMMODITY}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="444" y="185" width="111" height="25" uuid="8f0f379f-ac52-40ff-bae7-32758e4bc7ed">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[3]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="666" y="185" width="111" height="25" uuid="7acd6ce7-50b0-49a5-897e-742bf55efb07">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{R8_NET_OPEN_POSITION}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="444" y="60" width="333" height="50" uuid="3a61cf54-aff5-44e7-a51a-e91fd15ecef0"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<text><![CDATA[NIL]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

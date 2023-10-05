@@ -1,5 +1,4 @@
 package com.bornfire.xbrl.services;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -32,9 +31,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.bornfire.xbrl.entities.BRSS.BRS23_ENTITY;
-import com.bornfire.xbrl.entities.BRSS.BRS25_ENTITY;
-import com.bornfire.xbrl.entities.BRSS.BRSS22_ENTITY;
+import com.bornfire.xbrl.entities.BRSS.BRS28T1_ENTITY;
+import com.bornfire.xbrl.entities.BRSS.BRS28T2_ENTITY;
 import com.bornfire.xbrl.entities.BRSS.RBSTransactionMasterEntity;
 import com.bornfire.xbrl.entities.BRSS.T1CurProdDetail;
 
@@ -51,9 +49,8 @@ import net.sf.jasperreports.export.SimpleOutputStreamExporterOutput;
 @Service
 @Transactional
 @ConfigurationProperties("output")
-public class BRS23_SERVICE {
-	
-	private static final Logger logger = LoggerFactory.getLogger(BRS23_SERVICE.class);
+public class BRS28_SERVICE {
+	private static final Logger logger = LoggerFactory.getLogger(BRS28_SERVICE.class);
 
 	@Autowired
 	SessionFactory sessionFactory;
@@ -64,6 +61,11 @@ public class BRS23_SERVICE {
 	@Autowired
 	Environment env;
 	
+	/*
+	 * @Autowired BRF73ServiceRepo brf73ServiceRepo;
+	 */
+	
+    
 	
 	DateFormat df = new SimpleDateFormat("dd-MMM-yyyy");
 
@@ -80,12 +82,12 @@ public class BRS23_SERVICE {
 				dt1 = new SimpleDateFormat("dd/MM/yyyy").parse(fromdate);
 				dt9 = new SimpleDateFormat("dd/MM/yyyy").parse(todate);
 				logger.info("Getting No of records in Master table :" + reportid);
-				Long dtlcnt = (Long) hs.createQuery("select count(*) from BRS23_ENTITY a where a.report_date=?1")
+				Long dtlcnt = (Long) hs.createQuery("select count(*) from BRS28T1_ENTITY a where a.report_date=?1")
 						.setParameter(1, dt9).getSingleResult();
 
 				if (dtlcnt > 0) {
 					logger.info("Getting No of records in Mod table :" + reportid);
-					Long modcnt = (Long) hs.createQuery("select count(*) from BRS23_ENTITY a").getSingleResult();
+					Long modcnt = (Long) hs.createQuery("select count(*) from BRS28T1_ENTITY a").getSingleResult();
 					if (modcnt > 0) {
 						msg = "success";
 					}
@@ -105,57 +107,113 @@ public class BRS23_SERVICE {
 			return msg;
 
 		}	
-	public ModelAndView getBRS23_view(String reportId, String fromdate, String todate, String currency, String dtltype,
-			Pageable pageable) {
-		
-			ModelAndView mv = new ModelAndView();
-			Session hs = sessionFactory.getCurrentSession();
-			int pageSize = pageable.getPageSize();
-			int currentPage = pageable.getPageNumber();
-			int startItem = currentPage * pageSize;
-			List<BRS23_ENTITY> T1rep = new ArrayList<BRS23_ENTITY>();
-			// Query<Object[]> qr;
 
-			List<BRS23_ENTITY> T1Master = new ArrayList<BRS23_ENTITY>();
-			/* List<BRF73_TABLE2> T1Master1 = new ArrayList<BRF73_TABLE2>(); */
+	public ModelAndView  getBRS28_view(String reportId, String fromdate, String todate, String currency, String dtltype,
 
-			logger.info("Inside archive" +currency);
+				Pageable pageable) {
 
-			try {
-				Date d1 = df.parse(todate);
-			//	T1rep = t1CurProdServiceRepo.getT1CurProdServices(d1);
+
+				ModelAndView mv = new ModelAndView();
+
+				Session hs = sessionFactory.getCurrentSession();
+
+				int pageSize = pageable.getPageSize();
+
+				int currentPage = pageable.getPageNumber();
+
+				int startItem = currentPage * pageSize;
+
+				List<BRS28T1_ENTITY> T1Master = new ArrayList<BRS28T1_ENTITY>();
+
+				// Query<Object[]> qr;
+
+	 
+
+				List<BRS28T2_ENTITY> T2Master = new ArrayList<BRS28T2_ENTITY>();
+
 				
+	 
+
+				logger.info("Inside archive" +currency);
+
+	 
+
+				try {
+
+					Date d1 = df.parse(todate);
+
+				//	T1rep = t1CurProdServiceRepo.getT1CurProdServices(d1);
+
+	 
+
+					T1Master = hs.createQuery("from  BRS28T1_ENTITY a where a.report_date = ?1 ", BRS28T1_ENTITY .class)
+
+							.setParameter(1, df.parse(todate)).getResultList();
+					
+					T2Master = hs.createQuery("from  BRS28T2_ENTITY a where a.report_date = ?1 ", BRS28T2_ENTITY .class)
+
+							.setParameter(1, df.parse(todate)).getResultList();
+
+					
+
 				
 
-				T1Master = hs.createQuery("from  BRS23_ENTITY a where a.report_date = ?1 ", BRS23_ENTITY.class)
-						.setParameter(1, df.parse(todate)).getResultList();
 
-				/*
-				 * T1Master1 = hs.createQuery("from BRF73_TABLE2 a where a.report_date = ?1 ",
-				 * BRF73_TABLE2.class) .setParameter(1, df.parse(todate)).getResultList();
-				 */
+	 
 
-			} catch (ParseException e) {
-				e.printStackTrace();
+					/*
+
+					 * T1Master1 = hs.createQuery("from BRF73_TABLE2 a where a.report_date = ?1 ",
+
+					 * BRF73_TABLE2.class) .setParameter(1, df.parse(todate)).getResultList();
+
+					 */
+
+	 
+
+				} catch (ParseException e) {
+
+					e.printStackTrace();
+
+				}
+
+	 
+				// T1rep = t1CurProdServiceRepo.getT1CurProdServices(d1);
+
+	 
+
+				mv.setViewName("RR/brs28");
+
+				// mv.addObject("currlist", refCodeConfig.currList());
+
+				mv.addObject("reportsummary1", T1Master);
+
+				mv.addObject("reportsummary2", T2Master);
+
+				
+
+
+
+				/* mv.addObject("reportsummary1", T1Master1); */
+
+				mv.addObject("reportmaster", T1Master);
+
+				mv.addObject("displaymode", "summary");
+
+				mv.addObject("reportsflag", "reportsflag");
+
+				mv.addObject("menu", reportId);
+
+				System.out.println("scv" + mv.getViewName());
+
+	 
+
+				return mv;
+
+	 
+
 			}
-
-			// T1rep = t1CurProdServiceRepo.getT1CurProdServices(d1);
-
-			mv.setViewName("RR/brs23");
-			// mv.addObject("currlist", refCodeConfig.currList());
-			mv.addObject("reportsummary", T1Master);
-			/* mv.addObject("reportsummary1", T1Master1); */
-			mv.addObject("reportmaster", T1Master);
-			mv.addObject("displaymode", "summary");
-			mv.addObject("reportsflag", "reportsflag");
-			mv.addObject("menu", reportId);
-			System.out.println("scv" + mv.getViewName());
-
-			return mv;
-
-		}
-	
-	public ModelAndView getBRS23currentDtl(String reportId, String fromdate, String todate, String currency,
+	public ModelAndView getBRS28currentDtl(String reportId, String fromdate, String todate, String currency,
 			String dtltype, Pageable pageable, String filter) {
 
 		int pageSize = pageable.getPageSize();
@@ -170,13 +228,20 @@ public class BRS23_SERVICE {
 
 		if (dtltype.equals("report")) {
 			if (!filter.equals("null")) {
-				qr = hs.createNativeQuery("select * from TRAN_MASTER_DETAIL");
-				//qr.setParameter(2, filter);
+				qr = hs.createNativeQuery(
+						"select * from TRAN_MASTER_DETAIL  where report_date = ?1 and t1_report =?2");
+				qr.setParameter(2, filter);
 			} else {
-				qr = hs.createNativeQuery("select * from TRAN_MASTER_DETAIL");
+				qr = hs.createNativeQuery("select * from TRAN_MASTER_DETAIL  where report_date = ?1");
 			}
 		} else {
 			qr = hs.createNativeQuery("select * from TRAN_MASTER_DETAIL  where report_date = ?1");
+		}
+		try {
+			qr.setParameter(1, df.parse(todate));
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		List<RBSTransactionMasterEntity> T1Master = new ArrayList<RBSTransactionMasterEntity>();
 
@@ -184,7 +249,7 @@ public class BRS23_SERVICE {
 			T1Master = hs.createQuery("from RBSTransactionMasterEntity a where a.report_date = ?1", RBSTransactionMasterEntity.class)
 					.setParameter(1, df.parse(todate)).getResultList();
 		} catch (ParseException e) {
-			
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -305,7 +370,7 @@ public class BRS23_SERVICE {
 		logger.info("Converting to Page");
 		Page<Object> T1Dt1Page = new PageImpl<Object>(pagedlist, PageRequest.of(currentPage, pageSize), T1Dt1.size());
 
-		mv.setViewName("RR"+"/"+"brs23::reportcontent");
+		mv.setViewName("RR"+"/"+"brs28::reportcontent");
 		// mv.setViewName("ReportT1");
 		mv.addObject("reportdetails", T1Dt1Page);
 		mv.addObject("reportmaster", T1Master);
@@ -314,8 +379,7 @@ public class BRS23_SERVICE {
 		mv.addObject("menu", reportId);
 		return mv;
 	}
-	
-	public File getFileBRS23(String reportId, String fromdate, String todate, String currency, String dtltype,
+	public File getFileBRS28(String reportId, String fromdate, String todate, String currency, String dtltype,
 			String filetype) throws FileNotFoundException, JRException, SQLException {
 
 		DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
@@ -326,7 +390,7 @@ public class BRS23_SERVICE {
 		File outputFile;
 
 		logger.info("Getting Output file :" + reportId);
-		fileName = "011-BRF-003-A N";
+		fileName = "t" + reportId + "_" + todate;
 		/*try {
 			SimpleDateFormat dateFormat1 = new SimpleDateFormat("dd-MM-yyyy");
 			Date ConDate = dateFormat1.parse(todate);
@@ -350,17 +414,17 @@ public class BRS23_SERVICE {
 				if (filetype.equals("detailexcel")) {
 					if (dtltype.equals("report")) {
 
-						jasperFile = this.getClass().getResourceAsStream("/static/jasper/BRS23.jrxml");
+						jasperFile = this.getClass().getResourceAsStream("/static/jasper/BRS28.jrxml");
 					} else {
-						jasperFile = this.getClass().getResourceAsStream("/static/jasper/BRS23.jrxml");
+						jasperFile = this.getClass().getResourceAsStream("/static/jasper/BRS28.jrxml");
 					}
 
 				} else {
 					if (dtltype.equals("report")) {
 						logger.info("Inside report");
-						jasperFile = this.getClass().getResourceAsStream("/static/jasper/BRS25.jrxml");
+						jasperFile = this.getClass().getResourceAsStream("/static/jasper/BRS28.jrxml");
 					} else {
-						jasperFile = this.getClass().getResourceAsStream("/static/jasper/BRS25.jrxml");
+						jasperFile = this.getClass().getResourceAsStream("/static/jasper/BRS28.jrxml");
 					}
 				}
 
@@ -412,6 +476,4 @@ public class BRS23_SERVICE {
 
 		return outputFile;
 	}
-
 }
-
