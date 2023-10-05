@@ -102,6 +102,40 @@ public class RegulatoryReportServices {
     @Autowired
     BRS23_SERVICE brs23ReportService;
     
+    @Autowired
+	BRS32_SERVICE brs32_Service;
+	
+	@Autowired
+	BRS33_SERVICE brs33_Service;
+	
+	@Autowired
+	BRS34_SERVICE brs34_Service;
+	
+	@Autowired
+	BRS35_SERVICE brs35_Service;
+	
+	@Autowired
+	BRS36_SERVICE brs36_Service;
+	
+	@Autowired
+	BRS37_SERVICE brs37_Service;
+	
+
+	@Autowired
+	BRS38_SERVICE brs38_Service;
+	
+	@Autowired
+	BRS39_SERVICE brs39_Service;
+	
+	@Autowired
+	BRS40_SERVICE brs40_Service;
+	
+	@Autowired
+	BRS41_SERVICE brs41_Service;
+	
+	@Autowired
+	BRS68_SERVICE brs68_Service;
+    
 	public String getExportpath() {
 		return exportpath;
 	}
@@ -188,6 +222,43 @@ public class RegulatoryReportServices {
         case "BRS23": 
             repsummary = brs23ReportService.getBRS23_view(reportId,  fromdate, todate, currency, dtltype, pageable); 
             break;
+            
+        case "BRS32": 
+			repsummary = brs32_Service.getBRS32_View(reportId,  fromdate, todate, currency, dtltype, pageable); 
+		    break;
+		    
+		case "BRS33": 
+			repsummary = brs33_Service.getBRS33_View(reportId,  fromdate, todate, currency, dtltype, pageable); 
+		    break;
+		    
+		case "BRS34": 
+			repsummary = brs34_Service.getBRS34_View(reportId,  fromdate, todate, currency, dtltype, pageable); 
+		    break;
+			
+		case "BRS35": 
+			repsummary = brs35_Service.getBRS35_View(reportId,  fromdate, todate, currency, dtltype, pageable); 
+		    break;
+		case "BRS36": 
+			repsummary = brs36_Service.getBRS36_View(reportId,  fromdate, todate, currency, dtltype, pageable); 
+		    break;
+		case "BRS37": 
+			repsummary = brs37_Service.getBRS37_View(reportId,  fromdate, todate, currency, dtltype, pageable); 
+		    break;
+		case "BRS40": 
+			repsummary = brs40_Service.getBRS40_View(reportId,  fromdate, todate, currency, dtltype, pageable); 
+		    break;
+		case "BRS41": 
+			repsummary = brs41_Service.getBRS41_View(reportId,  fromdate, todate, currency, dtltype, pageable); 
+		    break;
+		case "BRS38": 
+			repsummary = brs38_Service.getBRS38_View(reportId,  fromdate, todate, currency, dtltype, pageable); 
+		    break;
+		case "BRS39": 
+			repsummary = brs39_Service.getBRS39_View(reportId,  fromdate, todate, currency, dtltype, pageable); 
+		    break;
+		case "BRS68": 
+			repsummary = brs68_Service.getBRS68_View(reportId,  fromdate, todate, currency, dtltype, pageable); 
+		    break;
 			}
 		
 
@@ -305,6 +376,41 @@ public class RegulatoryReportServices {
 			repsummary = brs4_ReportService.getBRS4_view(reportId, fromdate, todate, currency, dtltype, pageable);
 			break;
 			
+		case "BRS32":
+			repsummary = brs32_Service.getBRS32_View(reportId, fromdate, todate, currency, dtltype, pageable);
+			break;
+		case "BRS33":
+			repsummary = brs33_Service.getBRS33_View(reportId, fromdate, todate, currency, dtltype, pageable);
+			break;
+
+		case "BRS34":
+			repsummary = brs34_Service.getBRS34_View(reportId, fromdate, todate, currency, dtltype, pageable);
+			break;
+		case "BRS35":
+			repsummary = brs35_Service.getBRS35_View(reportId, fromdate, todate, currency, dtltype, pageable);
+			break;
+		case "BRS36":
+			repsummary = brs36_Service.getBRS36_View(reportId, fromdate, todate, currency, dtltype, pageable);
+			break;
+		case "BRS37":
+			repsummary = brs37_Service.getBRS37_View(reportId, fromdate, todate, currency, dtltype, pageable);
+			break;
+		case "BRS40":
+			repsummary = brs40_Service.getBRS40_View(reportId, fromdate, todate, currency, dtltype, pageable);
+			break;
+		case "BRS41":
+			repsummary = brs41_Service.getBRS41_View(reportId, fromdate, todate, currency, dtltype, pageable);
+			break;
+		case "BRS38":
+			repsummary = brs38_Service.getBRS38_View(reportId, fromdate, todate, currency, dtltype, pageable);
+			break;
+		case "BRS39":
+			repsummary = brs39_Service.getBRS39_View(reportId, fromdate, todate, currency, dtltype, pageable);
+			break;
+		case "BRS68":
+			repsummary = brs68_Service.getBRS68_View(reportId, fromdate, todate, currency, dtltype, pageable);
+			break;
+			
 
 		}
 
@@ -386,6 +492,41 @@ public class RegulatoryReportServices {
 		case "BRS31":
 			repdetail = brs31ReportService.getBRS31currentDtl(reportId, fromdate, todate, currency, dtltype, pageable, Filter);
 			break;
+			
+		case "BRS32":
+			repdetail = brs32_Service.getBRS32Details(reportId, fromdate, todate, currency, dtltype, pageable, Filter);
+			break;
+		case "BRS33":
+			repdetail = brs33_Service.getBRS33Details(reportId, fromdate, todate, currency, dtltype, pageable, Filter);
+			break;
+		case "BRS34":
+			repdetail = brs34_Service.getBRS34Details(reportId, fromdate, todate, currency, dtltype, pageable, Filter);
+			break;
+		case "BRS35":
+			repdetail = brs35_Service.getBRS35Details(reportId, fromdate, todate, currency, dtltype, pageable, Filter);
+			break;
+		case "BRS36":
+			repdetail = brs36_Service.getBRS36Details(reportId, fromdate, todate, currency, dtltype, pageable, Filter);
+			break;
+		case "BRS37":
+			repdetail = brs37_Service.getBRS37Details(reportId, fromdate, todate, currency, dtltype, pageable, Filter);
+			break;
+		case "BRS40":
+			repdetail = brs40_Service.getBRS40Details(reportId, fromdate, todate, currency, dtltype, pageable, Filter);
+			break;
+		case "BRS41":
+			repdetail = brs41_Service.getBRS41Details(reportId, fromdate, todate, currency, dtltype, pageable, Filter);
+			break;
+		case "BRS38":
+			repdetail = brs38_Service.getBRS38Details(reportId, fromdate, todate, currency, dtltype, pageable, Filter);
+			break;
+		case "BRS39":
+			repdetail = brs39_Service.getBRS39Details(reportId, fromdate, todate, currency, dtltype, pageable, Filter);
+			break;
+		case "BRS68":
+			repdetail = brs68_Service.getBRS68Details(reportId, fromdate, todate, currency, dtltype, pageable, Filter);
+			break;
+
 		}
 		return repdetail;
 	}
@@ -460,6 +601,42 @@ public class RegulatoryReportServices {
 		case "BRS4":
 			repfile = brs4_ReportService.getFileBRS4(reportId, fromdate, todate, currency, dtltype, filetype);
 			break;
+			
+		case "BRS32":
+			repfile = brs32_Service.getFileBRS32(reportId, fromdate, todate, currency, dtltype, filetype);
+			break;
+		case "BRS33":
+			repfile = brs33_Service.getFileBRS33(reportId, fromdate, todate, currency, dtltype, filetype);
+			break;
+		case "BRS34":
+			repfile = brs34_Service.getFileBRS34(reportId, fromdate, todate, currency, dtltype, filetype);
+			break;
+		case "BRS35":
+			repfile = brs35_Service.getFileBRS35(reportId, fromdate, todate, currency, dtltype, filetype);
+			break;
+		case "BRS36":
+			repfile = brs36_Service.getFileBRS36(reportId, fromdate, todate, currency, dtltype, filetype);
+			break;
+		case "BRS37":
+			repfile = brs37_Service.getFileBRS37(reportId, fromdate, todate, currency, dtltype, filetype);
+			break;
+		case "BRS40":
+			repfile = brs40_Service.getFileBRS40(reportId, fromdate, todate, currency, dtltype, filetype);
+			break;
+		case "BRS41":
+			repfile = brs41_Service.getFileBRS41(reportId, fromdate, todate, currency, dtltype, filetype);
+			break;
+		case "BRS38":
+			repfile = brs38_Service.getFileBRS38(reportId, fromdate, todate, currency, dtltype, filetype);
+			break;
+		case "BRS39":
+			repfile = brs39_Service.getFileBRS39(reportId, fromdate, todate, currency, dtltype, filetype);
+			break;
+		case "BRS68":
+			repfile = brs68_Service.getFileBRS68(reportId, fromdate, todate, currency, dtltype, filetype);
+			break;
+		
+
 		
 		
 
@@ -541,6 +718,41 @@ public class RegulatoryReportServices {
 			
 		case "BRS4": 
 			msg = brs4_ReportService.preCheck(reportid, fromdate, todate);
+			break;
+		case "BRS32": 
+			msg = brs32_Service.preCheck(reportid, fromdate, todate);
+			break;
+		case "BRS33": 
+			msg = brs33_Service.preCheck(reportid, fromdate, todate);
+			break;
+		case "BRS34": 
+			msg = brs34_Service.preCheck(reportid, fromdate, todate);
+			break;
+
+		case "BRS35": 
+			msg = brs35_Service.preCheck(reportid, fromdate, todate);
+			break;
+		case "BRS36": 
+			msg = brs36_Service.preCheckBRS36(reportid, fromdate, todate);
+			break;
+		case "BRS37": 
+			msg = brs37_Service.preCheck(reportid, fromdate, todate);
+			break;
+		case "BRS40": 
+			msg = brs40_Service.preCheck(reportid, fromdate, todate);
+			break;
+		case "BRS41": 
+			msg = brs41_Service.preCheck(reportid, fromdate, todate);
+			break;
+		case "BRS38": 
+			msg = brs38_Service.preCheck(reportid, fromdate, todate);
+			break;
+		case "BRS39": 
+			msg = brs39_Service.preCheck(reportid, fromdate, todate);
+			break;
+			
+		case "BRS68": 
+			msg = brs68_Service.preCheck(reportid, fromdate, todate);
 			break;
 			
 			

@@ -1,0 +1,3258 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<!-- 
+CREATED BY	: MANIVANNAN BASKAR.
+CREATED ON	: 13-OCT-2020
+PURPOSE		: T1 RBS REPORT
+ -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" type="text/css"
+	href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css"
+	th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}">
+<link rel="stylesheet" type="text/css"
+	href="/webjars/font-awesome/5.9.0/css/all.min.css"
+	th:href="@{/webjars/font-awesome/5.9.0/css/all.min.css}">
+<link rel="stylesheet" type="text/css"
+	href="/webjars/jquery-ui/1.12.1/jquery-ui.min.css"
+	th:href="@{/webjars/jquery-ui/1.12.1/jquery-ui.min.css}">
+<link rel="shortcut icon" th:href="@{/favicon.ico}" type="image/x-icon">
+<link rel="icon" th:href="@{/favicon.ico}" type="image/x-icon">
+
+
+
+<script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"
+	th:src="@{/webjars/bootstrap/4.3.1/js/bootstrap.min.js}"></script>
+<script src="/webjars/popper.js/1.14.7/umd/popper.min.js"
+	th:src="@{/webjars/popper.js/1.14.7/umd/popper.min.js}"></script>
+<script src="/webjars/jquery/3.4.1/jquery.min.js"
+	th:src="@{/webjars/jquery/3.4.1/jquery.min.js}"></script>
+<script src="/webjars/jquery-ui/1.12.1/jquery-ui.min.js"
+	th:src="@{/webjars/jquery-ui/1.12.1/jquery-ui.min.js}"></script>
+
+<script src="/webjars/jquery-form/4.2.2/jquery.form.min.js"
+	th:src="@{/webjars/jquery-form/4.2.2/jquery.form.min.js}"></script>
+
+<script src="/webjars/jquery-validation/1.19.0/jquery.validate.min.js"
+	th:src="@{/webjars/jquery-validation/1.19.0/jquery.validate.min.js}"></script>
+
+
+<script th:inline="javascript">
+	/*<![CDATA[*/
+
+	var subreportid = /*[[${subreportid}]]*/null;
+
+	var secid = /*[[${secid}]]*/null;
+
+	var permission = /*[[${session.PERMISSIONS}]]*/null;
+
+	var dtltype = /*[[${dtltype}]]*/null;
+
+	$(function() {
+
+		//to make the summary button active on load
+		$("#summarybtn").addClass("active");
+
+	});
+
+	//When report type change: set subreportid and secid and show summary.
+	function changeReptype() {
+
+		subreportid = $("#reporttype").find(':selected').val();
+
+		secid = "1";
+
+		showsummary();
+
+	};
+
+	/*to show details page - 3 parameters
+		mode - valid values are : nextpage, prevpage, givenpage, firstpage
+		num - page number to show to the user
+		maxpage - maximum number of pages avaialble in the data
+	 */
+	function showdetails(mode, num, maxpage) {
+		var filter = $("#filters").val();
+		var n = parseInt(num);
+		var max = parseInt(maxpage);
+		if (filter != null) {
+			var Callurl = /*[[@{'/Reports/'+${reportid}+'/Details'(asondate=${asondate},fromdate=${fromdate},todate=${todate},currency=${currency},dtltype=${dtltype})}]]*/
+			//Callurl = Callurl+"&instancecode="+instancecode;
+			Callurl = Callurl + "&filter=" + filter;
+		} else {
+
+			var filter = null;
+
+			var Callurl = /*[[@{'/Reports/'+${reportid}+'/Details'(asondate=${asondate},fromdate=${fromdate},todate=${todate},currency=${currency},dtltype=${dtltype})}]]*/
+			//	Callurl = Callurl+"&instancecode="+instancecode;
+			Callurl = Callurl + "&filter=" + filter;
+		}
+		switch (mode) {
+		case "nextpage":
+			n = n + 1;
+			if (n > max) {
+				break;
+			}
+			Callurl = Callurl + "&page=" + n;
+			break;
+		case "prevpage":
+			n = n - 1;
+			if (n < 0) {
+				break;
+			}
+			Callurl = Callurl + "&page=" + n;
+			break;
+		case "givenpage":
+			n = parseInt($("#pageno").val()) - 1;
+			if (n > max || n < 0) {
+				break;
+			}
+			Callurl = Callurl + "&page=" + n;
+		}
+
+		$.ajax({
+			type : 'get',
+			url : Callurl,
+			success : function(data) {
+
+				/*<![CDATA[*/
+
+				$('.content').html(data);
+				$("#detailsbtn").addClass("active");
+				/*]]>*/
+
+			}
+		})
+	}
+
+	//to fetch summary from the database - called from the summary button
+	function showsummary(mode, num, maxpage) {
+
+		var n = parseInt(num);
+		var max = parseInt(maxpage);
+		var Callurl = /*[[@{'/Reports/'+${reportid}+'/Summary'(asondate=${asondate},fromdate=${fromdate},todate=${todate},currency=${currency},dtltype=${dtltype})}]]*/
+		Callurl = Callurl + "&subreportid=" + subreportid + "&secid=" + secid;
+		switch (mode) {
+		case "nextpage":
+			n = n + 1;
+			if (n > max) {
+				break;
+			}
+			Callurl = Callurl + "&page=" + n;
+			break;
+		case "prevpage":
+			n = n - 1;
+			if (n < 0) {
+				break;
+			}
+			Callurl = Callurl + "&page=" + n;
+			break;
+		case "givenpage":
+			n = parseInt($("#pageno").val()) - 1;
+			if (n > max || n < 0) {
+				break;
+			}
+			Callurl = Callurl + "&page=" + n;
+		}
+
+		$.ajax({
+			type : 'get',
+			url : Callurl,
+			success : function(data) {
+
+				/*<![CDATA[*/
+
+				$('.content').html(data);
+				$("#summarybtn").addClass("active");
+
+				/*]]>*/
+			}
+		})
+	}
+
+	function sectionChange(a) {
+
+		secid = a;
+
+		showsummary();
+
+	};
+
+	function home() {
+		location.href = "/BRBS/Dashboard";
+
+	}
+	 
+	function back() {
+		window.history.back();
+	}
+
+	/*]]>*/
+</script>
+
+<style>
+.nav-buttons {
+	float: right;
+}
+
+.reptitle {
+	float: left;
+}
+
+.reptitle>p {
+	margin-top: 0px;
+}
+
+.customcol {
+	padding-left: 0px;
+	padding-right: 0px;
+	min-width: 1500px;
+}
+
+.btn-primary {
+	background-color: #E77400;
+	border-color: #0c0c0c;
+}
+
+.btn-primary:not (:disabled ):not (.disabled ).active, .btn-primary:not
+	 (:disabled ):not (.disabled ):active, .show>.btn-primary.dropdown-toggle
+	{
+	color: #fff;
+	background-color: #cc000000;
+	border-color: #161617;
+}
+
+.table .thead-light th {
+	border-color: #b3b6b9;
+}
+
+.error {
+	color: red;
+	padding-left: 10px;
+}
+
+.first_left {
+	position: absolute;
+	*position: relative; /*ie7*/
+	left: 0;
+	width: 30px;
+	margin-top: -2px;
+}
+
+.second_left {
+	position: absolute;
+	*position: relative; /*ie7*/
+	left: 30px;
+	width: 30px;
+	margin-top: -2px;
+}
+
+.third_left {
+	position: absolute;
+	*position: relative; /*ie7*/
+	left: 60px;
+	width: 150px;
+	margin-top: -2px;
+}
+
+.inner {
+	overflow-x: scroll;
+	overflow-y: visible;
+	/* margin-left: 60px; */
+}
+
+.table-bordered thead td, .table-bordered thead th {
+	border-bottom-width: 0px;
+}
+
+.table-bordered {
+	border: 0px;
+}
+
+.addedit {
+	color: #007bff;
+}
+
+.addedit:hover {
+	color: #0056b3;
+}
+</style>
+<script th:inline="javascript">
+	/*<![CDATA[*/
+	var currlist = /*[[${currlist}]]*/null;
+	function editsum(a) {
+
+		if (permission == 'W' && dtltype == 'report') {
+			//Assign action url for the edit/add form
+			var url = /*[[@{'/Reports/'+${reportid}+'/Changes/fim0800add'(asondate=${asondate},fromdate=${fromdate},todate=${todate},currency=${currency})}]]*/
+			$("#dataedit").attr('action', url);
+			//Reset form if any data present
+			document.getElementById("dataedit").reset();
+
+			/* //make readonly false to unique fields
+			//Make readonly fields
+			$("#cntprty_code").attr("readonly",false);
+			$("#report_date").attr("readonly",false); */
+
+			//Reset errors
+			var validator = $("#dataedit").validate();
+			validator.resetForm();
+
+			$("#addedit").modal("toggle");
+
+		}
+	};
+
+	function editsubmitform() {
+
+		var reportdate = $("#report_date").val();
+		//	alert(reportdate);
+
+		if ($("#dataedit").valid()) {
+
+			var url = "./T1Edit?";
+
+			$("#dataedit").attr('action', url);
+
+			var options = {
+				success : showResponse
+			// post-submit callback 
+			};
+
+			$("#dataedit").ajaxSubmit(options);
+
+			function showResponse(responseText, statusText, xhr, $form) {
+
+				$("#alertmsg").text(responseText);
+
+				$('#alert').modal("toggle");
+
+			}
+			;
+		}
+	};
+	function verifyscreen(a) {
+
+		if (permission == 'W' && dtltype == 'report') {
+			//Assign action url for the edit/add form
+			var url = /*[[@{'/Reports/'+${reportid}+'/Changes/fim0800add'(asondate=${asondate},fromdate=${fromdate},todate=${todate},currency=${currency})}]]*/
+			$("#dataedit").attr('action', url);
+			//Reset form if any data present
+			document.getElementById("dataedit").reset();
+
+			/* //make readonly false to unique fields
+			//Make readonly fields
+			$("#cntprty_code").attr("readonly",false);
+			$("#report_date").attr("readonly",false); */
+
+			//Reset errors
+			var validator = $("#dataedit").validate();
+			validator.resetForm();
+
+			$("#verify").modal("toggle");
+
+		}
+	};
+	function verifysubmitform(a) {
+
+		if ($("#dataverify").valid()) {
+			var entry = $("#ENTRY_USER").val();
+			var modify = $("#MODIFY_USER").val();
+			var verify = $("#VERIFY_USER").val();
+
+			//var formmode = a.getAttribute("data-formmode");
+			var url = "./T1Verify?";
+
+			$("#dataverify").attr('action', url);
+
+			var options = {
+				success : showResponse
+			// post-submit callback 
+			};
+
+			$("#dataverify").ajaxSubmit(options);
+
+			function showResponse(responseText, statusText, xhr, $form) {
+
+				$("#alertmsg").text(responseText);
+
+				$('#alert').modal("toggle");
+
+			}
+			;
+		} else {
+			$("#alertmsg").text("Same User Cannot Verify!");
+			$('#alert').modal("toggle");
+
+		}
+
+	};
+	function refreshPage() {
+		window.location.reload();
+	}
+	function addRecord() {
+		$("#edit").hide();
+		if (permission == 'W') {
+			//var url1 = /*[[@{'/customeradd/'+${reportid}+'/Details'(asondate=${asondate},fromdate=${fromdate},todate=${todate},currency=${currency},dtltype=${dtltype})}]]*/
+			//Callurl = Callurl+"&instancecode="+instancecode;
+			document.getElementById("dataedit").reset();
+
+			//make readonly false to unique fields
+			//Make readonly fields
+			$("#custid").attr("readonly", false);
+			$("#custname").attr("readonly", false);
+			$("#custtype").attr("readonly", false);
+			$("#custrating").attr("readonly", false);
+			$("#accnum").attr("readonly", false);
+			$("#tratype").attr("readonly", false);
+			$("#trasubtype").attr("readonly", false);
+			$("#tradate").attr("readonly", false);
+			$("#partialtraid").attr("readonly", false);
+			$("#partialtratype").attr("readonly", false);
+			$("#tracurr").attr("readonly", false);
+			$("#traamount").attr("readonly", false);
+			$("#tracat").attr("readonly", false);
+
+			$("#addedit").modal("toggle");
+
+		}
+	};
+
+	function editRecord(a) {
+		$("#add").hide();
+		if (permission == 'W') {
+
+			var url2 = "./customeredit?";
+			$("#dataedit").attr('action', url2);
+			//Assign selected values to the model box fields
+			$("#custid").val(a.getAttribute("data-custid"));
+			$("#custname").val(a.getAttribute("data-custname"));
+			$("#custtype").val(a.getAttribute("data-custtype"));
+			$("#custrating").val(a.getAttribute("data-custrating"));
+			$("#accnum").val(a.getAttribute("data-accnum"));
+			$("#accname").val(a.getAttribute("data-accname"));
+			$("#tratype").val(a.getAttribute("data-tratype"));
+			$("#trasubtype").val(a.getAttribute("data-trasubtype"));
+			$("#tradate").val(a.getAttribute("data-tradate"));
+			$("#traid").val(a.getAttribute("data-traid"));
+			$("#partialtraid").val(a.getAttribute("data-partialtraid"));
+			$("#partialtratype").val(a.getAttribute("data-partialtratype"));
+			$("#tracurr").val(a.getAttribute("data-tracurr"));
+			$("#traamount").val(a.getAttribute("data-traamount"));
+			$("#tracat").val(a.getAttribute("data-tracat"));
+			$("#addedit").modal("toggle");
+
+			//Make readonly fields
+			$("#tradate").attr("readonly", true);
+
+		}
+
+	};
+
+	function deleteRecord(a) {
+		$("#add").hide();
+		$("#edit").hide();
+
+		alert(a.getAttribute("data-custid"));
+		if (permission == 'W') {
+			var url3 = "/customerdelete?";
+			$("#dataedit").attr('action', url3);
+
+			//Assign selected values to the model box fields
+			$("#custid").val(a.getAttribute("data-custid"));
+			$("#custname").val(a.getAttribute("data-custname"));
+			$("#custtype").val(a.getAttribute("data-custtype"));
+			$("#custrating").val(a.getAttribute("data-custrating"));
+			$("#accnum").val(a.getAttribute("data-accnum"));
+			$("#accname").val(a.getAttribute("data-accname"));
+			$("#tratype").val(a.getAttribute("data-tratype"));
+			$("#trasubtype").val(a.getAttribute("data-trasubtype"));
+			$("#tradate").val(a.getAttribute("data-tradate"));
+			$("#traid").val(a.getAttribute("data-traid"));
+			$("#partialtraid").val(a.getAttribute("data-partialtraid"));
+			$("#partialtratype").val(a.getAttribute("data-partialtratype"));
+			$("#tracurr").val(a.getAttribute("data-tracurr"));
+			$("#traamount").val(a.getAttribute("data-traamount"));
+			$("#tracat").val(a.getAttribute("data-tracat"));
+
+			$("#datadelete").modal("toggle");
+
+		}
+
+	};
+
+	function submitdataform(a) {
+		$("#edit").hide();
+
+		var url4 = "./customeradd?";
+
+		$("#dataedit").attr('action', url4);
+		var options = {
+			success : showResponse
+		// post-submit callback 
+		};
+
+		$('#dataedit').ajaxSubmit(options);
+
+		function showResponse(responseText, statusText, xhr, $form) {
+
+			$("#alertmsg").text(responseText);
+
+			if ($('#addedit').is(':visible')) {
+				$('#addedit').modal("hide");
+
+			}
+			;
+			if ($('#datadelete').is(':visible')) {
+				$('#datadelete').modal("hide");
+
+			}
+			;
+			$('#alert').modal("toggle");
+
+		}
+
+	}
+
+	function submitdataformedit(a) {
+		//$("#add").hide();
+		var url = "./customeredit?";
+
+		$("#dataedit").attr('action', url);
+		var options = {
+			success : showResponse
+		// post-submit callback 
+		};
+
+		$('#dataedit').ajaxSubmit(options);
+
+		function showResponse(responseText, statusText, xhr, $form) {
+
+			$("#alertmsg").text(responseText);
+
+			if ($('#addedit').is(':visible')) {
+				$('#addedit').modal("hide");
+
+			}
+			;
+			if ($('#datadelete').is(':visible')) {
+				$('#datadelete').modal("hide");
+
+			}
+			;
+			$('#alert').modal("toggle");
+
+		}
+
+	}
+	function submitdataformdelete(a) {
+
+		var url4 = "./customerdelete?";
+		$("#dataedit").attr('action', url4);
+		var options = {
+			success : showResponse
+		// post-submit callback 
+		};
+
+		$('#dataedit').ajaxSubmit(options);
+
+		function showResponse(responseText, statusText, xhr, $form) {
+
+			$("#alertmsg").text(responseText);
+
+			if ($('#addedit').is(':visible')) {
+				$('#addedit').modal("hide");
+
+			}
+			;
+			if ($('#datadelete').is(':visible')) {
+				$('#datadelete').modal("hide");
+
+			}
+			;
+			$('#alert').modal("toggle");
+
+		}
+
+	}
+
+	/*]]>*/
+</script>
+
+<title>XBRL</title>
+</head>
+<body>
+	<!----------------------------------------------------- Header Section starts ----------------------------------------------------->
+	<div th:insert="XBRLHeaderMenu :: header"></div>
+	<i class="fa fa-question-circle" aria-hidden="true"
+		onclick="docEmb('Report')" id="ques"></i>
+	<!----------------------------------------------------- Header Section Ends ------------------------------------------------------->
+	<div class="container content" th:fragment="reportcontent">
+		<!--------------------------------------------------------------- Report title starts -------------------------------------------->
+		<div class="row">
+			<div class="col-sm-12 customcol"
+				style="background-color: #4d8cb9; padding-top: 10px; padding-bottom: 10px; padding-left: 5px;">
+
+				<b style="color: white;"> 
+BANK OF BOTSWANA - BANKING SUPERVISION DEPARTMENT
+				
+					 </b>
+				<div class="btn-group nav-buttons">
+					<button type="button" class="btn btn-primary"
+						onclick="showdetails('firstpage','1','0');" id="detailsbtn">Details</button>
+					<button type="button" class="btn btn-primary"
+						onclick="showsummary();" id="summarybtn">Summary</button>
+					<div class="btn-group">
+						<button type="button" class="btn btn-primary dropdown-toggle"
+							data-toggle="dropdown">
+							Download <span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<li th:if="${displaymode}=='summary' or ${displaymode}==null"><a
+								th:href="|@{'/Reports/'+${reportid}+'/Download'(asondate=${asondate},fromdate=${fromdate},todate=${todate},currency=${currency},subreportid=${subreportid},secid=${secid},dtltype=${dtltype})}&filetype=pdf|">Pdf</a></li>
+							<li th:if="${displaymode}=='summary' or ${displaymode}==null"><a
+								th:href="|@{'/Reports/'+${reportid}+'/Download'(asondate=${asondate},fromdate=${fromdate},todate=${todate},currency=${currency},subreportid=${subreportid},secid=${secid},dtltype=${dtltype})}&filetype=excel|">Excel</a></li>
+
+							<li th:if="${displaymode}=='detail'"><a
+								th:href="|@{'/Reports/'+${reportid}+'/Download'(asondate=${asondate},fromdate=${fromdate},todate=${todate},currency=${currency},subreportid=${subreportid},secid=${secid},dtltype=${dtltype})}&filetype=detailexcel|">Excel</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12 customcol"
+				style="background-color: #dadddf; padding-top: 10px; padding-bottom: 10px; padding-left: 5px;">
+<b style="color: Black;">(29) MONTHLY SCHEDULE: M-LA5: FOREIGN CURRENCY DENOMINATED LOANS AND ADVANCES 		
+
+    (P'000)
+	
+</b>
+
+				<div class="btn-group nav-buttons" th:if="${type} =='RBS'">
+					<button type="button" class="btn btn-primary"
+						onclick="editsum(this);" style="margin-top: -10px; padding: 3px;"
+						title="Click to EDIT Records"
+						th:classappend="${session.PERMISSIONS == 'W'} AND ${dtltype == 'report'} ? addedit "
+						id="addRecord">Modify</button>
+					<button type="button" class="btn btn-primary"
+						style="margin-right: 0px; margin-top: -10px; padding: 3px; background-color: #4d8cb9;"
+						title="view the records" id="addRecord">Inquiry</button>
+					<button type="button" class="btn btn-primary"
+						th:if="${report?.entity_flg}=='N' AND  ${type} !='ARCHIVAL'"
+						onclick="verifyscreen(this);"
+						style="margin-top: -10px; padding: 3px;"
+						title="Click to EDIT Records"
+						th:classappend="${session.PERMISSIONS == 'W'} AND ${dtltype == 'report'} ? addedit "
+						id="addRecord">Verify</button>
+				</div>
+			</div>
+		</div>
+		<!--------------------------------------------------------------- Report title ends ------------------------------------------------->
+
+		<!------------------------------ Report summary section starts it will shown only if summary button clicked------------------------->
+		<div class="row">
+			<div class="col-sm-12 customcol"
+				th:if="${displaymode}=='summary' or ${displaymode}==null">
+				<div class="row">
+
+					<div class="col-sm-12">
+
+						<div class="table-responsive"
+							style="border-right: 1px solid #dee2e6">
+							<table style="width: 1500px;"
+								class="table  table-bordered table-hover table-sm table-condensed">
+								<thead align="center">
+								 <tr>
+								  <th></th>
+								 <th></th>
+								 <th></th>
+								 <th></th>
+								 <th></th>
+								 <th></th>
+								 <th width="250" colspan="3">OTHER CURRENCIES(specify)		
+								 </th>
+								 <th></th>
+								 <th></th>
+								 </tr>
+								<tr>
+								<th></th>
+								<th>USD</th>
+								<th>ZAR</th>
+								<th>GBP</th>
+								<th>EURO</th>	 
+								<th>YEN</th>
+								<th></th>
+								 <th></th>
+								 <th></th>
+								 <th> Total 
+								 </th>
+								
+								</tr>
+									</thead>
+								<tbody th:each="repdetail: ${reportsummary}"
+									style="font-size: 16px;">
+									<tr>
+									<td th:text="${repdetail.r6_product}"></td>
+						                  <th
+											th:text="${#numbers.formatDecimal(repdetail.r6_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r6_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r6_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r6_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r6_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r6_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r6_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r6_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r6_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r7_product}"></td>
+						                    <th
+											th:text="${#numbers.formatDecimal(repdetail.r7_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r7_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r7_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r7_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r7_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r7_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r7_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r7_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r6_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r8_product}"></td>
+						                   <th
+											th:text="${#numbers.formatDecimal(repdetail.r8_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r8_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r8_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r8_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r8_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r8_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r8_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r8_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r8_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r9_product}"></td>
+						                   <th
+											th:text="${#numbers.formatDecimal(repdetail.r9_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r9_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r9_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r9_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r9_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r9_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r9_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r9_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r9_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r10_product}"></td>
+						                    <th
+											th:text="${#numbers.formatDecimal(repdetail.r10_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r10_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r10_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r10_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r10_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r10_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r10_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r10_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r10_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r11_product}"></td>
+						                    <th
+											th:text="${#numbers.formatDecimal(repdetail.r11_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r11_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r11_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r11_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r11_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r11_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r11_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r11_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r11_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r12_product}"></td>
+						                    <th
+											th:text="${#numbers.formatDecimal(repdetail.r12_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r12_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r12_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r12_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r12_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r12_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r12_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r12_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r12_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r13_product}"></td>
+						                   <th
+											th:text="${#numbers.formatDecimal(repdetail.r13_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r13_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r13_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r13_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r13_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r13_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r13_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r13_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r13_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r14_product}"></td>
+						                  <th
+											th:text="${#numbers.formatDecimal(repdetail.r14_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r14_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r14_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r14_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r14_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r14_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r14_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r14_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r14_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r15_product}"></td>
+						                   <th
+											th:text="${#numbers.formatDecimal(repdetail.r15_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r15_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r15_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r15_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r15_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r15_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r15_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r15_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r15_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r16_product}"></td>
+						                    <th
+											th:text="${#numbers.formatDecimal(repdetail.r16_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r16_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r16_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r16_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r16_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r16_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r16_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r16_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r16_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r17_product}"></td>
+						                  <th
+											th:text="${#numbers.formatDecimal(repdetail.r17_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r17_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r17_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r17_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r17_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r17_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r17_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r17_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r17_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									
+									<tr>
+									<td th:text="${repdetail.r18_product}"></td>
+						                   <th
+											th:text="${#numbers.formatDecimal(repdetail.r18_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r18_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r18_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r18_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r18_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r18_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r18_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r18_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r18_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r19_product}"></td>
+						                   <th
+											th:text="${#numbers.formatDecimal(repdetail.r19_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r19_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r19_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r19_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r19_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r19_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r19_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r19_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r19_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									
+									
+									<tr>
+									<td th:text="${repdetail.r20_product}"></td>
+						                   <th
+											th:text="${#numbers.formatDecimal(repdetail.r20_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r20_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r20_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r20_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r20_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r20_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r20_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r20_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r20_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r21_product}"></td>
+						                  <th
+											th:text="${#numbers.formatDecimal(repdetail.r21_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r21_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r21_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r21_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r21_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r21_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r21_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r21_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r21_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r22_product}"></td>
+						                  <th
+											th:text="${#numbers.formatDecimal(repdetail.r22_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r22_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r22_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r22_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r22_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r22_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r22_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r22_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r22_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									 <tr>
+									<td th:text="${repdetail.r23_product}"></td>
+						                   <th
+											th:text="${#numbers.formatDecimal(repdetail.r23_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r23_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r23_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r23_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r23_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r23_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r23_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r23_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r23_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r24_product}"></td>
+						                   <th
+											th:text="${#numbers.formatDecimal(repdetail.r24_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r24_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r24_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r24_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r24_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r24_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r24_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r24_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r24_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r25_product}"></td>
+						                   <th
+											th:text="${#numbers.formatDecimal(repdetail.r25_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r25_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r25_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r25_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r25_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r25_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r25_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r25_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r25_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r26_product}"></td>
+						                   <th
+											th:text="${#numbers.formatDecimal(repdetail.r26_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r26_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r26_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r26_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r26_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r26_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r26_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r26_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r26_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r27_product}"></td>
+						                   <th
+											th:text="${#numbers.formatDecimal(repdetail.r27_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r27_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r27_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r27_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r27_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r27_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r27_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r27_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r27_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r28_product}"></td>
+						                   <th
+											th:text="${#numbers.formatDecimal(repdetail.r28_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r28_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r28_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r28_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r28_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r28_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r28_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r28_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r28_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r29_product}"></td>
+						                   <th
+											th:text="${#numbers.formatDecimal(repdetail.r29_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r29_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r29_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r29_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r29_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r29_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r29_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r29_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r29_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r30_product}"></td>
+						                  <th
+											th:text="${#numbers.formatDecimal(repdetail.r30_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r30_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r30_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r30_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r30_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r30_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r30_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r30_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r30_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r31_product}"></td>
+						                   <th
+											th:text="${#numbers.formatDecimal(repdetail.r31_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r31_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r31_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r31_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r31_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r31_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r31_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r31_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r31_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r32_product}"></td>
+						                  <th
+											th:text="${#numbers.formatDecimal(repdetail.r32_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r32_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r32_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r32_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r32_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r32_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r32_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r32_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r32_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r33_product}"></td>
+						                   <th
+											th:text="${#numbers.formatDecimal(repdetail.r33_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r33_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r33_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r33_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r33_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r33_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r33_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r33_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r33_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r34_product}"></td>
+						                   <th
+											th:text="${#numbers.formatDecimal(repdetail.r34_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r34_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r34_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r34_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r34_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r34_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r34_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r34_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r34_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>									</tr>
+									<tr>
+									<td th:text="${repdetail.r35_product}"></td>
+						                  <th
+											th:text="${#numbers.formatDecimal(repdetail.r35_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r35_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r35_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r35_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r35_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r35_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r35_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r35_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r35_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r36_product}"></td>
+						                   <th
+											th:text="${#numbers.formatDecimal(repdetail.r36_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r36_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r36_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r36_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r36_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r36_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r36_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r36_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r36_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r37_product}"></td>
+						                   <th
+											th:text="${#numbers.formatDecimal(repdetail.r37_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r37_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r37_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r37_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r37_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r37_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r37_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r37_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r37_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r38_product}"></td>
+						                   <th
+											th:text="${#numbers.formatDecimal(repdetail.r38_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r38_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r38_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r38_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r38_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r38_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r38_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r38_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r38_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r39_product}"></td>
+						                  <th
+											th:text="${#numbers.formatDecimal(repdetail.r39_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r39_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r39_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r39_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r39_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r39_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r39_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r39_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r39_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r40_product}"></td>
+						                   <th
+											th:text="${#numbers.formatDecimal(repdetail.r40_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r40_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r40_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r40_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r40_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r40_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r40_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r40_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r40_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r41_product}"></td>
+						                   <th
+											th:text="${#numbers.formatDecimal(repdetail.r41_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r41_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r41_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r41_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r41_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r41_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r41_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r41_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r41_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r42_product}"></td>
+						                  <th
+											th:text="${#numbers.formatDecimal(repdetail.r42_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r42_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r42_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r42_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r42_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r42_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r42_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r42_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r42_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r43_product}"></td>
+						                  <th
+											th:text="${#numbers.formatDecimal(repdetail.r43_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r43_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r43_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r43_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r43_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r43_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r43_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r43_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r43_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r44_product}"></td>
+						                   <th
+											th:text="${#numbers.formatDecimal(repdetail.r44_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r44_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r44_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r44_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r44_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r44_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r44_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r44_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r44_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r45_product}"></td>
+						                   <th
+											th:text="${#numbers.formatDecimal(repdetail.r45_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r45_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r45_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r45_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r45_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r45_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r45_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r45_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r45_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r46_product}"></td>
+						                   <th
+											th:text="${#numbers.formatDecimal(repdetail.r46_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r46_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r46_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r46_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r46_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r46_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r46_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r46_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r46_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r47_product}"></td>
+						                   <th
+											th:text="${#numbers.formatDecimal(repdetail.r47_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r47_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r47_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r47_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r47_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r47_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r47_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r47_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r47_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r48_product}"></td>
+						                   <th
+											th:text="${#numbers.formatDecimal(repdetail.r48_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r48_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r48_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r48_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r48_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r48_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r48_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r48_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r48_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r49_product}"></td>
+						                  <th
+											th:text="${#numbers.formatDecimal(repdetail.r49_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r49_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r49_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r49_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r49_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r49_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r49_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r49_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r49_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r50_product}"></td>
+						                   <th
+											th:text="${#numbers.formatDecimal(repdetail.r50_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r50_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r50_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r50_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r50_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r50_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r50_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r50_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r50_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r51_product}"></td>
+						                  <th
+											th:text="${#numbers.formatDecimal(repdetail.r51_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r51_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r51_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r51_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r51_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r51_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r51_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r51_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r51_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r52_product}"></td>
+						                   <th
+											th:text="${#numbers.formatDecimal(repdetail.r52_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r52_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r52_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r52_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r52_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r52_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r52_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r52_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r52_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r53_product}"></td>
+						                  <th
+											th:text="${#numbers.formatDecimal(repdetail.r53_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r53_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r53_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r53_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r53_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r53_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r53_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r53_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r53_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r54_product}"></td>
+						                   <th
+											th:text="${#numbers.formatDecimal(repdetail.r54_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r54_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r54_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r54_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r54_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r54_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r54_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r54_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r54_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r55_product}"></td>
+						                   <th
+											th:text="${#numbers.formatDecimal(repdetail.r55_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r55_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r55_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r55_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r55_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r55_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r55_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r55_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r55_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r56_product}"></td>
+						                   <th
+											th:text="${#numbers.formatDecimal(repdetail.r56_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r56_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r56_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r56_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r56_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r56_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r56_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r56_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r56_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r57_product}"></td>
+						                  <th
+											th:text="${#numbers.formatDecimal(repdetail.r57_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r57_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r57_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r57_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r57_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r57_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r57_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r57_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r57_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r58_product}"></td>
+						                   <th
+											th:text="${#numbers.formatDecimal(repdetail.r58_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r58_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r58_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r58_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r58_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r58_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r58_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r58_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r58_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r59_product}"></td>
+						                   <th
+											th:text="${#numbers.formatDecimal(repdetail.r59_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r59_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r59_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r59_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r59_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r59_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r59_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r59_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r59_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r60_product}"></td>
+						                   <th
+											th:text="${#numbers.formatDecimal(repdetail.r60_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r60_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r60_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r60_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r60_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r60_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r60_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r60_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r60_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r61_product}"></td>
+						                   <th
+											th:text="${#numbers.formatDecimal(repdetail.r61_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r61_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r61_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r61_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r61_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r61_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r61_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r61_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r61_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									<tr>
+									<td th:text="${repdetail.r62_product}"></td>
+						                   <th
+											th:text="${#numbers.formatDecimal(repdetail.r62_usd,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r62_zar,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r62_gbp,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r62_euro,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r62_yen,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r62_a,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r62_b,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									      <th
+											th:text="${#numbers.formatDecimal(repdetail.r62_c,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									       <th
+											th:text="${#numbers.formatDecimal(repdetail.r62_total,1,'COMMA',2,'POINT')}"
+											style="text-align:right;">CHENNAI
+									      </th>
+									</tr>
+									
+
+									
+								</tbody>
+							</table>
+						</div>
+						<div class="card-footer text-center"
+							th:if="${displaymode}=='summary' or ${displaymode}==null"
+							style="background-color: #386276";>
+							<button type="button" class="btn btn-xs btn-primary" id="btnHome"
+								onclick="home();">Home</button>
+							 <button type="button" class="btn btn-xs btn-primary"
+									id="btnBack" onclick="back();">Back</button>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!------------------------------ Report summary section ends it will shown only if summary button clicked------------------------->
+			<!------------------------------ Report Details section starts it will shown only if Details button clicked------------------------->
+			<div class="col-sm-12 customcol" th:if="${displaymode}=='detail'"
+				th:fragment="detail">
+				<div style="overflow-x: auto; border-right: 1px solid #dee2e6"
+					th:class="${searchmsg == null}?'inner'">
+					<table th:if="${searchmsg} == null"
+						class="table table-bordered table-sm" style="width: 1500px"
+						id="detailtb">
+						<thead class="thead-light">
+							<tr style="text-align:center">
+							<th><a data-toggle="tooltip" class="editrec"
+									title="Click to add new Records"><i
+										th:classappend="${session.PERMISSIONS == 'W'}  ? addedit "
+										class="fa fa-plus-circle" onclick="addRecord();"
+										aria-hidden="true"></i></a></th>
+								<th></th>
+								<th>Cust ID</th>
+								<th>Cust Name</th>
+								<th>Cust Typ</th>
+								<th>Cust Rat</th>
+								<th>Acc No</th>
+								<th>Acc Name</th>
+								<th>Trn Typ</th>
+								<th>Trn Sub Typ</th>
+								<th>Trn Dt</th>
+								<th>Trn ID</th>
+								<th>Prt Trn ID</th>
+								<th>Prt Trn Typ</th>
+								<th>Trn Cur</th>
+								<th>Trn Amt</th>
+								<th>Trn Cat</th>
+
+							</tr>
+
+						</thead>
+						<tbody>
+							<tr th:each="repdetail : ${reportdetails.content}">
+							<td><a data-toggle="tooltip" class="editrec"
+									title="Click to Edit this Record"><i
+										th:classappend="${session.PERMISSIONS == 'W'}  ? addedit "
+										class="fas fa-edit"
+										
+										th:attr="data-custid=${repdetail.cust_id},
+										data-custname=${repdetail.cust_name},
+								        data-custtype=${repdetail.cust_type},
+										data-custrating=${repdetail.cust_rating},
+										data-accnum=${repdetail.acct_no},
+										data-accname=${repdetail.acct_name},
+										data-tratype=${repdetail.tran_type},
+										data-trasubtype=${repdetail.tran_sub_type},
+										data-tradate=${#dates.format(repdetail.tran_date, 'dd-MM-yyyy')},
+										data-traid=${repdetail.tran_id},
+										data-partialtraid=${repdetail.part_tran_id},
+										data-partialtratype=${repdetail.part_tran_type},
+										data-tracurr=${repdetail.tran_crncy},
+										data-traamount=${repdetail.tran_amt},
+										data-tracat=${repdetail.tran_category}"
+										onclick="editRecord(this)"></i></a></td>
+
+								<td><a data-toggle="tooltip" class="editrec"
+									title="Click to delete this Record"><i
+										th:classappend="${session.PERMISSIONS == 'W'}  ? addedit "
+										class="fas fa-minus-circle"
+										th:attr="data-custid=${repdetail.cust_id},
+										data-custname=${repdetail.cust_name},
+								        data-custtype=${repdetail.cust_type},
+										data-custrating=${repdetail.cust_rating},
+										data-accnum=${repdetail.acct_no},
+										data-accname=${repdetail.acct_name},
+										data-tratype=${repdetail.tran_type},
+										data-trasubtype=${repdetail.tran_sub_type},
+										data-tradate=${#dates.format(repdetail.tran_date, 'dd-MM-yyyy')},
+										data-traid=${repdetail.tran_id},
+										data-partialtraid=${repdetail.part_tran_id},
+										data-partialtratype=${repdetail.part_tran_type},
+										data-tracurr=${repdetail.tran_crncy},
+										data-traamount=${repdetail.tran_amt},
+										data-tracat=${repdetail.tran_category}"
+										onclick="deleteRecord(this)"></i></a></td>
+
+								
+							
+
+								<td th:text="${repdetail.cust_id	}">CHENNAI</td>
+								<td th:text="${repdetail.cust_name	}">CHENNAI</td>
+								<th:block th:switch="${repdetail.cust_type}">
+									<td th:case="'C'">Customer</td>
+									<td th:case="'E'">Employee</td>
+									<td th:case="'O'">Office</td>
+								</th:block>
+								<td th:text="${repdetail.cust_rating	}">CHENNAI</td>
+								<td th:text="${repdetail.acct_no	}">CHENNAI</td>
+								<td th:text="${repdetail.acct_name	}">CHENNAI</td>
+								<th:block th:switch="${repdetail.tran_type}">
+									<td th:case="'T'">XFER</td>
+									<td th:case="'L'">Clearing</td>
+									<td th:case="'C'">Cash</td>
+									<td th:case="''">XFER</td>
+								</th:block>
+								<td th:text="${repdetail.tran_sub_type	}">CHENNAI</td>
+								<td
+									th:text="${#dates.format(repdetail.tran_date, 'dd/MM/yyyy')}"></td>
+
+								<td th:text="${repdetail.tran_id	}">CHENNAI</td>
+								<td th:text="${repdetail.part_tran_id	}">CHENNAI</td>
+								<th:block th:switch="${repdetail.part_tran_type}">
+									<td th:case="'D'">Dr</td>
+									<td th:case="'C'">Cr</td>
+								</th:block>
+								<td th:text="${repdetail.tran_crncy	}">CHENNAI</td>
+								<td
+									th:text="${#numbers.formatDecimal(repdetail.tran_amt	,1,'COMMA',2,'POINT')}"
+									align="right">CHENNAI</td>
+								<td th:text="${repdetail.tran_category	}">CHENNAI</td>
+
+
+							</tr>
+						</tbody>
+					</table>
+
+
+				</div>
+				<!-- -----------------------------------Details edit modal form----------------------------------------------------->
+				<div class="modal fade" id="addedit" th:fragment="dataedit">
+					<div
+						class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+						<div class="modal-content">
+
+							<!-- Modal Header -->
+							<div class="modal-header">
+								<h4 class="modal-title">Add/Edit Records</h4>
+								<button type="button" class="close" data-dismiss="modal">×</button>
+							</div>
+							<div class="modal-body" style="text-align: center">
+								<form th:object=${singledetail} id="dataedit" method="post">
+									<div class="form-group">
+										<div class="row">
+											<label class="col-sm-5">Customer Id</label> <input
+												class="form-control col-sm-5" type="number"
+												th:field="*{cust_id}" th:value="${cust_id}" id="custid"
+												readonly />
+										</div>
+										<div class="row">
+											<label class="col-sm-5">Customer Name</label> <input
+												class="form-control col-sm-5" type="text"
+												th:field="*{cust_name}" th:value="${cust_name}"
+												id="custname" />
+										</div>
+										<div class="row">
+											<label class="col-sm-5">Customer Type</label>
+												
+												<select class="form-control col-sm-5" 
+												th:field="*{cust_type}" th:value="${cust_type}"
+												id="custtype">
+												<option value="C">Customer</option>
+												<option value="E">Employee</option>
+												<option value="O">Office</option>
+												</select>
+										</div>
+										<div class="row">
+											<label class="col-sm-5">Customer Rating</label> <input
+												class="form-control col-sm-5" type="text"
+												th:field="*{cust_rating}" th:value="${cust_rating}"
+												id="custrating">
+										</div>
+
+										<div class="row">
+											<label class="col-sm-5">Account Number</label> <input
+												class="form-control col-sm-5" type="number"
+												th:field="*{acct_no}" th:value="${acct_no}" id="accnum">
+										</div>
+										<div class="row">
+											<label class="col-sm-5">Account Name</label> <input
+												class="form-control col-sm-5" type="text"
+												th:field="*{acct_name}" th:value="${acct_name}" id="accname">
+										</div>
+										<div class="row">
+											<label class="col-sm-5">Transaction Type</label> 
+												<select class="form-control col-sm-5" type="text"
+												th:field="*{tran_type}" th:value="${tran_type}" id="tratype">
+												<option value="T">Transfer</option>
+												<option value="C">Clearing</option>
+												<option value="C">Cash</option>
+												
+												</select>
+												
+										</div>
+
+
+										<div class="row">
+											<label class="col-sm-5">Transaction Sub Type</label> <input
+												class="form-control col-sm-5" type="text"
+												th:field="*{tran_sub_type}" th:value="${tran_sub_type}"
+												id="trasubtype">
+										</div>
+
+										<div class="row">
+											<label class="col-sm-5">Transaction Date</label> <input
+												class="form-control col-sm-5 hasDatepicker"
+												th:field="*{tran_date}" th:value="${tran_date}"  type="Date" 
+												id="tradate">
+										</div>
+
+										<div class="row">
+											<label class="col-sm-5">Transaction Id</label> <input
+												class="form-control col-sm-5" type="text"
+												th:field="*{tran_id}" th:value="${tran_id}" id="traid">
+										</div>
+										<div class="row">
+											<label class="col-sm-5">Partial Transaction Id</label> 
+											<input
+												class="form-control col-sm-5" type="number"
+												th:field="*{part_tran_id}" th:value="${part_tran_id}"
+												id="partialtraid">
+										</div>
+
+										<div class="row">
+											<label class="col-sm-5">Partial Transaction Type</label> 
+											<select
+												class="form-control col-sm-5" type="text"
+												th:field="*{part_tran_type}" th:value="${part_tran_type}"
+												id="partialtratype">
+												<option value="C">Credit</option>
+												<option value="D">Debit</option>
+											</select>
+
+										</div>
+										<div class="row">
+											<label class="col-sm-5">Transaction Currency</label> <input
+												class="form-control col-sm-5" type="text"
+												th:field="*{tran_crncy}" th:value="${tran_crncy}"
+												id="tracurr">
+
+										</div>
+									</div>
+									<div class="row">
+										<label class="col-sm-5">Transaction Amount</label> <input
+											class="form-control col-sm-5" type="number"
+											th:field="*{tran_amt}" th:value="${tran_amt}" id="traamount">
+
+									</div>
+									<div class="row">
+										<label class="col-sm-5">Transaction Category</label> <input
+											class="form-control col-sm-5" type="number"
+											th:field="*{tran_category}" th:value="${tran_category}"
+											id="tracat">
+
+									</div>
+								</form>
+							</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-primary"
+											onclick="submitdataform(this);" id="add">Add</button>
+										 <button type="button" class="btn btn-primary"
+											onclick="submitdataformedit(this);" id="edit" >Edit</button> 
+
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+
+
+				<!-------------------------------------Details edit modal form----------------------------------------------------->
+				<div class="modal fade" id="datadelete">
+							<div
+								class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+								<div class="modal-content">
+									<div class="modal-body" style="text-align: center">
+										<button type="button" class="close" data-dismiss="modal">×</button>
+										Are you Sure want to delete?
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-primary"
+											onclick="submitdataformdelete(this);" >Submit</button>
+										<button type="button" class="btn btn-primary"
+											data-dismiss="modal">Cancel</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+			<!-- -----------------------------------Search modal form----------------------------------------------------->
+			<!------------------------------ Report Details pagination - shown if paginated -------------------------------------------------->
+			<!-- <div class="float-right" th:if="${reportdetails.totalPages} gt 1">
+<a href="#"><i class="fas fa-caret-left fa-2x"
+                        th:onclick="|showdetails('prevpage',${reportdetails.number},${reportdetails.totalPages});|"></i></a>
+<input type="text" id="pageno" style="width: 30px"
+                        th:value="${reportdetails.number+1}"
+                        th:onchange="|showdetails('givenpage',${reportdetails.number},${reportdetails.totalPages});|"></input>
+                    of <font th:text="${reportdetails.totalPages}"></font> <a href="#"><i
+                        class="fas fa-caret-right fa-2x"
+                        th:onclick="|showdetails('nextpage',${reportdetails.number},${reportdetails.totalPages});|"></i></a>
+</div> -->
+			<!------------------------------ Report Details pagination - shown if paginated -------------------------------------------------->
+		</div>
+		<!------------------------------ Report Details section ends it will shown only if Details button clicked------------------------->
+	</div>
+	</div>
+
+	<!--------------------------------------------------------------- Modal for alert messages-------------------------------->
+	<div class="modal fade" id="alert">
+		<div
+			class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-content">
+				<div class="modal-body" style="text-align: center">
+					<p id="alertmsg"></p>
+					<button type="button" class="btn btn-primary" data-dismiss="modal"
+						onclick="refreshPage()">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--------------------------------------------------------------- Modal for alert messages-------------------------------->
+
+
+</body>
+</html>
