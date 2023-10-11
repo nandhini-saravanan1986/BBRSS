@@ -1,0 +1,1614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="BRS65" pageWidth="1595" pageHeight="1842" columnWidth="1555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="290e38af-b37e-43b3-8f65-8d54205b47a2">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="BRSS.jrdax"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="REPORT_DATE" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from  "BRS65_TABLE" where REPORT_DATE=$P{REPORT_DATE}]]>
+	</queryString>
+	<field name="R15_PRODUCT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R15_PRODUCT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R15_PRODUCT"/>
+	</field>
+	<field name="R15_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R15_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R15_RESIDENT"/>
+	</field>
+	<field name="R15_NON_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R15_NON_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R15_NON_RESIDENT"/>
+	</field>
+	<field name="R16_PRODUCT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R16_PRODUCT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R16_PRODUCT"/>
+	</field>
+	<field name="R16_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R16_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R16_RESIDENT"/>
+	</field>
+	<field name="R16_NON_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R16_NON_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R16_NON_RESIDENT"/>
+	</field>
+	<field name="R17_PRODUCT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R17_PRODUCT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R17_PRODUCT"/>
+	</field>
+	<field name="R17_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R17_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R17_RESIDENT"/>
+	</field>
+	<field name="R17_NON_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R17_NON_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R17_NON_RESIDENT"/>
+	</field>
+	<field name="R18_PRODUCT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R18_PRODUCT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R18_PRODUCT"/>
+	</field>
+	<field name="R18_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R18_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R18_RESIDENT"/>
+	</field>
+	<field name="R18_NON_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R18_NON_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R18_NON_RESIDENT"/>
+	</field>
+	<field name="R19_PRODUCT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R19_PRODUCT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R19_PRODUCT"/>
+	</field>
+	<field name="R19_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R19_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R19_RESIDENT"/>
+	</field>
+	<field name="R19_NON_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R19_NON_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R19_NON_RESIDENT"/>
+	</field>
+	<field name="R20_PRODUCT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R20_PRODUCT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R20_PRODUCT"/>
+	</field>
+	<field name="R20_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R20_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R20_RESIDENT"/>
+	</field>
+	<field name="R20_NON_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R20_NON_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R20_NON_RESIDENT"/>
+	</field>
+	<field name="R21_PRODUCT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R21_PRODUCT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R21_PRODUCT"/>
+	</field>
+	<field name="R21_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R21_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R21_RESIDENT"/>
+	</field>
+	<field name="R21_NON_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R21_NON_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R21_NON_RESIDENT"/>
+	</field>
+	<field name="R22_PRODUCT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R22_PRODUCT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R22_PRODUCT"/>
+	</field>
+	<field name="R22_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R22_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R22_RESIDENT"/>
+	</field>
+	<field name="R22_NON_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R22_NON_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R22_NON_RESIDENT"/>
+	</field>
+	<field name="R23_PRODUCT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R23_PRODUCT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R23_PRODUCT"/>
+	</field>
+	<field name="R23_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R23_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R23_RESIDENT"/>
+	</field>
+	<field name="R23_NON_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R23_NON_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R23_NON_RESIDENT"/>
+	</field>
+	<field name="R24_PRODUCT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R24_PRODUCT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R24_PRODUCT"/>
+	</field>
+	<field name="R24_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R24_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R24_RESIDENT"/>
+	</field>
+	<field name="R24_NON_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R24_NON_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R24_NON_RESIDENT"/>
+	</field>
+	<field name="R25_PRODUCT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R25_PRODUCT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R25_PRODUCT"/>
+	</field>
+	<field name="R25_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R25_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R25_RESIDENT"/>
+	</field>
+	<field name="R25_NON_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R25_NON_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R25_NON_RESIDENT"/>
+	</field>
+	<field name="R26_PRODUCT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R26_PRODUCT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R26_PRODUCT"/>
+	</field>
+	<field name="R26_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R26_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R26_RESIDENT"/>
+	</field>
+	<field name="R26_NON_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R26_NON_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R26_NON_RESIDENT"/>
+	</field>
+	<field name="R27_PRODUCT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R27_PRODUCT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R27_PRODUCT"/>
+	</field>
+	<field name="R27_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R27_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R27_RESIDENT"/>
+	</field>
+	<field name="R27_NON_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R27_NON_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R27_NON_RESIDENT"/>
+	</field>
+	<field name="R28_PRODUCT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R28_PRODUCT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R28_PRODUCT"/>
+	</field>
+	<field name="R28_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R28_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R28_RESIDENT"/>
+	</field>
+	<field name="R28_NON_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R28_NON_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R28_NON_RESIDENT"/>
+	</field>
+	<field name="R29_PRODUCT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R29_PRODUCT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R29_PRODUCT"/>
+	</field>
+	<field name="R29_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R29_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R29_RESIDENT"/>
+	</field>
+	<field name="R29_NON_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R29_NON_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R29_NON_RESIDENT"/>
+	</field>
+	<field name="R30_PRODUCT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R30_PRODUCT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R30_PRODUCT"/>
+	</field>
+	<field name="R30_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R30_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R30_RESIDENT"/>
+	</field>
+	<field name="R30_NON_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R30_NON_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R30_NON_RESIDENT"/>
+	</field>
+	<field name="R31_PRODUCT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R31_PRODUCT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R31_PRODUCT"/>
+	</field>
+	<field name="R31_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R31_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R31_RESIDENT"/>
+	</field>
+	<field name="R31_NON_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R31_NON_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R31_NON_RESIDENT"/>
+	</field>
+	<field name="R32_PRODUCT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R32_PRODUCT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R32_PRODUCT"/>
+	</field>
+	<field name="R32_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R32_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R32_RESIDENT"/>
+	</field>
+	<field name="R32_NON_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R32_NON_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R32_NON_RESIDENT"/>
+	</field>
+	<field name="R33_PRODUCT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R33_PRODUCT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R33_PRODUCT"/>
+	</field>
+	<field name="R33_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R33_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R33_RESIDENT"/>
+	</field>
+	<field name="R33_NON_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R33_NON_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R33_NON_RESIDENT"/>
+	</field>
+	<field name="R34_PRODUCT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R34_PRODUCT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R34_PRODUCT"/>
+	</field>
+	<field name="R34_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R34_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R34_RESIDENT"/>
+	</field>
+	<field name="R34_NON_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R34_NON_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R34_NON_RESIDENT"/>
+	</field>
+	<field name="R35_PRODUCT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R35_PRODUCT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R35_PRODUCT"/>
+	</field>
+	<field name="R35_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R35_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R35_RESIDENT"/>
+	</field>
+	<field name="R35_NON_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R35_NON_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R35_NON_RESIDENT"/>
+	</field>
+	<field name="R36_PRODUCT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R36_PRODUCT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R36_PRODUCT"/>
+	</field>
+	<field name="R36_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R36_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R36_RESIDENT"/>
+	</field>
+	<field name="R36_NON_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R36_NON_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R36_NON_RESIDENT"/>
+	</field>
+	<field name="R37_PRODUCT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R37_PRODUCT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R37_PRODUCT"/>
+	</field>
+	<field name="R37_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R37_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R37_RESIDENT"/>
+	</field>
+	<field name="R37_NON_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R37_NON_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R37_NON_RESIDENT"/>
+	</field>
+	<field name="R38_PRODUCT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R38_PRODUCT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R38_PRODUCT"/>
+	</field>
+	<field name="R38_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R38_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R38_RESIDENT"/>
+	</field>
+	<field name="R38_NON_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R38_NON_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R38_NON_RESIDENT"/>
+	</field>
+	<field name="R39_PRODUCT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R39_PRODUCT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R39_PRODUCT"/>
+	</field>
+	<field name="R39_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R39_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R39_RESIDENT"/>
+	</field>
+	<field name="R39_NON_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R39_NON_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R39_NON_RESIDENT"/>
+	</field>
+	<field name="R40_PRODUCT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R40_PRODUCT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R40_PRODUCT"/>
+	</field>
+	<field name="R40_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R40_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R40_RESIDENT"/>
+	</field>
+	<field name="R40_NON_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R40_NON_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R40_NON_RESIDENT"/>
+	</field>
+	<field name="R41_PRODUCT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R41_PRODUCT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R41_PRODUCT"/>
+	</field>
+	<field name="R41_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R41_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R41_RESIDENT"/>
+	</field>
+	<field name="R41_NON_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R41_NON_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R41_NON_RESIDENT"/>
+	</field>
+	<field name="R42_PRODUCT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R42_PRODUCT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R42_PRODUCT"/>
+	</field>
+	<field name="R42_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R42_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R42_RESIDENT"/>
+	</field>
+	<field name="R42_NON_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R42_NON_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R42_NON_RESIDENT"/>
+	</field>
+	<field name="R43_PRODUCT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R43_PRODUCT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R43_PRODUCT"/>
+	</field>
+	<field name="R43_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R43_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R43_RESIDENT"/>
+	</field>
+	<field name="R43_NON_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R43_NON_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R43_NON_RESIDENT"/>
+	</field>
+	<field name="R44_PRODUCT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="R44_PRODUCT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R44_PRODUCT"/>
+	</field>
+	<field name="R44_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R44_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R44_RESIDENT"/>
+	</field>
+	<field name="R44_NON_RESIDENT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="R44_NON_RESIDENT"/>
+		<property name="com.jaspersoft.studio.field.label" value="R44_NON_RESIDENT"/>
+	</field>
+	<field name="REPORT_DATE" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="REPORT_DATE"/>
+		<property name="com.jaspersoft.studio.field.label" value="REPORT_DATE"/>
+	</field>
+	<field name="REPORT_FROM_DATE" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="REPORT_FROM_DATE"/>
+		<property name="com.jaspersoft.studio.field.label" value="REPORT_FROM_DATE"/>
+	</field>
+	<field name="REPORT_TO_DATE" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="REPORT_TO_DATE"/>
+		<property name="com.jaspersoft.studio.field.label" value="REPORT_TO_DATE"/>
+	</field>
+	<field name="ENTITY_FLG" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="ENTITY_FLG"/>
+		<property name="com.jaspersoft.studio.field.label" value="ENTITY_FLG"/>
+	</field>
+	<field name="MODIFY_FLG" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="MODIFY_FLG"/>
+		<property name="com.jaspersoft.studio.field.label" value="MODIFY_FLG"/>
+	</field>
+	<field name="DEL_FLG" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="DEL_FLG"/>
+		<property name="com.jaspersoft.studio.field.label" value="DEL_FLG"/>
+	</field>
+	<field name="REPORT_CODE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="REPORT_CODE"/>
+		<property name="com.jaspersoft.studio.field.label" value="REPORT_CODE"/>
+	</field>
+	<field name="REPORT_SUBMIT_DATE" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="REPORT_SUBMIT_DATE"/>
+		<property name="com.jaspersoft.studio.field.label" value="REPORT_SUBMIT_DATE"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="256" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="20" width="881" height="21" uuid="fd4ab8c0-c779-4091-a117-13685d073c92"/>
+				<text><![CDATA[BANK OF BOTSWANA - BANKING SUPERVISION DEPARTMENT		
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="41" width="881" height="21" uuid="594ef856-a776-46ef-9163-d2eda645087f"/>
+				<text><![CDATA[(4) QUARTERLY SCHEDULE: Q-SMME LOANS: SMME LOANS AND ADVANCES 		
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="62" width="881" height="21" uuid="be8a5d67-007c-4e3a-ad2d-d3ab0839582c"/>
+				<text><![CDATA[   (P'000)
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="82" width="881" height="21" uuid="1822f02b-928e-45b4-a336-45963ef5794c"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="146" width="881" height="21" uuid="7cd418ac-3384-4e45-b414-78277bc1bb2d"/>
+				<text><![CDATA[Quarter ended (dd/mm/yyy): 31.12.2022
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="104" width="881" height="21" uuid="1c053237-ab41-4e09-b60b-b67857ea232f"/>
+				<text><![CDATA[(confidential and not available for inspection by the public)
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="125" width="881" height="21" uuid="e85e62ae-14e8-43e4-8d25-4c7ebb08efba"/>
+				<text><![CDATA[Name of bank: Bank of Baroda(Botswana) Ltd.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="190" width="380" height="21" uuid="24dfc878-8af7-4f06-affb-b2c113dab09b"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="211" width="380" height="35" uuid="5f415869-fe7b-4b21-b2ff-5bcc78ddfd22"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<text><![CDATA[CATEGORY ANALYSIS OF INTEREST INCOME
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="620" y="211" width="240" height="35" uuid="1fac34b9-38ce-4ba5-a2a7-0c2797263bc8"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<text><![CDATA[Non-resident
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="211" width="240" height="35" uuid="0e72084a-600f-44da-b678-f9c1f558e24c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<text><![CDATA[Resident
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="190" width="480" height="21" uuid="3edf33d2-1ca0-4d50-a81e-475fe29fa7e0"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<text><![CDATA[CARRYING AMOUNT (VALUE)	
+]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="788" splitType="Stretch">
+			<textField>
+				<reportElement x="620" y="326" width="240" height="21" uuid="c0307a65-a55a-4151-ac7f-7dcc00cf3de4">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="410" width="240" height="21" uuid="9b3392b1-92f6-42d6-ae1f-2733584dd1e0">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Transparent" x="620" y="368" width="240" height="21" backcolor="#40F037" uuid="f82f4721-852f-4cba-8e13-2b11f62fee2d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R33_NON_RESIDENT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="620" y="305" width="240" height="21" uuid="9cd3beae-155b-4292-aa1a-dad95a67fb9d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="53" width="380" height="21" uuid="476de3a3-0c31-4927-9426-17af99e450b1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R18_PRODUCT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Transparent" x="380" y="368" width="240" height="21" backcolor="#40F037" uuid="95ab5f08-f64e-4057-b945-e3acdf89fbbb">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R33_RESIDENT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="389" width="240" height="21" uuid="79cd9a4f-621f-4cee-ab59-700b490cdafe">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="305" width="240" height="21" uuid="9a0ea7ce-23ad-4e90-a35b-71d22dcc75ca">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="620" y="116" width="240" height="21" uuid="23c6c504-1342-4737-9187-70c0832be047">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="116" width="240" height="21" uuid="0f49113e-c5ca-4ff6-9dd6-2210c19d8618">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R21_RESIDENT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="326" width="240" height="21" uuid="d813c871-e73c-4e01-a1b8-b84cd97beac2">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="473" width="380" height="21" uuid="8b3c910a-23bb-45c8-b8f8-3d49f119d7f0">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R38_PRODUCT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="536" width="240" height="21" uuid="225555c3-9474-474b-acb9-87c8e1fda1e4">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="368" width="380" height="21" uuid="92e05edf-8f9b-4c9b-abb7-5919045160e5">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R33_PRODUCT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="11" width="240" height="21" uuid="4c4b89ab-b485-422a-807a-bbca2da97521">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R16_RESIDENT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="380" y="284" width="240" height="21" backcolor="#40F037" uuid="13254b80-08e4-4832-97d7-fc8b6a275095">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R29_RESIDENT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="326" width="380" height="21" uuid="ce85a442-4726-45db-8a20-bb85b0553ece">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R31_PRODUCT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="32" width="380" height="21" uuid="df3f0326-ad43-46bd-8003-85218e6efcbb">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R17_PRODUCT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="200" width="380" height="21" uuid="317482c6-8d74-4fba-83b0-a411d61eead7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R25_PRODUCT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="-10" width="380" height="21" uuid="99cf3a21-9ad0-4b93-bfa2-004f9d5ff7be">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R15_PRODUCT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="380" y="578" width="240" height="21" backcolor="#40F037" uuid="6a9fd034-0634-435d-b9d9-458588e52c4a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R43_RESIDENT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="137" width="240" height="21" uuid="59afba7c-84b6-4112-a843-78c9c1a5d7ba">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R22_RESIDENT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="473" width="240" height="21" uuid="a648ff30-2dfe-4089-aa2e-3bdfab1fb610">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="263" width="240" height="21" uuid="4a890e78-4e53-44a8-b7bb-2003cd2234b3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R28_RESIDENT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="95" width="240" height="21" uuid="7e1a72f1-6040-45e1-9868-3b4c9a95d516">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R20_RESIDENT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="32" width="240" height="21" uuid="c33e21dd-af41-4873-baea-696b4d52591b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R17_RESIDENT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="95" width="380" height="21" uuid="0659f6e3-37dc-42aa-9827-9930ef2a16a3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R20_PRODUCT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="53" width="240" height="21" uuid="ef3a09a0-1639-4859-ade7-98fb141e241b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R18_RESIDENT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="242" width="380" height="21" uuid="16fb2aa1-2ce0-41b4-a301-6e5231faead0">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R27_PRODUCT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="620" y="200" width="240" height="21" uuid="548c4339-886c-4f66-9d05-2210719e6d33">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="137" width="380" height="21" uuid="b53cd65a-5aea-4ddb-bca7-59e59b721859">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R22_PRODUCT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="620" y="137" width="240" height="21" uuid="20d65685-58e2-4c69-a3f0-1b03586c1262">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="515" width="380" height="21" uuid="cc8f8260-2929-48cf-805e-47b005c76b60">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R40_PRODUCT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="347" width="240" height="21" uuid="ed058ac8-9a97-4041-b131-0369f2f26b0c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="200" width="240" height="21" uuid="64a546e6-67cb-4c66-9cfa-b7e1a9267d4e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R25_RESIDENT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="74" width="240" height="21" uuid="d21f9913-fe3e-4bff-b908-a0777e273a42">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R19_RESIDENT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="263" width="380" height="21" uuid="4eeff4d9-6e65-4e23-aa13-21d3ed98c527">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R28_PRODUCT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="494" width="240" height="21" uuid="4d847df6-e569-40e4-bd4b-6f25fb30dff4">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="158" width="380" height="21" uuid="006707d7-6793-4d21-971c-47797f9c39e2">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R23_PRODUCT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="620" y="536" width="240" height="21" uuid="dd4cf57b-f932-4c55-acf2-3108b8a0db59">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="620" y="347" width="240" height="21" uuid="7ae2959d-9c17-4228-893d-2d43c99ef217">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="11" width="380" height="21" uuid="f1869daf-66df-4e74-9338-b31996c44f2c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R16_PRODUCT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="620" y="389" width="240" height="21" uuid="a6fc86b8-4b9d-4e54-8f4c-4966bd732dc1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="74" width="380" height="21" uuid="af88bf2e-6397-4f58-aba0-8a5d8dd27ee7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R19_PRODUCT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="347" width="380" height="21" uuid="2a021479-8390-4970-ba5d-7c0e0e0f576c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R32_PRODUCT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="620" y="494" width="240" height="21" uuid="17c7191c-5818-4cc1-ac09-82beb958c2d3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="221" width="240" height="21" uuid="35183bbb-b0ae-4630-a8c8-6f5be6168342">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R26_RESIDENT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="620" y="242" width="240" height="21" uuid="443f5314-ac13-4d89-b1b4-d8a18d22fb04">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="179" width="240" height="21" uuid="bf36c53b-1f49-4924-b871-a13c608bae29">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R24_RESIDENT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="578" width="380" height="21" uuid="889005d3-3ee4-41ae-ac89-b75ecd08db27">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R43_PRODUCT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="557" width="240" height="21" uuid="e60a31da-ee06-4059-975b-9376e854a679">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="620" y="74" width="240" height="21" uuid="bd7b727a-f1f1-46e4-b0c3-32b0b90a5948">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="620" y="221" width="240" height="21" uuid="ebda4fd5-3714-4a2b-bdf7-a5e775794c27">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="620" y="410" width="240" height="21" uuid="28052a19-c72d-425e-a8ba-af525d2f93f0">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="620" y="578" width="240" height="21" backcolor="#40F037" uuid="0d79efb5-23ca-4b79-a486-a0227b04826a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R43_NON_RESIDENT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="620" y="431" width="240" height="21" backcolor="#40F037" uuid="b3992b24-57fb-4f70-920e-edd90148ab82">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="242" width="240" height="21" uuid="459a435d-8562-4b88-b008-1ff758aa8183">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R27_RESIDENT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="179" width="380" height="21" uuid="9ee26997-6955-4075-8864-539e9ed0e02d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R24_PRODUCT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="389" width="380" height="21" uuid="0dafbb84-1b22-448a-ab47-9fbe8245b5f5">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R34_PRODUCT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="620" y="557" width="240" height="21" uuid="0538c422-f784-48c8-b551-79283919f034">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="620" y="284" width="240" height="21" backcolor="#40F037" uuid="6ba80ebf-3234-464d-bb0a-2a9decb8ee44">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R29_NON_RESIDENT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="620" y="11" width="240" height="21" uuid="56f2d4e1-9e76-442f-8c5d-f4951c2947fe">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="620" y="-10" width="240" height="21" backcolor="#40F037" uuid="a605fd85-9c22-4e4b-94a5-f2660d21ec14">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R15_NON_RESIDENT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="620" y="515" width="240" height="21" uuid="e8611511-79ab-4e4e-b5ec-798d2c9bb93c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="494" width="380" height="21" uuid="b4181345-92b3-4ed1-8d00-93302eb1d080">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R39_PRODUCT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="221" width="380" height="21" uuid="47934f38-6b79-4d14-884a-830528006451">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R26_PRODUCT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="158" width="240" height="21" uuid="3b20f8eb-6810-4be0-8029-807965620edb">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R23_RESIDENT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="620" y="473" width="240" height="21" uuid="7549a41c-d001-49dd-a747-20f58b2c2f0d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="410" width="380" height="21" uuid="1fb2fecf-fac0-4c85-8088-083506d33631">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R35_PRODUCT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="620" y="452" width="240" height="21" backcolor="#40F037" uuid="1088f9bb-d1ca-4c13-8899-3b09f922842c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R37_NON_RESIDENT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="620" y="95" width="240" height="21" uuid="bc965858-10a5-48ed-a743-a42bbd7257d8">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="620" y="53" width="240" height="21" uuid="48cf1635-0bfd-402d-9504-3fb4fbc5d065">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="620" y="179" width="240" height="21" uuid="42bbb2e5-14dc-43a0-b58d-442d60e2d01f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="620" y="158" width="240" height="21" uuid="9470ba0c-9a5b-431e-b19e-a62f4007b6e6">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="515" width="240" height="21" uuid="3495e954-c07a-4d86-b232-0efe4532992c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="284" width="380" height="21" uuid="1020dc16-e3db-46b3-a596-38dcbf5d7608">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R29_PRODUCT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="452" width="380" height="21" uuid="3eccd9a0-909d-4111-8783-31a7e8acffac">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R37_PRODUCT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="380" y="452" width="240" height="21" backcolor="#40F037" uuid="205d3dbd-810f-4f2c-a52f-de560d188f2b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R37_RESIDENT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="536" width="380" height="21" uuid="a01544ca-423c-4155-acb0-ec00920f3d1e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R41_PRODUCT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="380" y="-10" width="240" height="21" backcolor="#40F037" uuid="3ae55230-2d60-40a3-8613-a0da003d20ef">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R15_RESIDENT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="620" y="263" width="240" height="21" uuid="b7a9f2db-7c71-4211-ab0b-7c510ae33d71">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="620" y="32" width="240" height="21" uuid="674e789d-4f8d-49e3-a235-0fd4338a260f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="431" width="380" height="21" uuid="e274d5aa-f095-415e-8653-b88d93f44bcf">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R36_PRODUCT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="305" width="380" height="21" uuid="b5f5e2af-cdd6-4417-82ef-2251ec4ce2a4">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R30_PRODUCT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="116" width="380" height="21" uuid="55c889ba-7449-4b7e-935c-551e132fdb2f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R21_PRODUCT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="557" width="380" height="21" uuid="52af0ecc-6747-4b9c-9464-37ca8d93bc8f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R42_PRODUCT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="380" y="431" width="240" height="21" backcolor="#40F037" uuid="45a43fbb-fff2-4721-a7c2-763e3d256e05">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="380" y="599" width="240" height="21" backcolor="#40F037" uuid="80b196eb-6621-4da8-887e-6d2158b52974">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R44_RESIDENT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="620" y="599" width="240" height="21" uuid="802d4e64-1440-4d94-af51-9d6ecb182968">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="599" width="380" height="21" uuid="a4825db0-e9d0-4835-ab4d-3443e85ee006">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{R44_PRODUCT}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="650" width="860" height="20" uuid="f76a12ef-fe56-44ac-8455-ae4fa2e2c99c"/>
+				<text><![CDATA[* SMME Classification should be done in relation to turnover / revenue p.a up to a maxium of P4 million. 	
+]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>
